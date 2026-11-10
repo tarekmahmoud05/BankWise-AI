@@ -1,0 +1,48 @@
+{
+  "_note": "SYNTHETIC SAMPLE DATA for pipeline testing. Figures are invented. Replace with the real bank documents.",
+  "language": "ar",
+  "category": "fees",
+  "source_url": "https://example.com/sample-bank/fees-schedule",
+  "retrieved_date": "2026-11-05",
+  "updated_at": "2026-09-01",
+  "records": [
+    {
+      "id": "fees-savings",
+      "product": "savings_account",
+      "category": "accounts",
+      "question": "ما هي رسوم فتح حساب التوفير والحد الأدنى للرصيد؟",
+      "answer": "فتح حساب التوفير مجاني، والحد الأدنى للرصيد 1,000 جنيه مصري."
+    },
+    {
+      "id": "fees-atm",
+      "product": "debit_card",
+      "question": "كم تبلغ رسوم السحب من ماكينة صراف آلي تابعة لبنك آخر؟",
+      "answer": "تبلغ رسوم السحب من ماكينات الصراف الآلي التابعة لبنوك أخرى 5 جنيهات مصرية للعملية الواحدة."
+    },
+    {
+      "id": "fees-card-replace",
+      "product": "debit_card",
+      "question": "ما هي رسوم إصدار بطاقة خصم بدل فاقد أو تالف؟",
+      "answer": "رسوم إصدار بطاقة بدل فاقد أو تالف 50 جنيهًا مصريًا."
+    },
+    {
+      "id": "fees-lost-card",
+      "product": "debit_card",
+      "category": "cards",
+      "question": "ماذا أفعل إذا فقدت بطاقتي؟",
+      "answer": "أبلغ فورًا عبر الخط الساخن المدوّن على ظهر البطاقة أو أوقف البطاقة مؤقتًا من تطبيق الموبايل البنكي، ثم اطلب بطاقة بدل فاقد."
+    },
+    {
+      "id": "fees-transfer-limit",
+      "product": "mobile_banking",
+      "question": "ما هو الحد اليومي للتحويل عبر تطبيق الموبايل البنكي؟",
+      "answer": "الحد اليومي للتحويلات عبر تطبيق الموبايل البنكي 50,000 جنيه مصري."
+    },
+    {
+      "id": "fees-no-pin",
+      "category": "security",
+      "question": "هل يطلب البنك الرقم السري أو رقم البطاقة عبر الهاتف أو المحادثة؟",
+      "answer": "لا. لا يطلب البنك أبدًا الرقم السري أو رمز التحقق أو بيانات البطاقة الكاملة عبر الهاتف أو الرسائل أو المحادثة. لا تشاركها مع أي شخص."
+    }
+  ]
+}

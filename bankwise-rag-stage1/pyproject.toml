@@ -1,0 +1,16 @@
+[project]
+name = "bankwise-rag"
+version = "0.1.0"
+description = "BankWise AI - RAG stage 1: load & normalize"
+requires-python = ">=3.10"
+dependencies = []                 # standard library only
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["bankwise_rag"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
