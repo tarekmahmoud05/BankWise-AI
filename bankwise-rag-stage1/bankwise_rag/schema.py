@@ -26,6 +26,9 @@ class SourceRecord:
     updated_at: str = ""
     title: str = ""                 # FAQ: the question
     question: str = ""
+    answer: str | None = None
+    body: str | None = None
+    sections: list[str] = field(default_factory=list)
 
 
 # New Added (Adgham)
