@@ -7,7 +7,7 @@ Chunk is the final chunk representation of Stage 3.
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import List, Tuple   
+from typing import Any, Dict, List, Tuple  # Any, Dict  Added New (Adgham)   
 
 
 @dataclass
@@ -26,6 +26,24 @@ class SourceRecord:
     updated_at: str = ""
     title: str = ""                 # FAQ: the question
     question: str = ""
+
+
+# New Added (Adgham)
+
+@dataclass
+class RawChunk:
+    """Intermediate chunk produced by Stage 2 (chunking)."""
+    text: str
+    heading: str = ""
+
+
+@dataclass
+class Chunk:
+    """Final chunk contract produced by Stage 3 (metadata & normalization)."""
+    chunk_id: str
+    text: str
+    embed_text: str
+    metadata: Dict[str, Any]
     answer: str = ""
     body: str = ""
     sections: List[Tuple[str, str]] = field(default_factory=list)   # (heading, text)
