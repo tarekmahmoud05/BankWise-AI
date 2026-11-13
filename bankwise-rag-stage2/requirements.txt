@@ -1,0 +1,9 @@
+# BankWise AI - RAG stages 1-4. Use Python 3.12 (3.11 or 3.13 also fine). NOT 3.14: chromadb does not work there yet.
+#   py -3.12 -m venv .venv ; .\.venv\Scripts\Activate.ps1 ; pip install -r requirements.txt
+chromadb==1.5.9
+langchain-core==1.8.0
+langchain-chroma==1.1.0
+langchain-huggingface==1.2.3
+sentence-transformers==6.3.0
+torch==2.15.0
+pytest==9.2.0

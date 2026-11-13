@@ -1,0 +1,20 @@
+[project]
+name = "bankwise-rag"
+version = "0.1.0"
+description = "BankWise AI - RAG stages 1-4: load, chunk, metadata, embed & index"
+requires-python = ">=3.10"
+dependencies = []                 # standard library only
+
+[project.optional-dependencies]
+embed = ["chromadb", "langchain-core", "langchain-chroma", "langchain-huggingface", "sentence-transformers", "torch"]
+dev = ["pytest"]
+
+[project.scripts]
+bankwise = "bankwise_rag.cli:main"        # after `pip install -e .`:  bankwise ingest / bankwise eval
+
+[tool.setuptools]
+packages = ["bankwise_rag"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

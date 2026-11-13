@@ -1,0 +1,28 @@
+{
+  "_note": "SYNTHETIC SAMPLE DATA. English records exist to exercise the language metadata and cross-lingual retrieval.",
+  "language": "en",
+  "category": "cards",
+  "source_url": "https://example.com/sample-bank/cards-faq-en",
+  "retrieved_date": "2026-11-05",
+  "updated_at": "2026-07-01",
+  "records": [
+    {
+      "id": "cards-annual-fee",
+      "product": "credit_card",
+      "question": "What is the annual fee for the classic credit card?",
+      "answer": "The classic credit card has an annual fee of EGP 300, waived in the first year."
+    },
+    {
+      "id": "cards-contactless",
+      "product": "debit_card",
+      "question": "What is the contactless payment limit without a PIN?",
+      "answer": "Contactless payments up to EGP 1,000 per transaction do not require a PIN."
+    },
+    {
+      "id": "cards-statement",
+      "product": "credit_card",
+      "question": "When is the credit card statement issued?",
+      "answer": "Statements are issued monthly on the 25th, and the payment due date is 15 days after the statement date."
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+[
+  {
+    "type": "faq",
+    "query": "بنك مصر اتأسس امتى وعلى ايد مين",
+    "expected_id": "ABT-001"
+  },
+  {
+    "type": "faq",
+    "query": "هو بنك مصر كبير قد ايه وعنده كام فرع",
+    "expected_id": "ABT-002"
+  },
+  {
+    "type": "faq",
+    "query": "بنك مصر بيشتغل في بلاد تانية ولا في مصر بس",
+    "expected_id": "ABT-003"
+  },
+  {
+    "type": "faq",
+    "query": "بيانات كارتي عندكم في امان ولا ممكن تتسرق",
+    "expected_id": [
+      "ABT-004",
+      "RGT-013",
+      "RGT-015"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ايه خطة البنك للسنين الجاية",
+    "expected_id": "ABT-006"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اكلم خدمة العملاء",
+    "expected_id": [
+      "CON-001",
+      "CON-002"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "رقم الخط الساخن بتاع البنك كام",
+    "expected_id": "CON-002"
+  },
+  {
+    "type": "faq",
+    "query": "في شات على الموقع اكلم حد منه ومواعيده امتى",
+    "expected_id": "CON-003"
+  },
+  {
+    "type": "faq",
+    "query": "مين عبقرينو ده",
+    "expected_id": "CON-004"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع ابعتلكم رسالة على الواتس",
+    "expected_id": "CON-005"
+  },
+  {
+    "type": "faq",
+    "query": "عايز ابعت ايميل للبنك استفسر عن ايه",
+    "expected_id": "CON-006"
+  },
+  {
+    "type": "faq",
+    "query": "انا برا مصر ومش مشترك في الانترنت البنكي وعايز اشتري شهادة",
+    "expected_id": "CON-008"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع اشترك في تطبيق الموبايل البنكي من غير ما انزل الفرع",
+    "expected_id": "DIG-002"
+  },
+  {
+    "type": "faq",
+    "query": "تطبيق البنك بيعمل ايه بالظبط",
+    "expected_id": "DIG-001"
+  },
+  {
+    "type": "faq",
+    "query": "الخدمة الصوتية اللي بالتليفون دي ايه واشترك فيها ازاي",
+    "expected_id": [
+      "DIG-003",
+      "DIG-004"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ازاي اعرف رقم الايبان بتاع حسابي",
+    "expected_id": "DIG-005"
+  },
+  {
+    "type": "faq",
+    "query": "اهلي في السعودية بيبعتولي فلوس ايه مميزات استلامها عندكم",
+    "expected_id": "REM-001"
+  },
+  {
+    "type": "faq",
+    "query": "حساب حوالتي ده ايه ومميزاته",
+    "expected_id": "REM-003"
+  },
+  {
+    "type": "faq",
+    "query": "بطاقة حوالتي مين يقدر ياخدها",
+    "expected_id": "REM-004"
+  },
+  {
+    "type": "faq",
+    "query": "ابني لسه شاب ينفع يفتح حساب توفير",
+    "expected_id": "ACC-002"
+  },
+  {
+    "type": "faq",
+    "query": "في حساب بيجمع بين التوفير والجاري",
+    "expected_id": "ACC-004"
+  },
+  {
+    "type": "faq",
+    "query": "ايه الودايع اللي بنك مصر بيقدمها",
+    "expected_id": "ACC-005"
+  },
+  {
+    "type": "faq",
+    "query": "صندوق يوم بيوم اقل مبلغ افتحه بيه كام",
+    "expected_id": "ACC-006"
+  },
+  {
+    "type": "faq",
+    "query": "في شهادات ادخار بالدولار",
+    "expected_id": "CER-002"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اشتري شهادة بالجنيه المصري ايه المتاح",
+    "expected_id": [
+      "CER-003",
+      "CER-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "شهادة ايليت فيها ايه",
+    "expected_id": "CER-004"
+  },
+  {
+    "type": "faq",
+    "query": "انا مصري شغال في الكويت وعايز افتح حساب لاول مرة",
+    "expected_id": "ABR-001"
+  },
+  {
+    "type": "faq",
+    "query": "في تمويل عقاري للمصريين اللي شغالين برا",
+    "expected_id": "ABR-002"
+  },
+  {
+    "type": "faq",
+    "query": "هو لازم يبقى معايا ضامن في التمويل العقاري",
+    "expected_id": "ABR-003"
+  },
+  {
+    "type": "faq",
+    "query": "ايه الفرق بين المرابحة والقرض العادي",
+    "expected_id": "RET-001"
+  },
+  {
+    "type": "faq",
+    "query": "اقصى قسط اقدر ادفعه من مرتبي كام في المية",
+    "expected_id": "RET-002"
+  },
+  {
+    "type": "faq",
+    "query": "مراتي شغالة ودخلها ينفع يتحسب معايا في التمويل",
+    "expected_id": [
+      "RET-003",
+      "RET-011"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "لو حولت مرتبي على بنك مصر هستفيد ايه في التمويل",
+    "expected_id": "RET-004"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اخد قرض شخصي اقدم ازاي",
+    "expected_id": "RET-005"
+  },
+  {
+    "type": "faq",
+    "query": "بتحسبوا معدل العائد ازاي",
+    "expected_id": "RET-006"
+  },
+  {
+    "type": "faq",
+    "query": "المصاريف الادارية دي ايه وبتتدفع امتى",
+    "expected_id": "RET-007"
+  },
+  {
+    "type": "faq",
+    "query": "لما باخد التمويل بيتعمل تأمين عليا",
+    "expected_id": "RET-008"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع اجدد القرض النقدي بتاعي وامتى",
+    "expected_id": "RET-009"
+  },
+  {
+    "type": "faq",
+    "query": "عليا تمويل في بنك تاني ينفع بنك مصر يسدده",
+    "expected_id": "RET-010"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع انا ومراتي ناخد تمويل عقاري مشترك",
+    "expected_id": "RET-011"
+  },
+  {
+    "type": "faq",
+    "query": "اقساط التمويل العقاري بتتسدد ازاي",
+    "expected_id": "RET-012"
+  },
+  {
+    "type": "faq",
+    "query": "مين بيقيم الشقة ومين بيدفع للمقيم",
+    "expected_id": "RET-013"
+  },
+  {
+    "type": "faq",
+    "query": "ايه انواع الوحدات اللي بتتمول في التمويل العقاري",
+    "expected_id": "RET-014"
+  },
+  {
+    "type": "faq",
+    "query": "قرض التشطيب بيتصرف ازاي",
+    "expected_id": "RET-015"
+  },
+  {
+    "type": "faq",
+    "query": "مين بيدفع تأمين الشقة في التمويل العقاري",
+    "expected_id": "RET-016"
+  },
+  {
+    "type": "faq",
+    "query": "شروط مبادرة متوسطي الدخل 3%",
+    "expected_id": "RET-017"
+  },
+  {
+    "type": "faq",
+    "query": "شروط مبادرة متوسطي الدخل 8%",
+    "expected_id": "RET-018"
+  },
+  {
+    "type": "faq",
+    "query": "المبادرة بتتاخد كام مرة وفيها وديعة الصيانة",
+    "expected_id": "RET-020"
+  },
+  {
+    "type": "faq",
+    "query": "البطاقات الائتمانية اللي عندكم ايه",
+    "expected_id": "CRD-001"
+  },
+  {
+    "type": "faq",
+    "query": "كروت الخصم المباشر المتاحة ايه",
+    "expected_id": "CRD-002"
+  },
+  {
+    "type": "faq",
+    "query": "برنامج BM Rewards بيدي ايه",
+    "expected_id": "CRD-004"
+  },
+  {
+    "type": "faq",
+    "query": "كارت وورلد ايليت ده ايه",
+    "expected_id": "CRD-005"
+  },
+  {
+    "type": "faq",
+    "query": "خدمة كبار العملاء BMVIP ايه مميزاتها",
+    "expected_id": "VIP-001"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اعرف عن ادارة الثروات",
+    "expected_id": "VIP-002"
+  },
+  {
+    "type": "faq",
+    "query": "ايه برامج التأمين اللي البنك بيقدمها",
+    "expected_id": "VIP-003"
+  },
+  {
+    "type": "faq",
+    "query": "عايز استثمر فلوسي في صندوق استثمار",
+    "expected_id": [
+      "INV-001",
+      "INV-002"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "صندوق العمر ده ايه",
+    "expected_id": "INV-003"
+  },
+  {
+    "type": "faq",
+    "query": "في صندوق بيدي عائد كل شهر",
+    "expected_id": "INV-004"
+  },
+  {
+    "type": "faq",
+    "query": "عندي ورشة صغيرة وعايز اوسعها بتمولوا اي مشاريع",
+    "expected_id": [
+      "SME-001",
+      "SME-006"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "مشروع متناهي الصغر يقدر يقترض كام وعلى كام سنة",
+    "expected_id": "SME-002"
+  },
+  {
+    "type": "faq",
+    "query": "المشروع الصغير يقدر يقترض كام وعلى كام سنة",
+    "expected_id": "SME-003"
+  },
+  {
+    "type": "faq",
+    "query": "المشروعات المتوسطة تمويلها بيتم ازاي",
+    "expected_id": "SME-004"
+  },
+  {
+    "type": "faq",
+    "query": "ايه رواد النيل ده",
+    "expected_id": "SME-005"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اقدم شكوى على البنك اعمل ايه",
+    "expected_id": "RGT-016"
+  },
+  {
+    "type": "faq",
+    "query": "البنك بياخد قد ايه عشان يرد على الشكوى",
+    "expected_id": "RGT-017"
+  },
+  {
+    "type": "faq",
+    "query": "مش راضي عن رد البنك على الشكوى اعمل ايه",
+    "expected_id": "RGT-018"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع اشتكي للبنك المركزي مباشرة",
+    "expected_id": "RGT-019"
+  },
+  {
+    "type": "faq",
+    "query": "كارتي اتسرق واتسحب منه فلوس البنك هيعوضني",
+    "expected_id": "RGT-003"
+  },
+  {
+    "type": "faq",
+    "query": "لو سددت القرض قبل معاده هدفع كام",
+    "expected_id": "RGT-007"
+  },
+  {
+    "type": "faq",
+    "query": "طلبي اترفض ليه وعملوا فيه ايه",
+    "expected_id": "RGT-002"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع البنك يخصم رسوم مش مكتوبة في العقد",
+    "expected_id": "RGT-005"
+  },
+  {
+    "type": "faq",
+    "query": "البنك يقدر يغير الفايدة من غير ما يقولي",
+    "expected_id": "RGT-009"
+  },
+  {
+    "type": "faq",
+    "query": "انا مضغوط ماليا ومش قادر اسدد القسط",
+    "expected_id": "RGT-011"
+  },
+  {
+    "type": "faq",
+    "query": "لحد امتى اقدر اطلب كشف حساب قديم",
+    "expected_id": "RGT-012"
+  },
+  {
+    "type": "faq",
+    "query": "التطبيق اتخترق وفلوسي راحت مين المسؤول",
+    "expected_id": "RGT-014"
+  },
+  {
+    "type": "faq",
+    "query": "اعمل ايه عشان احمي حسابي وكروتي",
+    "expected_id": "RGT-015"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع اسدد قسط القرض من فوري",
+    "expected_id": "FAW-001"
+  },
+  {
+    "type": "faq",
+    "query": "فوري بياخد كام عمولة",
+    "expected_id": "FAW-002"
+  },
+  {
+    "type": "faq",
+    "query": "ايصال فوري يثبت اني خلصت القرض كله",
+    "expected_id": "FAW-003"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اشتغل في بنك مصر اقدم ازاي",
+    "expected_id": "JOB-001"
+  },
+  {
+    "type": "faq",
+    "query": "بعد ما قدمت على وظيفة الرد بيجي امتى",
+    "expected_id": "JOB-004"
+  },
+  {
+    "type": "faq",
+    "query": "لازم يبقى عندي خبرة في البنوك عشان اقدم",
+    "expected_id": "JOB-005"
+  },
+  {
+    "type": "followup",
+    "context": "عايز اخد قرض شخصي",
+    "query": "طب والعائد بيتحسب ازاي",
+    "expected_id": "RET-006"
+  },
+  {
+    "type": "followup",
+    "context": "بسأل عن شهادات الادخار بالدولار",
+    "query": "طب والجنيه",
+    "expected_id": "CER-003"
+  },
+  {
+    "type": "followup",
+    "context": "بسأل عن الحوالات اللي بتيجي من برا",
+    "query": "طب ايه مميزاتها",
+    "expected_id": "REM-001"
+  },
+  {
+    "type": "followup",
+    "context": "عايز اقدم شكوى",
+    "query": "وهيردوا عليا امتى",
+    "expected_id": "RGT-017"
+  },
+  {
+    "type": "followup",
+    "context": "بسأل عن مبادرة متوسطي الدخل",
+    "query": "والتانية اللي 8% شروطها ايه",
+    "expected_id": "RET-018"
+  },
+  {
+    "type": "followup",
+    "context": "بسأل عن التمويل العقاري",
+    "query": "ولازم ضامن",
+    "expected_id": "ABR-003"
+  },
+  {
+    "type": "followup",
+    "context": "عايز افتح حساب توفير",
+    "query": "ينفع لو لسه شاب",
+    "expected_id": "ACC-002"
+  },
+  {
+    "type": "out_of_scope",
+    "query": "سعر الدولار النهاردة كام",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "ايه احسن موبايل اشتريه",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "الجو عامل ازاي في اسكندرية",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "مين فاز في ماتش الاهلي امبارح",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "قولي نكتة",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "ازاي اعمل كشري",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "اكتبلي كود بايثون يرتب قايمة",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "سعر الذهب النهاردة",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "ازاي افتح حساب في بنك QNB",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "هل الدولار هيرتفع الاسبوع الجاي",
+    "expected_id": null
+  }
+]

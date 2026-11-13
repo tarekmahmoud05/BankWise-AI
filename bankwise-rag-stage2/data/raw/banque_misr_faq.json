@@ -1,0 +1,2068 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr general FAQ knowledge base",
+    "version": "1.0",
+    "languages": [
+      "en",
+      "ar"
+    ],
+    "bank": {
+      "en": "Banque Misr",
+      "ar": "بنك مصر"
+    },
+    "entry_count": 105,
+    "source_files": [
+      "BM_services_guide_for_Egyptians_residing_abroad.pdf",
+      "Customer_Rights_Policy_EN_Translation.pdf",
+      "FAQ_of_how_to_apply_to_jobs.pdf",
+      "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "دفع_القروض_عن_طريق_منافذ_فوري.pdf"
+    ],
+    "notes": [
+      "Answers are based only on the five Banque Misr documents provided. Rates, limits and fees may have changed since those documents were published.",
+      "Where a document was published in one language only, the other language is a project translation, not official bank wording.",
+      "For account-specific, personal or time-sensitive questions the assistant should direct the customer to the contact center (19888) or the nearest branch.",
+      "Car loan eligibility is not covered here; it is handled by the separate eligibility rules files."
+    ]
+  },
+  "categories": [
+    {
+      "id": "about_bank",
+      "label": {
+        "en": "About Banque Misr",
+        "ar": "نبذة عن بنك مصر"
+      }
+    },
+    {
+      "id": "contact_channels",
+      "label": {
+        "en": "Contact and support channels",
+        "ar": "قنوات التواصل والدعم"
+      }
+    },
+    {
+      "id": "digital_services",
+      "label": {
+        "en": "Digital and phone banking services",
+        "ar": "الخدمات الإلكترونية والصوتية"
+      }
+    },
+    {
+      "id": "remittances",
+      "label": {
+        "en": "Incoming remittances and Hawalati account",
+        "ar": "الحوالات الواردة وحساب حوالتي"
+      }
+    },
+    {
+      "id": "accounts_deposits",
+      "label": {
+        "en": "Accounts and deposits",
+        "ar": "الحسابات والودائع"
+      }
+    },
+    {
+      "id": "savings_certificates",
+      "label": {
+        "en": "Savings certificates",
+        "ar": "شهادات الادخار"
+      }
+    },
+    {
+      "id": "egyptians_abroad",
+      "label": {
+        "en": "Services for Egyptians abroad",
+        "ar": "خدمات المصريين بالخارج"
+      }
+    },
+    {
+      "id": "retail_finance",
+      "label": {
+        "en": "Retail finance, personal finance and real estate finance",
+        "ar": "التمويل الشخصي والعقاري للأفراد"
+      }
+    },
+    {
+      "id": "cards",
+      "label": {
+        "en": "Cards and rewards",
+        "ar": "البطاقات والمكافآت"
+      }
+    },
+    {
+      "id": "vip_wealth_insurance",
+      "label": {
+        "en": "VIP, wealth management and bank insurance",
+        "ar": "كبار العملاء وإدارة الثروات والتأمين البنكي"
+      }
+    },
+    {
+      "id": "investment_funds",
+      "label": {
+        "en": "Investment funds",
+        "ar": "صناديق الاستثمار"
+      }
+    },
+    {
+      "id": "sme_finance",
+      "label": {
+        "en": "Small and medium business finance",
+        "ar": "تمويل المشروعات"
+      }
+    },
+    {
+      "id": "customer_rights",
+      "label": {
+        "en": "Customer rights, complaints and data protection",
+        "ar": "حقوق العملاء والشكاوى وحماية البيانات"
+      }
+    },
+    {
+      "id": "installment_payment",
+      "label": {
+        "en": "Paying installments through Fawry",
+        "ar": "سداد الأقساط عبر فوري"
+      }
+    },
+    {
+      "id": "careers",
+      "label": {
+        "en": "Careers at Banque Misr",
+        "ar": "الوظائف في بنك مصر"
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "id": "ABT-001",
+      "category": "about_bank",
+      "question": {
+        "en": "When and by whom was Banque Misr founded?",
+        "ar": "متى وعلى يد من تأسس بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr was founded in 1920 thanks to the vision of the economic pioneer Mohamed Talaat Harb Pasha, who championed the idea of national savings and directing those savings toward economic and social development. It is the first Egyptian bank founded and 100% owned by Egyptians.",
+        "ar": "تأسس بنك مصر عام 1920 بفضل فكر الرائد الاقتصادي محمد طلعت حرب باشا، الذي تزعم فكرة الادخار الوطني وتوجيه المدخرات نحو التنمية الاقتصادية والاجتماعية. وهو أول بنك مصري يؤسسه ويمتلكه المصريون 100% بالكامل."
+      },
+      "tags": [
+        "history",
+        "founder",
+        "1920"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABT-002",
+      "category": "about_bank",
+      "question": {
+        "en": "How large is Banque Misr?",
+        "ar": "ما حجم بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr has more than 800 electronically connected branches across Egypt, serves more than 13 million customers in Egypt, employs more than 20,000 people and has paid-in capital of 15 billion. It owns one of the largest ATM networks in Egypt and holds significant shares in 157 companies in fields such as finance, tourism, housing, agriculture, food, communications and information technology.",
+        "ar": "يمتلك بنك مصر أكثر من 800 فرع متصلة إلكترونياً في جميع أنحاء الجمهورية، وتصل قاعدة عملائه إلى أكثر من 13 مليون عميل في مصر، ويعمل به أكثر من 20,000 موظف، ويصل إجمالي رأس المال المدفوع إلى 15 مليار. ويمتلك واحدة من أكبر شبكات الصراف الآلي في مصر، ونسبة كبيرة من الأسهم في 157 شركة في مجالات التمويل والسياحة والإسكان والزراعة والغذاء والاتصالات وتكنولوجيا المعلومات."
+      },
+      "tags": [
+        "branches",
+        "customers",
+        "size",
+        "employees"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABT-003",
+      "category": "about_bank",
+      "question": {
+        "en": "Does Banque Misr operate outside Egypt?",
+        "ar": "هل يعمل بنك مصر خارج مصر؟"
+      },
+      "answer": {
+        "en": "Yes. Banque Misr has five branches in the United Arab Emirates and a branch in France, subsidiary banks in Germany and Lebanon, and representative offices in Russia (Moscow), China (Guangzhou), South Korea (Seoul), Italy (Milan) and Kenya (Nairobi). A representative office in Côte d'Ivoire (Abidjan) belongs to Banque Misr Liban. The bank also aims to expand into Somalia (Mogadishu), Djibouti and Saudi Arabia (Riyadh), and works with a network of correspondents worldwide.",
+        "ar": "نعم. يمتلك بنك مصر خمسة فروع في دولة الإمارات وفرعاً في فرنسا، وبنكين تابعين في ألمانيا ولبنان، ومكاتب تمثيل في روسيا (موسكو) والصين (جوانزو) وكوريا الجنوبية (سيول) وإيطاليا (ميلانو) وكينيا (نيروبي). كما يوجد مكتب تمثيل تابع لبنك مصر لبنان في كوت ديفوار (أبيدجان). ويهدف البنك إلى التوسع في الصومال (مقديشو) وجيبوتي والمملكة العربية السعودية (الرياض)، ويعمل مع شبكة من المراسلين حول العالم."
+      },
+      "tags": [
+        "international",
+        "uae",
+        "france",
+        "germany",
+        "lebanon",
+        "representative offices"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABT-004",
+      "category": "about_bank",
+      "question": {
+        "en": "Is Banque Misr certified for card data security?",
+        "ar": "هل بنك مصر حاصل على شهادة لتأمين بيانات البطاقات؟"
+      },
+      "answer": {
+        "en": "Yes. Banque Misr was granted the international PCI DSS certificate for securing electronic payment card data, in its latest version 3.2.1. It is described as one of the first banks in Egypt and North Africa to apply these standards.",
+        "ar": "نعم. مُنح بنك مصر شهادة المعايير العالمية لتأمين بيانات بطاقات الدفع الإلكترونية (PCI DSS) بأحدث إصداراتها 3.2.1، باعتباره من أوائل البنوك في مصر وشمال أفريقيا التي تلتزم بتطبيق هذه المعايير."
+      },
+      "tags": [
+        "security",
+        "PCI DSS",
+        "certification"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABT-005",
+      "category": "about_bank",
+      "question": {
+        "en": "What are Banque Misr's vision, mission and values?",
+        "ar": "ما رؤية بنك مصر ورسالته وقيمه؟"
+      },
+      "answer": {
+        "en": "Vision: distinguished performance as the road to a leadership the bank deserves by name and heritage. Mission: excellence in providing all banking needs of customers, maximizing value for stakeholders, developing employee loyalty and playing a leading role in Egypt's prosperity and development. Values: customer focus, flexibility, pride, innovation, and responsibility and mastery.",
+        "ar": "الرؤية: أداؤنا المتميز طريقنا نحو ريادة نستحقها اسماً وتراثاً. المهمة: التميز في توفير كافة الاحتياجات المصرفية للعملاء، وتعظيم القيمة لأصحاب المصلحة، وتنمية ولاء العاملين، مع القيام بدور رائد في رخاء وتنمية مصر. القيم: محورية العميل، المرونة، الفخر والاعتزاز، الابتكار، المسؤولية والإتقان."
+      },
+      "tags": [
+        "vision",
+        "mission",
+        "values",
+        "strategy"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABT-006",
+      "category": "about_bank",
+      "question": {
+        "en": "What is Banque Misr's strategy?",
+        "ar": "ما هي استراتيجية بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr follows an ambitious strategy to maximize added value for customers and support economic growth. It serves as a roadmap for developing and offering all banking services to customers in support of financial inclusion, based on continuous modernization of operations and taking economic, social and environmental aspects into account in its decisions.",
+        "ar": "يتبنى بنك مصر استراتيجية طموحة لتعظيم القيمة المضافة لعملائه وتعزيز النمو الاقتصادي، وتُعد بمثابة خارطة طريق لتطوير وإتاحة كافة الخدمات المصرفية للعملاء بما يدعم تطبيق الشمول المالي. وتعتمد على التحديث المستمر لعملياته المصرفية ومراعاة النواحي الاقتصادية والاجتماعية والبيئية في جميع قراراته."
+      },
+      "tags": [
+        "strategy",
+        "financial inclusion"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-001",
+      "category": "contact_channels",
+      "question": {
+        "en": "How can I contact Banque Misr customer service?",
+        "ar": "كيف أتواصل مع خدمة عملاء بنك مصر؟"
+      },
+      "answer": {
+        "en": "You can call the contact center on 19888, email bm19888@banquemisr.com, use Live Chat on www.banquemisr.com, message the bank on WhatsApp (0020219888) or by SMS on 01019888000. VIP customers can email bmvip@banquemisr.com or use the dedicated SMS number 01011119888. The bank also has official pages on Facebook, YouTube, Twitter, Instagram and LinkedIn.",
+        "ar": "يمكنك الاتصال بمركز الاتصال على 19888، أو مراسلة البنك على bm19888@banquemisr.com، أو استخدام خدمة Live Chat من موقع www.banquemisr.com، أو التواصل عبر الواتس أب على 0020219888، أو إرسال رسالة نصية على 01019888000. ويمكن لكبار العملاء مراسلة bmvip@banquemisr.com أو استخدام الرقم المخصص للرسائل النصية 01011119888. كما للبنك صفحات رسمية على فيسبوك ويوتيوب وتويتر وإنستجرام ولينكد إن."
+      },
+      "tags": [
+        "phone",
+        "19888",
+        "email",
+        "whatsapp",
+        "sms",
+        "support"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-002",
+      "category": "contact_channels",
+      "question": {
+        "en": "What is the Banque Misr call center number?",
+        "ar": "ما رقم مركز اتصال بنك مصر؟"
+      },
+      "answer": {
+        "en": "The call center number is 19888. The same number is used to get your identification number for the voice banking (IVR) service, and remittance inquiries are available around the clock on +219888.",
+        "ar": "رقم مركز الاتصال هو 19888. ويُستخدم الرقم نفسه للحصول على الرقم التعريفي للخدمة الصوتية البنكية IVR، كما يمكن الاستعلام عن الحوالات على مدار الساعة عبر الرقم +219888."
+      },
+      "tags": [
+        "19888",
+        "call center"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-003",
+      "category": "contact_channels",
+      "question": {
+        "en": "What can I do through Live Chat on the Banque Misr website, and when is it available?",
+        "ar": "ما الذي يمكنني فعله عبر خدمة Live Chat بموقع بنك مصر ومتى تتوفر؟"
+      },
+      "answer": {
+        "en": "Live Chat lets customers and non-customers talk directly to a customer service representative to get answers to inquiries about products and services, submit complaints, stop a card, check an account or card balance or transactions, remove wrong PIN attempts on cards, ask about nominal or on-account transfers, install credit card transactions, and remove wrong login attempts or reset the internet banking password. It runs from 8 a.m. to 12 midnight in Arabic and English, according to the customer's language.",
+        "ar": "تتيح الخدمة للعملاء وغير العملاء التحدث المباشر مع أحد مسؤولي خدمة العملاء للإجابة على الاستفسارات عن منتجات وخدمات البنك وتلقي الشكاوى، وإيقاف بطاقة، والاستعلام عن رصيد أو معاملات الحساب أو البطاقة، ورفع محاولات الرقم السري الخطأ للبطاقات، والاستفسار عن حوالات اسمية أو على الحساب، وتقسيط معاملات البطاقات الائتمانية، وإزالة محاولات الدخول الخطأ وإعادة تعيين كلمة السر للإنترنت البنكي. تعمل الخدمة من الساعة 8 صباحاً وحتى 12 مساءً باللغتين العربية والإنجليزية طبقاً للغة العميل."
+      },
+      "tags": [
+        "live chat",
+        "hours",
+        "card stop",
+        "password reset"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-004",
+      "category": "contact_channels",
+      "question": {
+        "en": "What is Abkarino, the Banque Misr chatbot?",
+        "ar": "ما هو المساعد الآلي عبقرينو؟"
+      },
+      "answer": {
+        "en": "Abkarino (Chat Bot 3bkarino, an intelligent self engine) is an automated assistant on the bank's website. It lets customers and non-customers ask about the bank's products and services 24 hours a day and get an instant automated reply in Arabic and English.",
+        "ar": "عبقرينو (Chat Bot 3bkarino) هو مساعد آلي ذكي على موقع البنك يتيح للعملاء وغير العملاء الاستفسار عن منتجات وخدمات البنك على مدار 24 ساعة في شكل رد آلي فوري باللغتين العربية والإنجليزية."
+      },
+      "tags": [
+        "chatbot",
+        "abkarino",
+        "24 hours"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-005",
+      "category": "contact_channels",
+      "question": {
+        "en": "What does the Banque Misr WhatsApp service offer?",
+        "ar": "ما الذي تقدمه خدمة الواتس أب في بنك مصر؟"
+      },
+      "answer": {
+        "en": "The WhatsApp service (0020219888) uses artificial intelligence to answer questions from customers and non-customers about the bank's services and products in Arabic and English. Among other services, it includes a loan calculator that computes your loan.",
+        "ar": "تتيح خدمة الواتس أب (0020219888) الرد على استفسارات العملاء وغير العملاء عن خدمات ومنتجات البنك باستخدام تكنولوجيا الذكاء الاصطناعي باللغتين العربية والإنجليزية، ومن بين خدماتها حساب القرض من خلال آلة احتساب القروض (loan calculator)."
+      },
+      "tags": [
+        "whatsapp",
+        "loan calculator"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-006",
+      "category": "contact_channels",
+      "question": {
+        "en": "What can I ask the bank by email?",
+        "ar": "ما الذي يمكنني الاستفسار عنه عبر البريد الإلكتروني للبنك؟"
+      },
+      "answer": {
+        "en": "By email (bm19888@banquemisr.com, bmvip@banquemisr.com, BMGLOBAL@banquemisr.com) you can ask about all of the bank's products and services, inquire about local and international remittances, ask about your credit card debt and have a credit card transactions statement sent, and submit and follow up complaints about products and services.",
+        "ar": "عبر البريد الإلكتروني (bm19888@banquemisr.com أو bmvip@banquemisr.com أو BMGLOBAL@banquemisr.com) يمكنك الاستعلام عن كافة منتجات وخدمات البنك، والاستعلام عن الحوالات الداخلية والخارجية، والاستعلام عن المديونية وإرسال بيان عمليات البطاقات الائتمانية، وتلقي ومتابعة الشكاوى الخاصة بمنتجات وخدمات البنك."
+      },
+      "tags": [
+        "email",
+        "inquiries",
+        "complaints"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-007",
+      "category": "contact_channels",
+      "question": {
+        "en": "How can I send an SMS to Banque Misr?",
+        "ar": "كيف أراسل بنك مصر برسالة نصية؟"
+      },
+      "answer": {
+        "en": "You can inquire about the bank's products and send suggestions or complaints by SMS to 01019888000. The number 01011119888 is dedicated to receiving inquiries from VIP customers by SMS.",
+        "ar": "يمكنك الاستعلام عن منتجات البنك وإرسال مقترحاتك وشكواك عن طريق رسالة نصية على الرقم 01019888000. وتم تخصيص الرقم 01011119888 لاستقبال استفسارات كبار العملاء VIP عن طريق الرسائل النصية."
+      },
+      "tags": [
+        "sms",
+        "vip"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-008",
+      "category": "contact_channels",
+      "question": {
+        "en": "How can customers outside Egypt buy or redeem certificates if they are not subscribed to internet banking?",
+        "ar": "كيف يشتري العملاء خارج مصر الشهادات أو يستردونها إذا لم يكونوا مشتركين في الإنترنت البنكي؟"
+      },
+      "answer": {
+        "en": "Customers outside Egypt who are not subscribed to internet banking can request redemption and purchase of certificates by emailing BM_CDassistance@banquemisr.com.",
+        "ar": "يمكن للعملاء من خارج مصر غير المشتركين في خدمة الإنترنت البنكي طلب استرداد وشراء الشهادات من خلال البريد الإلكتروني BM_CDassistance@banquemisr.com."
+      },
+      "tags": [
+        "certificates",
+        "abroad",
+        "email"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CON-009",
+      "category": "contact_channels",
+      "question": {
+        "en": "Where can I buy Banque Misr USD certificates online or start opening an account?",
+        "ar": "أين يمكنني شراء شهادات بنك مصر الدولارية أو بدء فتح حساب إلكترونياً؟"
+      },
+      "answer": {
+        "en": "USD certificates can be requested at https://digitalapp.banquemisr.com/certificate/usd. To start opening an account from inside Egypt, use https://www.banquemisr.com/Home/Digital%20Services/Open%20Your%20Account%20Online. Egyptians residing abroad who want to start opening an account (applying from outside Egypt) can contact a customer service representative through https://bnkmsr.com/3KzWGs5.",
+        "ar": "لشراء شهادات بنك مصر الدولارية استخدم الرابط https://digitalapp.banquemisr.com/certificate/usd. وللتمهيد لفتح حساب من داخل مصر استخدم الرابط https://www.banquemisr.com/Home/Digital%20Services/Open%20Your%20Account%20Online. وللمقيمين في الخارج الراغبين في فتح حساب (التقديم من خارج مصر) يمكن التواصل مع أحد ممثلي خدمة العملاء عبر الرابط https://bnkmsr.com/3KzWGs5."
+      },
+      "tags": [
+        "links",
+        "open account",
+        "usd certificate"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "DIG-001",
+      "category": "digital_services",
+      "question": {
+        "en": "What can I do with BM Online internet and mobile banking?",
+        "ar": "ما الذي يمكنني فعله من خلال الإنترنت والموبايل البنكي BM Online؟"
+      },
+      "answer": {
+        "en": "BM Online lets you manage all your accounts and transfer between your accounts or to other customers' accounts; open an additional account, create a deposit, buy savings certificates and issue a cheque book; view statements for different currencies and cards and see exchange rates; request a temporary card stop and pay a credit card; transfer from your account to any account outside Egypt, to e-wallets and to any card in Egypt, including Banque Misr credit cards; pay gas, electricity, water and mobile bills, top up mobile credit and make donations; and view the bank's map with branch and ATM locations and its social media pages.",
+        "ar": "يتيح BM Online التعامل على كافة حساباتك والتحويل بين حساباتك وحسابات عملاء آخرين، وفتح حساب إضافي وإنشاء وديعة وشراء شهادات ادخار وإصدار دفتر شيكات، وعرض كشوف الحسابات بمختلف العملات والبطاقات وأسعار الصرف، وطلب إيقاف بطاقة مؤقت وسداد بطاقة ائتمان، والتحويل من حسابك لأي حساب خارج مصر وللمحافظ الإلكترونية ولأي بطاقة داخل مصر بما فيها البطاقات الائتمانية لبنك مصر، ودفع فواتير الغاز والكهرباء والمياه والمحمول، وشحن رصيد المحمول، ودفع التبرعات، واستعراض خريطة البنك ومواقع الفروع وماكينات الصراف الآلي وصفحات البنك على مواقع التواصل."
+      },
+      "tags": [
+        "BM Online",
+        "mobile banking",
+        "internet banking",
+        "transfers",
+        "bills"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "DIG-002",
+      "category": "digital_services",
+      "question": {
+        "en": "Can I register for BM Online without visiting a branch?",
+        "ar": "هل يمكنني الاشتراك في BM Online دون زيارة الفرع؟"
+      },
+      "answer": {
+        "en": "Yes. Customers who are not yet subscribed can self-register for internet and mobile banking without visiting a branch, provided they have an active Banque Misr card. The service is then available for 6 months from the date of subscription and self-activation, until the customer visits the branch to sign the required documents.",
+        "ar": "نعم. يمكن للعملاء غير المشتركين التسجيل الذاتي في خدمة الإنترنت والموبايل البنكي دون زيارة الفرع، بشرط أن يكون لديهم بطاقة بنك مصر مفعلة. وتتاح الخدمة للعميل لمدة 6 أشهر من تاريخ الاشتراك والتفعيل الذاتي لحين زيارته لفرع التعامل والتوقيع على المستندات المطلوبة."
+      },
+      "tags": [
+        "self registration",
+        "BM Online",
+        "active card"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "DIG-003",
+      "category": "digital_services",
+      "question": {
+        "en": "What is the voice banking service (IVR) and what does it offer?",
+        "ar": "ما هي الخدمة الصوتية البنكية IVR وماذا تقدم؟"
+      },
+      "answer": {
+        "en": "The IVR lets you check account balances and the last 5 transactions (current, savings and day-by-day accounts); transfer between your own accounts; check credit card payments and the last 5 card transactions; pay your credit card debt from your accounts; request an account statement (current and savings) sent by post, fax or email; request a credit card transactions statement; request a cheque book to collect from the branch where the account is held; and change the voice service PIN.",
+        "ar": "تتيح الخدمة الاستعلام عن أرصدة الحسابات وآخر 5 حركات (الجاري والتوفير ويوم بيوم)، والتحويل بين حسابات العميل نفسه، والاستعلام عن مدفوعات البطاقات الائتمانية وآخر 5 حركات عليها، وسداد مديونية البطاقة الائتمانية من حسابات العميل، وطلب كشف حساب (للجاري والتوفير) يُرسل بالبريد أو الفاكس أو البريد الإلكتروني، وطلب بيان عمليات للبطاقة الائتمانية، وطلب دفتر شيكات يُستلم من الفرع المفتوح لديه الحساب، وتغيير الرقم السري للخدمة الصوتية."
+      },
+      "tags": [
+        "IVR",
+        "voice banking",
+        "balance"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "DIG-004",
+      "category": "digital_services",
+      "question": {
+        "en": "How do I subscribe to the IVR voice service?",
+        "ar": "كيف أشترك في الخدمة الصوتية IVR؟"
+      },
+      "answer": {
+        "en": "Call the contact center on 19888 or email BM19888@banquemisr.com, get the identification number for the voice service and activate it yourself.",
+        "ar": "اتصل بمركز الاتصال على 19888 أو راسل البريد الإلكتروني BM19888@banquemisr.com، واحصل على الرقم التعريفي للخدمة الصوتية وقم بالتنشيط ذاتياً."
+      },
+      "tags": [
+        "IVR",
+        "subscription"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "DIG-005",
+      "category": "digital_services",
+      "question": {
+        "en": "How can I find out my IBAN?",
+        "ar": "كيف أعرف رقم الحساب المصرفي الدولي IBAN؟"
+      },
+      "answer": {
+        "en": "You can get your IBAN without subscribing to the IVR voice service by calling the contact center on 19888 or emailing BM19888@banquemisr.com.",
+        "ar": "يمكنك معرفة رقم الحساب المصرفي الدولي IBAN دون الاشتراك في الخدمة الصوتية IVR، عن طريق الاتصال بمركز الاتصال على 19888 أو مراسلة BM19888@banquemisr.com."
+      },
+      "tags": [
+        "IBAN",
+        "19888"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "REM-001",
+      "category": "remittances",
+      "question": {
+        "en": "What are the benefits of receiving remittances from abroad at Banque Misr?",
+        "ar": "ما مزايا استقبال الحوالات الواردة من الخارج في بنك مصر؟"
+      },
+      "answer": {
+        "en": "Benefits include an instant transfer system through API linking with all banks and exchange houses; instant notification by SMS to the beneficiary; receiving the remittance in Egyptian pounds or US dollars; a dedicated card for receiving remittances (Hawalati); cashing remittances on Fridays, Saturdays and official holidays through designated branches; more ways to receive money (accounts, internet banking account, mobile wallets, prepaid cards such as Hawalati and Meeza, ATMs, and remittances from inside the bank's branches); inquiry about remittances around the clock on +219888; and no undisclosed fees deducted from the beneficiary, in addition to competitive exchange rates.",
+        "ar": "تشمل المزايا: نظام لحظي لتحويل الأموال من خلال الربط API بكافة البنوك والصيارفة، والإخطار الفوري برسالة قصيرة لهاتف المستفيد، وإمكانية استلام الحوالة بالجنيه المصري أو الدولار الأمريكي، وكارت خاص لتلقي الحوالات (حوالتي)، وصرف الحوالات أيام الجمعة والسبت والعطلات الرسمية من خلال فروع محددة، وخيارات متعددة لاستقبال الأموال (الحسابات وحساب الإنترنت البنكي ومحافظ الهاتف المحمول والبطاقات مسبقة الدفع مثل حوالتي وميزة وأجهزة الصراف الآلي والحوالات من داخل فروع البنك)، والاستعلام عن الحوالات على مدار الساعة عبر +219888، وعدم خصم أي رسوم غير معلنة من المستفيد، إضافة لأسعار صرف تنافسية."
+      },
+      "tags": [
+        "remittance",
+        "hawalati",
+        "instant transfer",
+        "exchange rate"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "REM-002",
+      "category": "remittances",
+      "question": {
+        "en": "Which partners does Banque Misr use for incoming remittances?",
+        "ar": "ما الشركاء الذين يتعامل معهم بنك مصر في الحوالات الواردة؟"
+      },
+      "answer": {
+        "en": "Banque Misr has strategic partnerships with major financial institutions worldwide, more than 40 correspondents and exchange houses in the Gulf region and a network of nearly 280 correspondents worldwide. It also contracts with major global money transfer companies and with a local institution with nearly 4,000 units and offices across the governorates to ease delivery of remittances. Remittances from IBAG (Western Union) can be received at Banque Misr branches.",
+        "ar": "ارتبط بنك مصر بشراكات استراتيجية مع مؤسسات مالية كبرى حول العالم، وأكثر من 40 مراسلاً وصرافاً بمنطقة الخليج، إضافة إلى شبكة مراسلين تقارب 280 مراسلاً على مستوى العالم. كما تعاقد مع كبرى شركات تحويل الأموال بالعالم ومع مؤسسة محلية تمتلك ما يقرب من 4000 وحدة ومكتب موزعة بالمحافظات لتسهيل توصيل الحوالات للمستفيدين. ويمكن استلام الحوالات من أيباج (IBAG) ويسترن يونيون من فروع بنك مصر."
+      },
+      "tags": [
+        "partners",
+        "correspondents",
+        "western union",
+        "IBAG"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "REM-003",
+      "category": "remittances",
+      "question": {
+        "en": "What is the Hawalati account?",
+        "ar": "ما هو حساب حوالتي؟"
+      },
+      "answer": {
+        "en": "Hawalati is an Egyptian-pound account for Egyptians and foreigners that lets residents of Egypt receive transfers from abroad in major foreign currencies with no maximum limit, with the received foreign currency automatically exchanged at a special rate. There is no minimum amount to open the account. Account opening fees and some fees applied to other accounts are waived. You can get a debit card on the account for cash withdrawal and purchases, withdraw from ATMs or from the branch for amounts above the daily ATM limit, and check the balance or transfer to other accounts within the bank through BM Online.",
+        "ar": "حساب حوالتي هو حساب بالجنيه المصري متاح للأفراد المصريين والأجانب بجميع فروع بنك مصر، يتيح لمن يقيم في مصر استقبال الحوالات الواردة من الخارج بالعملات الأجنبية الرئيسية بدون حد أقصى، مع استبدال العملة الأجنبية الواردة تلقائياً بتسعير مميز. لا يوجد حد أدنى لفتح الحساب، وهناك إعفاء من مصاريف فتح الحساب ومن بعض المصاريف المطبقة على الحسابات الأخرى. ويمكن إصدار بطاقة خصم فوري على الحساب للسحب النقدي والشراء، والسحب من ماكينات الصراف الآلي أو من داخل الفرع للمبالغ التي تتعدى الحد اليومي للسحب، والاستعلام عن الرصيد أو التحويل لحسابات أخرى داخل البنك عبر BM Online."
+      },
+      "tags": [
+        "hawalati",
+        "account",
+        "no minimum",
+        "foreign currency"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "REM-004",
+      "category": "remittances",
+      "question": {
+        "en": "What is the Hawalati card and who can get it?",
+        "ar": "ما هي بطاقة حوالتي ومن يمكنه الحصول عليها؟"
+      },
+      "answer": {
+        "en": "Hawalati is a prepaid card issued free of charge from all branches to beneficiaries in Egypt who want to cash remittances received from abroad. The card balance is funded with the value of incoming remittances in Egyptian pounds on the day they arrive, and the beneficiary receives an SMS with the remittance reference.",
+        "ar": "بطاقة حوالتي بطاقة مدفوعة مقدماً تصدر مجاناً من كافة فروع البنك للعملاء المستفيدين في مصر الراغبين في صرف قيمة الحوالات الواردة لهم من الخارج. ويتم تغذية رصيد البطاقة بقيم الحوالات الواردة بالجنيه المصري يوم ورودها، مع إرسال رسالة للمستفيد لإخطاره بوصول الحوالة ومرجع الصرف."
+      },
+      "tags": [
+        "hawalati card",
+        "prepaid",
+        "free"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ACC-001",
+      "category": "accounts_deposits",
+      "question": {
+        "en": "What are the features of Banque Misr savings accounts?",
+        "ar": "ما مميزات حسابات التوفير في بنك مصر؟"
+      },
+      "answer": {
+        "en": "Savings accounts give a competitive return on your savings in different currencies (Egyptian pound, US dollar, pound sterling and euro), with flexible options for receiving the return and freedom to withdraw and deposit at any time. They are available to Egyptians and foreigners. For EGP and USD accounts the return can be paid monthly, quarterly, semi-annually or annually; for euro and sterling accounts it is paid semi-annually.",
+        "ar": "تعد حسابات التوفير طريقة عملية للحصول على عائد تنافسي على المدخرات بعملات مختلفة (الجنيه المصري والدولار الأمريكي والجنيه الإسترليني واليورو) مع خيارات مرنة لصرف العائد وحرية السحب والإيداع وقتما تشاء. وهي متاحة للأفراد المصريين والأجانب. ويمكن صرف العائد في حسابات الجنيه والدولار شهرياً أو ربع سنوياً أو نصف سنوياً أو سنوياً، أما حسابات اليورو والجنيه الإسترليني فيُصرف العائد نصف سنوياً."
+      },
+      "tags": [
+        "savings account",
+        "currencies",
+        "return"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ACC-002",
+      "category": "accounts_deposits",
+      "question": {
+        "en": "Can young people open a savings account?",
+        "ar": "هل يمكن للشباب فتح حساب توفير؟"
+      },
+      "answer": {
+        "en": "Yes. Savings accounts can be opened for young customers aged 16 to 35, with a special return and a range of banking and non-banking benefits.",
+        "ar": "نعم. يمكن فتح حسابات توفير للعملاء الشباب من عمر 16 عاماً إلى 35 عاماً بعائد مميز وبمزايا بنكية وغير بنكية متعددة."
+      },
+      "tags": [
+        "youth",
+        "savings",
+        "16-35"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ACC-003",
+      "category": "accounts_deposits",
+      "question": {
+        "en": "What are the features of current accounts?",
+        "ar": "ما مميزات الحسابات الجارية؟"
+      },
+      "answer": {
+        "en": "A current account can be opened in Egyptian pounds and various foreign currencies, and funded by cash, cheques or transfers from abroad, with freedom to withdraw and transfer inside and outside Egypt. You can take the balance in foreign currency or Egyptian pounds as you prefer, buy Banque Misr savings certificates and pay your recurring obligations from the account.",
+        "ar": "يمكن فتح الحساب الجاري بالجنيه المصري والعملات الأجنبية المختلفة، وتغذيته نقداً أو بشيكات أو حوالات من الخارج مع حرية السحب والتحويل للداخل والخارج. ويمكن صرف رصيد الحساب بالعملات الأجنبية أو بالجنيه المصري تبعاً لرغبة العميل، وشراء شهادات ادخار بنك مصر وسداد الالتزامات الدورية خصماً من الحساب الجاري."
+      },
+      "tags": [
+        "current account"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ACC-004",
+      "category": "accounts_deposits",
+      "question": {
+        "en": "Is there an account that combines the benefits of savings and current accounts?",
+        "ar": "هل يوجد حساب يجمع بين مزايا التوفير والجاري؟"
+      },
+      "answer": {
+        "en": "Yes. A current account with a daily return is available, giving a special return calculated and added daily on the account balance according to tiers that start from EGP 50,000 with no upper limit. The Kenana Plus account at the Islamic transactions branches combines savings and current account benefits, with flexible return payment frequencies (monthly, quarterly, semi-annually or annually).",
+        "ar": "نعم. يمكن فتح الحساب الجاري ذو العائد اليومي الذي يمنح عائداً مميزاً يُحتسب ويُضاف بشكل يومي على رصيد الحساب وفقاً لشرائح تبدأ من 50,000 جنيه وبدون حد أقصى. كما يوجد حساب كنانة بلس بفروع المعاملات الإسلامية بدوريات صرف عائد مرنة (شهري أو ربع سنوي أو نصف سنوي أو سنوي) ويجمع بين مزايا حسابات التوفير ومزايا الحسابات الجارية."
+      },
+      "tags": [
+        "daily return",
+        "kenana plus",
+        "islamic"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ACC-005",
+      "category": "accounts_deposits",
+      "question": {
+        "en": "What deposits does Banque Misr offer?",
+        "ar": "ما الودائع التي يقدمها بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr offers short- and long-term deposits in local and foreign currencies. Foreign-currency deposits (US dollar, pound sterling, euro, Saudi riyal) have different terms of up to 12 months. Local-currency deposits have terms ranging from 7 days to 7 years. Deposits renew automatically for similar terms according to the customer's wish, and the return can be added to the deposit or to the customer's current or savings account. Deposits can be created for minors or for third parties under the bank's rules, and the whole deposit can be redeemed at any time before maturity under the applicable redemption rules.",
+        "ar": "يوفر بنك مصر الودائع على المدى القصير والطويل بمختلف العملات المحلية والأجنبية. فالودائع بالعملات الأجنبية (دولار أمريكي – جنيه إسترليني – يورو – ريال سعودي) ذات آجال مختلفة لمدة تصل إلى 12 شهراً، والودائع بالعملة المحلية ذات آجال تتراوح بين 7 أيام و7 سنوات. وتُجدد الودائع لمدد مماثلة بصورة تلقائية وفقاً لرغبة العميل، ويمكن إضافة العائد على الوديعة أو إلى حساب العميل (جاري أو توفير). كما يمكن إنشاء ودائع للقصر أو للغير وفقاً للقواعد المنصوص عليها بالبنك، واسترداد الوديعة كلها في أي وقت قبل تاريخ الاستحقاق وفقاً لقواعد الاسترداد المطبقة."
+      },
+      "tags": [
+        "deposits",
+        "terms",
+        "currencies"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ACC-006",
+      "category": "accounts_deposits",
+      "question": {
+        "en": "What are the cash funds' day-by-day account features and minimum opening amount?",
+        "ar": "ما مميزات حساب صندوق يوم بيوم النقدي والحد الأدنى لفتحه؟"
+      },
+      "answer": {
+        "en": "The cash funds (Yom Be Yom) offer the highest possible daily return without freezing the customer's savings and with no restrictions. Deposits and withdrawals in local currency are easy at any time and from any branch without commissions or fees. You get an ATM card, and you can get a Banque Misr credit card or borrow against the account. The account suits entities, companies and individuals, Egyptians and non-Egyptians, resident or not, and its return is fully tax-exempt. The minimum to open is EGP 10,000, or USD 5,000 or EUR 5,000.",
+        "ar": "تقدم الصناديق النقدية أعلى عائد يومي ممكن بدون تجميد لمدخرات العميل وبلا أي قيود، مع سهولة السحب والإيداع بالعملة المحلية في أي وقت ومن أي فرع بدون عمولات أو مصاريف، والحصول على بطاقة الصراف الآلي ATM، ويمكن الحصول على بطاقة بنك مصر الائتمانية أو الاقتراض بضمان الحساب. والحساب مناسب للهيئات والشركات والأفراد (للمصريين وغير المصريين سواء مقيمين أو غير مقيمين) والعائد عليه معفي بالكامل من الضرائب. الحد الأدنى لفتح الحساب 10,000 جنيه مصري أو 5,000 دولار أو يورو."
+      },
+      "tags": [
+        "cash fund",
+        "yom be yom",
+        "minimum",
+        "tax exempt"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CER-001",
+      "category": "savings_certificates",
+      "question": {
+        "en": "What savings certificates does Banque Misr offer?",
+        "ar": "ما شهادات الادخار التي يقدمها بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr offers a range of savings certificates in local and foreign currency with terms from 3 to 7 years, fixed, variable or cumulative returns, and flexible payout frequencies (monthly, quarterly, semi-annual or annual). To learn how to obtain any of them, visit the bank's website.",
+        "ar": "ينفرد بنك مصر بتقديم باقة من شهادات الادخار متعددة المزايا تناسب جميع احتياجات العملاء من حيث المدة والقيمة، بالعملة المحلية والأجنبية، وتتراوح مددها من 3 إلى 7 سنوات وبمعدلات عائد (ثابتة أو متغيرة أو تراكمية) ودوريات صرف مرنة للعائد (شهري أو ربع سنوي أو نصف سنوي أو سنوي). ولمعرفة كيفية الحصول على أي منها يرجى زيارة موقع البنك."
+      },
+      "tags": [
+        "certificates",
+        "savings",
+        "3 to 7 years"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CER-002",
+      "category": "savings_certificates",
+      "question": {
+        "en": "What foreign-currency certificates are available?",
+        "ar": "ما شهادات الادخار المتاحة بالعملة الأجنبية؟"
+      },
+      "answer": {
+        "en": "Foreign-currency certificates include: Elite (USD, fixed quarterly return, 3 years); Qimma (USD, return paid in advance in Egyptian pounds, 3 years); Thabat in USD with fixed return and flexible payout (monthly, quarterly, semi-annual or annual) for 3 or 5 years; Thabat in euro with fixed quarterly return for 3 or 5 years; a semi-annual variable return certificate in various foreign currencies; Ekhtiyar (USD, cumulative return paid at maturity) for 3 and 5 years; and Islamic transactions certificates in USD with a monthly return for 5 years or a quarterly return for 3 years.",
+        "ar": "تشمل: شهادة إيليت بالدولار الأمريكي ذات العائد الثابت الربع سنوي لمدة 3 سنوات؛ شهادة القمة بالدولار الأمريكي ذات العائد المدفوع مقدماً بالجنيه المصري لمدة 3 سنوات؛ شهادة الثبات بالدولار الأمريكي بدوريات صرف عائد ثابت (شهري أو ربع سنوي أو نصف سنوي أو سنوي) لمدة 3 أو 5 سنوات؛ شهادة الثبات باليورو ذات العائد الثابت الربع سنوي لمدة 3 أو 5 سنوات؛ شهادة الادخار ذات العائد المتغير نصف السنوي بالعملات الأجنبية المختلفة؛ شهادة الاختيار بالدولار الأمريكي ذات العائد التراكمي الذي يُصرف في نهاية المدة لمدة 3 و5 سنوات؛ وشهادات ادخار المعاملات الإسلامية بالدولار الأمريكي ذات العائد الشهري لمدة 5 سنوات أو الربع سنوي لمدة 3 سنوات."
+      },
+      "tags": [
+        "foreign currency",
+        "USD",
+        "EUR",
+        "elite",
+        "thabat",
+        "qimma",
+        "ekhtiyar"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CER-003",
+      "category": "savings_certificates",
+      "question": {
+        "en": "What local-currency (Egyptian pound) certificates are available?",
+        "ar": "ما شهادات الادخار المتاحة بالعملة المحلية؟"
+      },
+      "answer": {
+        "en": "Local-currency certificates include: Ibn Misr (declining annual return paid monthly, 3 years); Qimma (fixed monthly return, 3 years); the Triple certificate with a variable quarterly return (3 years) and the Triple certificate with a variable monthly return (3 years); Aman Al-Masriyyin (fixed return paid at the end of the 3 years); fixed-return savings certificates for 5 or 7 years; and Islamic transactions certificates with a monthly return for 5 years or a quarterly return for 3 years.",
+        "ar": "تشمل: شهادة ابن مصر بعائد سنوي متناقص يُصرف شهرياً لمدة 3 سنوات؛ شهادة القمة ذات العائد الثابت الشهري لمدة 3 سنوات؛ الشهادة الثلاثية ذات العائد المتغير الربع سنوي لمدة 3 سنوات؛ الشهادة الثلاثية ذات العائد المتغير الشهري لمدة 3 سنوات؛ شهادة أمان المصريين ذات العائد الثابت الذي يُصرف بنهاية مدة الشهادة بعد 3 سنوات؛ شهادات الادخار ذات العائد الثابت لمدة 5 أو 7 سنوات؛ وشهادات ادخار المعاملات الإسلامية ذات العائد الشهري لمدة 5 سنوات أو الربع سنوي لمدة 3 سنوات."
+      },
+      "tags": [
+        "local currency",
+        "EGP",
+        "ibn misr",
+        "aman",
+        "triple"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CER-004",
+      "category": "savings_certificates",
+      "question": {
+        "en": "What are the features of the Elite certificate?",
+        "ar": "ما مميزات شهادة إيليت؟"
+      },
+      "answer": {
+        "en": "The Elite certificate comes in denominations of USD 1,000 and multiples, pays its return quarterly in US dollars, and has a term of three years. You can borrow against the certificate up to EGP 10 million, and it can be obtained through the bank's electronic channels and branches inside and outside Egypt. It is promoted as the highest savings return for Egyptians and foreigners among three-year USD certificates.",
+        "ar": "فئة الشهادة 1,000 دولار ومضاعفاتها، ويُصرف العائد ربع سنوياً بالدولار الأمريكي، ومدتها ثلاث سنوات. ويمكن الاقتراض بضمان الشهادة بحد أقصى 10 مليون جنيه مصري، كما يمكن الحصول عليها من خلال القنوات الإلكترونية للبنك وفروع البنك داخلياً وخارجياً. وتُقدَّم باعتبارها أعلى عائد ادخار للمصريين والأجانب بين شهادات الادخار الثلاثية بالدولار."
+      },
+      "tags": [
+        "elite",
+        "1000 USD",
+        "loan against certificate"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABR-001",
+      "category": "egyptians_abroad",
+      "question": {
+        "en": "How can an Egyptian living abroad open an account for the first time?",
+        "ar": "كيف يفتح المصري المقيم بالخارج حساباً لأول مرة؟"
+      },
+      "answer": {
+        "en": "A customer who is abroad can complete the account opening documents through Banque Misr's own branches abroad or through accredited representative offices. You can also contact a customer service representative to start the process from outside Egypt through https://bnkmsr.com/3KzWGs5.",
+        "ar": "يمكن للعميل في حالة وجوده خارج البلاد استيفاء مستندات فتح الحساب من خلال فروع البنك المملوكة له في الخارج أو من خلال مكاتب التمثيل المعتمدة. كما يمكن التواصل مع أحد ممثلي خدمة العملاء لبدء الإجراءات من خارج مصر عبر الرابط https://bnkmsr.com/3KzWGs5."
+      },
+      "tags": [
+        "open account",
+        "abroad",
+        "representative office"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABR-002",
+      "category": "egyptians_abroad",
+      "question": {
+        "en": "What real estate finance does Banque Misr offer to Egyptians working abroad?",
+        "ar": "ما منتجات التمويل العقاري التي يقدمها بنك مصر للمصريين العاملين بالخارج؟"
+      },
+      "answer": {
+        "en": "Banque Misr offers real estate finance products designed for Egyptians working abroad to buy residential or summer units in Egypt. They include (1) a real estate loan secured by savings instruments held at the bank, up to EGP 50 million per loan, with more than one loan possible within the guarantee amount and flexible repayment of up to 15 years; and (2) a real estate loan for Egyptians with monthly income, with terms from 6 months up to 15 years and a maximum finance value of EGP 5 million at a competitive return. Existing residential units can be financed with a mortgage, a temporary assignment or a sale ban on the company's records. The bank bears insurance against death and total disability, and the maximum financing ratio is up to 80% of the unit value. More details are on the bank's website.",
+        "ar": "يتيح بنك مصر منتجات تمويل عقاري مصممة خصيصاً للمصريين العاملين بالخارج لشراء وحدات سكنية أو مصيفية داخل مصر، ومنها: (1) قرض تمويل عقاري بضمان الأوعية الادخارية المملوكة طرف البنك بحد أقصى 50 مليون جنيه مصري للقرض الواحد، مع إمكانية الحصول على أكثر من قرض في حدود مبلغ الضمان وفترات سداد مرنة تصل إلى 15 عاماً؛ (2) قرض تمويل عقاري للمصريين ذوي الدخول الشهرية بمدد تتراوح من 6 أشهر حتى 15 عاماً وبحد أقصى لقيمة التمويل 5 مليون جنيه مصري بسعر عائد تنافسي. ويمكن تمويل الوحدات السكنية القائمة بضمان رهن عقاري أو تنازل مؤقت أو حظر بيع بسجلات الشركة. ويتحمل البنك التأمين ضد مخاطر الوفاة والعجز الكلي، وتصل أكبر نسبة تمويل إلى 80% من قيمة الوحدة. وللمزيد يرجى زيارة موقع البنك."
+      },
+      "tags": [
+        "real estate",
+        "abroad",
+        "50 million",
+        "15 years",
+        "80%"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "ABR-003",
+      "category": "egyptians_abroad",
+      "question": {
+        "en": "Is a guarantor required for real estate finance?",
+        "ar": "هل يشترط وجود ضامن في التمويل العقاري؟"
+      },
+      "answer": {
+        "en": "A guarantor is required only for the real estate finance product for Egyptians working abroad.",
+        "ar": "يشترط وجود ضامن فقط بمنتج التمويل العقاري للمصريين العاملين بالخارج."
+      },
+      "tags": [
+        "guarantor",
+        "real estate"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "RET-001",
+      "category": "retail_finance",
+      "question": {
+        "en": "What is Murabaha, and what is Murabaha by agency?",
+        "ar": "ما المقصود بالمرابحة وبالمرابحة بالوكالة؟"
+      },
+      "answer": {
+        "en": "Murabaha is a form of Islamic sale contracts in which goods are sold at their purchase cost plus a known profit agreed by both parties; it is a method permitted in Islamic law. Murabaha by agency is a Murabaha transaction in which the customer is appointed as agent to buy and receive the goods on the bank's behalf, because the customer is an expert in the type and places of sale of the goods and the bank cannot do it itself, given the difficulty of obtaining a price offer.",
+        "ar": "المرابحة أحد أشكال عقود البيوع الإسلامية عن طريق بيع السلعة بتكلفة شرائها مع زيادة ربح معلوم اتفق عليه الطرفان، وهو أسلوب جائز شرعاً مشروع بالكتاب والسنة والإجماع. والمرابحة بالوكالة هي عملية مرابحة يتم فيها توكيل العميل لشراء واستلام البضاعة نيابة عن البنك، حيث إن العميل خبير بها ولديه الدراية الكافية عن نوعية وأماكن بيع السلعة، ويتعذر على البنك القيام بذلك بنفسه مع صعوبة إحضار عرض سعر."
+      },
+      "tags": [
+        "murabaha",
+        "islamic",
+        "agency"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-002",
+      "category": "retail_finance",
+      "question": {
+        "en": "What is the maximum installment allowed relative to income?",
+        "ar": "ما هو الحد الأقصى لقسط التمويل بالنسبة للدخل؟"
+      },
+      "answer": {
+        "en": "The finance installment is calculated at a maximum of 50% of the monthly income, except for real estate finance loans where it is a maximum of 40% of the net monthly income.",
+        "ar": "يتم احتساب قسط التمويل بحد أقصى 50% من الدخل الشهري، فيما عدا قروض التمويل العقاري فيكون الحد الأقصى 40% من صافي الدخل الشهري."
+      },
+      "tags": [
+        "installment",
+        "income",
+        "50%",
+        "40%",
+        "debt burden"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-003",
+      "category": "retail_finance",
+      "question": {
+        "en": "Can other income be counted when calculating the finance amount?",
+        "ar": "هل يُحتسب دخل آخر عند احتساب قيمة التمويل؟"
+      },
+      "answer": {
+        "en": "Yes. Additional income can be counted if it comes from additional work with another employer, a monthly pension, rental income from properties, or savings instruments held at the bank.",
+        "ar": "نعم. يمكن احتساب دخل إضافي ناتج عن عمل إضافي بجهة أخرى، أو معاش شهري، أو إيجار أملاك، أو أوعية ادخارية طرف مصرفنا."
+      },
+      "tags": [
+        "additional income",
+        "pension",
+        "rent"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-004",
+      "category": "retail_finance",
+      "question": {
+        "en": "What are the benefits of transferring my salary to Banque Misr when getting finance?",
+        "ar": "ما مزايا تحويل الراتب إلى بنك مصر عند الحصول على التمويل؟"
+      },
+      "answer": {
+        "en": "Benefits include a lower return rate, a longer finance term, and one-time administrative fees deducted when the finance is disbursed, with no other fees during the life of the finance.",
+        "ar": "تشمل المزايا: سعر عائد أقل، ومدة تمويل أطول، ومصروفات إدارية تُخصم مرة واحدة عند صرف التمويل ولا توجد أي مصروفات أخرى خلال عمر التمويل."
+      },
+      "tags": [
+        "salary transfer",
+        "benefits",
+        "fees"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-005",
+      "category": "retail_finance",
+      "question": {
+        "en": "How can I apply for personal finance?",
+        "ar": "كيف يمكنني التقدم للحصول على التمويل الشخصي؟"
+      },
+      "answer": {
+        "en": "You can apply by going to the nearest branch or through the online banking application.",
+        "ar": "يمكنك التقدم من خلال التوجه لأقرب فرع أو من خلال تطبيق online banking."
+      },
+      "tags": [
+        "apply",
+        "personal finance",
+        "branch",
+        "app"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-006",
+      "category": "retail_finance",
+      "question": {
+        "en": "How is the return rate calculated?",
+        "ar": "كيف يتم احتساب معدل العائد؟"
+      },
+      "answer": {
+        "en": "The return rate is calculated according to the prices announced by the bank at the time the finance request is submitted.",
+        "ar": "يتم احتساب معدل العائد وفقاً للأسعار المعلنة من قبل البنك وقت تقديم طلب الحصول على التمويل."
+      },
+      "tags": [
+        "return rate",
+        "interest",
+        "announced prices"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-007",
+      "category": "retail_finance",
+      "question": {
+        "en": "What are administrative fees and how are they paid?",
+        "ar": "ما المقصود بالمصاريف الإدارية وكيف تُسدد؟"
+      },
+      "answer": {
+        "en": "Administrative fees are the fees the customer bears in return for the procedures of obtaining the finance. They are paid by deducting a percentage once, when the finance is disbursed.",
+        "ar": "هي المصاريف التي يتحملها العميل مقابل إجراءات الحصول على التمويل. ويتم سدادها بخصم نسبة المصاريف الإدارية مرة واحدة عند صرف التمويل."
+      },
+      "tags": [
+        "administrative fees",
+        "one-time"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-008",
+      "category": "retail_finance",
+      "question": {
+        "en": "Is the customer insured when getting finance?",
+        "ar": "هل يتم التأمين على العميل عند الحصول على التمويل؟"
+      },
+      "answer": {
+        "en": "Yes. The customer's life is insured free of charge, with regard to Murabaha by agency (Islamic cash finance with Takaful insurance).",
+        "ar": "نعم، يتم التأمين على حياة العميل مجاناً فيما يخص المرابحة بالوكالة (التمويل النقدي الإسلامي بتأمين تكافلي)."
+      },
+      "tags": [
+        "insurance",
+        "life",
+        "takaful",
+        "free"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-009",
+      "category": "retail_finance",
+      "question": {
+        "en": "What does refinancing a cash loan against personal guarantee mean, and when can it be done?",
+        "ar": "ما المقصود بتجديد القرض النقدي بالضمان الشخصي ومتى يمكن عمله؟"
+      },
+      "answer": {
+        "en": "Refinancing (renewing) a loan means getting a new loan, closing the old one and paying the difference to the customer. It can be done 3 months after the disbursement date of the previous loan, and there is no maximum limit on the number of times it can be done.",
+        "ar": "المقصود بالاستعاضة (تجديد القرض) الحصول على قرض جديد وغلق القرض القديم وصرف الفرق للعميل. ويمكن عملها بعد مرور 3 أشهر من تاريخ صرف القرض السابق، وبدون حد أقصى لعدد مرات الاستعاضة."
+      },
+      "tags": [
+        "refinance",
+        "renewal",
+        "3 months"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-010",
+      "category": "retail_finance",
+      "question": {
+        "en": "Can Banque Misr pay off finance I took from another bank?",
+        "ar": "هل يمكن لبنك مصر سداد تمويلات حصلت عليها من بنك آخر؟"
+      },
+      "answer": {
+        "en": "Yes. The debt can be settled with the other banks, with the customer exempted from 50% of the administrative fees, within the limit of the purchased debt.",
+        "ar": "نعم، يمكن سداد المديونية طرف البنوك الأخرى مع إعفاء العميل من 50% من المصاريف الإدارية في حدود المديونية المشتراة."
+      },
+      "tags": [
+        "debt transfer",
+        "settle other bank",
+        "50% fee waiver"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-011",
+      "category": "retail_finance",
+      "question": {
+        "en": "Can a joint real estate loan be granted to a husband and wife?",
+        "ar": "هل يمكن منح قرض تمويل عقاري مشترك للزوج والزوجة؟"
+      },
+      "answer": {
+        "en": "Yes, a loan can be granted jointly to the husband and wife.",
+        "ar": "نعم، يمكن منح قرض زوج وزوجة معاً."
+      },
+      "tags": [
+        "real estate",
+        "joint",
+        "spouses"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-012",
+      "category": "retail_finance",
+      "question": {
+        "en": "How are installments paid on real estate loans?",
+        "ar": "ما طريقة سداد الأقساط في قروض التمويل العقاري؟"
+      },
+      "answer": {
+        "en": "For individuals' real estate finance products: fixed monthly installments. For the Central Bank initiatives: a fixed installment or a decreasing installment, according to the customer's wish.",
+        "ar": "بالنسبة لمنتجات التمويل العقاري للأفراد: أقساط شهرية ثابتة. وبالنسبة لمبادرات البنك المركزي: قسط ثابت أو قسط متناقص حسب رغبة العميل."
+      },
+      "tags": [
+        "real estate",
+        "installments",
+        "fixed",
+        "decreasing"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-013",
+      "category": "retail_finance",
+      "question": {
+        "en": "Who values the unit being financed, and who pays the valuer's fees?",
+        "ar": "من يقوم بتقييم الوحدة محل التمويل ومن يتحمل مصاريف المقيم العقاري؟"
+      },
+      "answer": {
+        "en": "Real estate valuation is carried out by valuation experts accredited by the Central Bank of Egypt. For individuals' real estate finance products the customer bears the valuer's fees; for the Central Bank initiatives the bank bears them.",
+        "ar": "يتم التقييم العقاري عن طريق خبراء التقييم المعتمدين لدى البنك المركزي المصري. وبالنسبة لمنتجات التمويل العقاري للأفراد يتحمل العميل مصاريف المقيم، وبالنسبة لمبادرات البنك المركزي يتحمل البنك مصاريف المقيم."
+      },
+      "tags": [
+        "valuation",
+        "valuer fees",
+        "central bank"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-014",
+      "category": "retail_finance",
+      "question": {
+        "en": "What types of units can be financed under individuals' real estate loans?",
+        "ar": "ما أنواع الوحدات التي يمكن تمويلها ضمن قروض التمويل العقاري للأفراد؟"
+      },
+      "answer": {
+        "en": "Units that are registered in the real estate registry, units that can be temporarily assigned, and units inside a compound with or without a sale ban on the unit.",
+        "ar": "يتم تمويل الوحدات المسجلة بالشهر العقاري، والقابلة للتنازل المؤقت، والوحدات داخل كمبوند مع إمكانية حظر لبيع الوحدة أو بدون حظر بيع للوحدة."
+      },
+      "tags": [
+        "real estate",
+        "unit types"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-015",
+      "category": "retail_finance",
+      "question": {
+        "en": "How is a finishing/upgrade loan disbursed?",
+        "ar": "كيف يتم صرف قيمة قرض منتج التشطيب والتحسين؟"
+      },
+      "answer": {
+        "en": "The loan is disbursed in two instalments: 50% of the finance value is paid by issuing a bank cheque or transferring it to the current account of the engineer or consulting office, to start the work; the other 50% is paid two months later, after the first stage has been completed and the contractor has carried out the work.",
+        "ar": "يتم صرف قيمة القرض على دفعتين: إصدار شيك مصرفي أو تحويله إلى الحساب الجاري لصالح المهندس أو المكتب الاستشاري بنسبة 50% فقط من قيمة التمويل عند تنفيذ القرض، و50% الأخرى يتم صرفها بعد شهرين وبعد الانتهاء من المرحلة الأولى من تنفيذ المقاول للوحدة."
+      },
+      "tags": [
+        "finishing",
+        "upgrade",
+        "disbursement",
+        "50%"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-016",
+      "category": "retail_finance",
+      "question": {
+        "en": "Who bears the insurance of the residential unit in real estate loans?",
+        "ar": "من يتحمل تكلفة التأمين على الوحدة السكنية في قروض التمويل العقاري؟"
+      },
+      "answer": {
+        "en": "Insurance against fire risks and additional hazards is borne by the customer.",
+        "ar": "يتم التأمين ضد مخاطر الحريق والأخطار الإضافية ويتحمل قيمتها العميل."
+      },
+      "tags": [
+        "insurance",
+        "fire",
+        "real estate"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-017",
+      "category": "retail_finance",
+      "question": {
+        "en": "What are the conditions for the 3% middle-income initiative?",
+        "ar": "ما شروط التقدم لمبادرة متوسطي الدخل 3%؟"
+      },
+      "answer": {
+        "en": "The maximum income is EGP 10,000 for an individual and EGP 14,000 for a married person or family; the unit must be fully finished and ready for living; and the maximum value of the residential unit to be financed is EGP 1.4 million. The administrative fees are 1% of the loan value.",
+        "ar": "الحد الأقصى لدخل الفرد الأعزب 10 آلاف جنيه وللمتزوج 14 ألف للأسرة، ويجب أن تكون الوحدة كاملة التشطيب وجاهزة للسكن، والحد الأقصى لقيمة الوحدة السكنية المراد تمويلها 1.4 مليون. والمصاريف الإدارية 1% من قيمة القرض."
+      },
+      "tags": [
+        "initiative",
+        "3%",
+        "middle income",
+        "1.4 million"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-018",
+      "category": "retail_finance",
+      "question": {
+        "en": "What are the conditions for the 8% middle-income initiative?",
+        "ar": "ما شروط التقدم لمبادرة متوسطي الدخل 8%؟"
+      },
+      "answer": {
+        "en": "The maximum income is EGP 40,000 for an individual and EGP 50,000 for a married person or family; the unit must be fully finished and ready for living; and the maximum value of the residential unit to be financed is EGP 2.5 million. There are no administrative fees for this initiative.",
+        "ar": "الحد الأقصى لدخل الفرد الأعزب 40 ألف جنيه وللمتزوج 50 ألف للأسرة، ويجب أن تكون الوحدة كاملة التشطيب وجاهزة للسكن، والحد الأقصى لقيمة الوحدة السكنية المراد تمويلها 2.5 مليون. ولا توجد مصاريف إدارية في هذه المبادرة."
+      },
+      "tags": [
+        "initiative",
+        "8%",
+        "middle income",
+        "2.5 million"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-019",
+      "category": "retail_finance",
+      "question": {
+        "en": "Which residential units can be financed under the middle-income initiative?",
+        "ar": "ما الوحدات السكنية التي يجوز تمويلها لمبادرة متوسطي الدخل؟"
+      },
+      "answer": {
+        "en": "Units belonging to the Social Housing and Real Estate Finance Support Fund; units registered in the real estate registry; units belonging to the urban communities authorities; and units inside a compound or belonging to one of the developers or associations.",
+        "ar": "الوحدات السكنية التابعة لصندوق الإسكان الاجتماعي ودعم التمويل العقاري، والوحدات السكنية المسجلة بالشهر العقاري، والوحدات السكنية التابعة لأجهزة المدن، والوحدات السكنية داخل كمبوند أو تابعة لأحد المطورين أو الجمعيات."
+      },
+      "tags": [
+        "initiative",
+        "unit types"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "RET-020",
+      "category": "retail_finance",
+      "question": {
+        "en": "How many times can I benefit from the real estate finance initiatives, and does the finance include a maintenance deposit?",
+        "ar": "كم عدد مرات الاستفادة من مبادرات التمويل العقاري، وهل يشمل التمويل وديعة الصيانة؟"
+      },
+      "answer": {
+        "en": "The customer or the family may benefit from the initiative for one residential unit only, provided that neither the customer nor the family has benefited from previous real estate finance initiatives. For the middle-income initiative the finance includes the maintenance deposit, up to a maximum of 10% of the unit price.",
+        "ar": "يحق للعميل أو الأسرة الاستفادة من المبادرة لوحدة سكنية واحدة فقط، وبشرط عدم استفادة العميل والأسرة من مبادرات التمويل العقاري السابقة. ويشمل التمويل في مبادرة متوسطي الدخل قيمة وديعة الصيانة وبحد أقصى 10% من سعر الوحدة السكنية."
+      },
+      "tags": [
+        "initiative",
+        "once",
+        "maintenance deposit",
+        "10%"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf"
+    },
+    {
+      "id": "CRD-001",
+      "category": "cards",
+      "question": {
+        "en": "What credit cards does Banque Misr offer and what benefits do they have?",
+        "ar": "ما البطاقات الائتمانية التي يقدمها بنك مصر وما مميزاتها؟"
+      },
+      "answer": {
+        "en": "Banque Misr issues several types of credit cards, with personal guarantee or secured by savings instruments held at the bank. Benefits include a grace period for paying usage of up to 57 days and a 5% of monthly usage requirement as stated by the bank; several ways to pay the monthly dues; an unlimited number of supplementary cards; purchases and cash withdrawals locally and abroad, and online purchases with offers and discounts at many merchants; installment of purchases and cash withdrawals over different periods with no minimum or maximum amount; free SMS on card issue or renewal, on any purchase showing the remaining limit, and on the monthly statement with the minimum payment; and free airport lounge access around the world plus other services for Mastercard Titanium, Platinum (Visa/Mastercard) and World / World Elite cardholders.",
+        "ar": "يصدر بنك مصر أنواعاً متعددة من البطاقات الائتمانية بالضمان الشخصي أو بضمان الأوعية الادخارية المملوكة لدى البنك، ومن مميزاتها: فترة سماح لسداد الاستخدامات تصل إلى 57 يوماً وبنسبة 5% من قيمة الاستخدامات الشهرية كما ورد بالمصدر، وإمكانية سداد المستحق شهرياً بطرق متعددة، وإصدار عدد من البطاقات الإضافية بدون حد أقصى، وتنفيذ عمليات الشراء والسحب النقدي محلياً ودولياً والشراء عبر الإنترنت مع عروض وتخفيضات لدى مجموعة كبيرة من التجار، وتقسيط عمليات الشراء والسحب النقدي على فترات مختلفة دون حد أدنى أو أقصى، ورسائل SMS مجانية عند إصدار أو تجديد البطاقة وعند أي عملية شراء متضمنة المتبقي من حد البطاقة وعند صدور بيان العمليات الشهري بالحد الأدنى المطلوب سداده، والدخول مجاناً إلى صالات استراحات المسافرين في مطارات حول العالم وخدمات أخرى لحاملي ماستركارد تيتانيوم والبلاتينية (فيزا/ماستركارد) وبطاقات World وWorld Elite."
+      },
+      "tags": [
+        "credit card",
+        "57 days",
+        "installments",
+        "supplementary",
+        "lounge"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CRD-002",
+      "category": "cards",
+      "question": {
+        "en": "What debit cards are available?",
+        "ar": "ما بطاقات الخصم الفوري المتاحة؟"
+      },
+      "answer": {
+        "en": "Debit cards are issued in Egyptian pounds and US dollars on the customer's accounts (current or savings) and are used for purchases, cash withdrawals locally and abroad, and online purchases within the set usage limits. Types include Classic, Gold, Tahya Misr Gold, Titanium, Platinum, World and World Elite. They come with free SMS on issue/renewal and on every purchase, and lounge access plus other services for Titanium, World and World Elite holders.",
+        "ar": "بطاقات الخصم الفوري هي بطاقات بالعملة المحلية والدولار الأمريكي على حسابات العميل المختلفة (جارية أو توفير)، وتُستخدم في عمليات الشراء والسحب النقدي محلياً ودولياً وفي الشراء عبر الإنترنت وفقاً لحدود الاستخدام المقررة. ومن أنواعها: الكلاسيك والذهبية وتحيا مصر الذهبية وتيتانيوم والبلاتينية ووورلد ووورلد إيليت. وتشمل رسائل SMS مجانية عند الإصدار أو التجديد وعند أي عملية شراء، والدخول لصالات المطارات وخدمات أخرى لحاملي تيتانيوم ووورلد ووورلد إيليت."
+      },
+      "tags": [
+        "debit card",
+        "classic",
+        "gold",
+        "titanium",
+        "platinum",
+        "world"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CRD-003",
+      "category": "cards",
+      "question": {
+        "en": "What prepaid cards does Banque Misr offer?",
+        "ar": "ما البطاقات المدفوعة مقدماً التي يقدمها بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr offers prepaid cards including the Hawalati card (issued free from all branches to receive remittances from abroad), internet cards, and Teens cards for young people under 16, which are issued without needing a current or savings account. They are issued from all branches and allow cash withdrawals, purchases, online use and access to offers and discounts.",
+        "ar": "يقدم بنك مصر مجموعة من البطاقات المدفوعة مقدماً منها بطاقة حوالتي (تصدر مجاناً من كافة الفروع لاستقبال الحوالات الواردة من الخارج)، وبطاقات الإنترنت، وبطاقات Teens التي تصدر للشباب أقل من 16 سنة دون الحاجة إلى فتح حساب جاري أو توفير. وتصدر من كافة فروع البنك وتتيح السحب النقدي والمشتريات والاستخدام على الإنترنت والحصول على العروض والتخفيضات."
+      },
+      "tags": [
+        "prepaid",
+        "teens",
+        "hawalati",
+        "under 16"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CRD-004",
+      "category": "cards",
+      "question": {
+        "en": "What is the BM Rewards Club?",
+        "ar": "ما هو برنامج المكافآت BM Rewards Club؟"
+      },
+      "answer": {
+        "en": "BM Rewards Club is the bank's rewards program. Reward points are earned on every purchase made locally or internationally with the Banque Misr cards specified in the program. Points can be redeemed for electronic vouchers (E-Vouchers) to use at participating merchants, for products from participating merchants shipped to your address, for travel (air tickets, hotels, car rental), for mobile phone top-up, or as cash back to your payment card. To log in and manage points, visit www.bmrewardsclub.com.",
+        "ar": "برنامج المكافآت BM Rewards Club هو برنامج مكافآت بنك مصر. يتم احتساب نقاط مكافآت عن كل عملية شراء منفذة محلياً ودولياً ببطاقات بنك مصر المحددة بالبرنامج. ويمكن استعاضة قيمة النقاط بقسائم شراء إلكترونية (E-Vouchers) لاستخدامها لدى شبكة التجار المشاركين، أو بمنتجات من التجار المشاركين تُشحن على عنوانك، أو بالسفر (تذاكر طيران وفنادق وتأجير سيارات)، أو بشحن الهاتف المحمول، أو بنقود Cash Back تُحوَّل إلى بطاقة الدفع. وللدخول وإدارة النقاط يرجى زيارة الموقع www.bmrewardsclub.com."
+      },
+      "tags": [
+        "rewards",
+        "points",
+        "cash back",
+        "vouchers"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "CRD-005",
+      "category": "cards",
+      "question": {
+        "en": "What are the World and World Elite credit cards?",
+        "ar": "ما هي بطاقات وورلد ووورلد إيليت الائتمانية؟"
+      },
+      "answer": {
+        "en": "World and World Elite are Banque Misr – Mastercard credit cards (World Elite introduced for the first time in Egypt). Banque Misr – Mastercard Titanium is another credit card in the range. The BMVIP service also gives its customers World and World Elite direct debit Mastercards.",
+        "ar": "وورلد ووورلد إيليت بطاقات بنك مصر – ماستركارد الائتمانية (وورلد إيليت لأول مرة في مصر). كما توجد بطاقة بنك مصر – ماستركارد تيتانيوم الائتمانية. وتقدم خدمة BMVIP لعملائها بطاقتي الخصم المباشر وورلد ووورلد إيليت من ماستركارد."
+      },
+      "tags": [
+        "world",
+        "world elite",
+        "titanium",
+        "mastercard"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "VIP-001",
+      "category": "vip_wealth_insurance",
+      "question": {
+        "en": "What is the BMVIP service?",
+        "ar": "ما هي خدمة كبار العملاء BMVIP؟"
+      },
+      "answer": {
+        "en": "BMVIP is Banque Misr's service for VIP customers, launched in cooperation with Mastercard. It gives customers World and World Elite direct debit Mastercards, dedicated service areas inside selected branches across Egypt for full privacy, a current account with an increasing daily return according to the balance, exemption from cheque book issuance fees and some commissions and fees, free Lounge Key airport lounge membership, free stays at the Starwood hotels and resorts chain, free membership in local and international concierge services through a mobile app (hotel booking, travel tickets, airport reception and transfer to the hotel), free Discovery membership in the global hotel alliance, and travel problems insurance.",
+        "ar": "خدمة BMVIP أطلقها البنك بالتعاون مع ماستركارد لكبار العملاء، وتشمل بطاقتي الخصم المباشر وورلد ووورلد إيليت ماستركارد، وأماكن خدمة مميزة داخل فروع مختارة على مستوى الجمهورية للاستفادة بالخصوصية التامة، وحساباً جارياً ذو عائد يومي تصاعدي وفقاً لرصيد الحساب، وإعفاء من رسوم إصدار دفتر الشيكات ومن بعض العمولات والمصاريف، وعضوية مجانية في برنامج Lounge Key لصالات المطارات، وإقامة مجانية في مجموعة فنادق ومنتجعات ستاروود العالمية، وعضوية مجانية في خدمات المساعدة الشخصية الكونسيرج المحلية والدولية من خلال تطبيق موبايل (حجز الفندق وتذاكر السفر والاستقبال في المطار والتوصيل إلى الفندق)، وعضوية ديسكفري المجانية من التحالف الفندقي العالمي، والتأمين ضد مشكلات السفر."
+      },
+      "tags": [
+        "BMVIP",
+        "vip",
+        "lounge",
+        "concierge",
+        "starwood"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "VIP-002",
+      "category": "vip_wealth_insurance",
+      "question": {
+        "en": "What wealth management services are available?",
+        "ar": "ما خدمات إدارة الثروات المتاحة؟"
+      },
+      "answer": {
+        "en": "The international wealth management unit at Banque Misr Dubai opens all types of accounts for senior Egyptian and foreign customers, with personal portfolio management and private banking services such as international government and corporate treasury bonds, sukuk, investment funds and private investments.",
+        "ar": "تختص إدارة الثروات الدولية بفتح كافة أنواع الحسابات في بنك مصر دبي لكبار العملاء المصريين والأجانب، مع خدمة إدارة المحافظ الشخصية وتقديم الخدمات المصرفية الخاصة مثل سندات الخزانة الدولية للشركات والحكومات والصكوك وصناديق الاستثمار والاستثمارات الخاصة."
+      },
+      "tags": [
+        "wealth management",
+        "dubai",
+        "private banking"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "VIP-003",
+      "category": "vip_wealth_insurance",
+      "question": {
+        "en": "What bank insurance programs does Banque Misr offer?",
+        "ar": "ما برامج التأمين البنكي التي يقدمها بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr offers insurance services and programs in partnership with Allianz Egypt, serving families and corporate customers, with flexibility in premiums, insured amounts, age and timing. Programs include: a future program for your children's education, a retirement program, a family protection program, a protection and investment program, and the five-year future program. More details are on the bank's website.",
+        "ar": "يقدم البنك خدمات وبرامج تأمينية بالاشتراك مع شركة أليانز مصر تخدم القطاع العائلي وقطاع الشركات، وتتميز بالمرونة في تحديد الأقساط والمبالغ التأمينية والسن والوقت المناسبين. ومن البرامج: برنامج المستقبل لتعليم أبنائك، وبرنامج مستقبلك للتقاعد، وبرنامج مستقبلك لحماية أسرتك، وبرنامج مستقبلك للحماية والاستثمار، وبرنامج المستقبل الخماسية. وللمزيد يرجى زيارة موقع البنك."
+      },
+      "tags": [
+        "insurance",
+        "allianz",
+        "retirement",
+        "education"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "INV-001",
+      "category": "investment_funds",
+      "question": {
+        "en": "What are the benefits of investing in Banque Misr investment funds?",
+        "ar": "ما مميزات الاستثمار في صناديق استثمار بنك مصر؟"
+      },
+      "answer": {
+        "en": "Benefits include professional management; diversification of investments across securities of different sectors; lower risk thanks to the scale of the fund; a range of investment objectives (for example funds investing in fixed-income bonds); easy redemption (from the issuing bank for open funds, or by selling on the stock exchange for closed funds, if available); daily purchase of units for individuals and institutions, Egyptian or foreign, with a minimum of one unit; and the possibility of borrowing against the units.",
+        "ar": "تشمل المميزات: توافر الإدارة المحترفة، وتنويع الاستثمارات في أوراق مالية من قطاعات مختلفة، وتخفيض المخاطر لتوافر إمكانيات مالية كبيرة للصندوق، وتنوع الأهداف الاستثمارية (مثل الصناديق التي تستثمر في السندات ذات العائد الثابت)، وسهولة استرداد الأموال (من البنك المصدر في الصناديق المفتوحة أو بيع الوثائق في البورصة في الصناديق المغلقة إن توفرت)، وإمكانية شراء الوثائق يومياً للأفراد والمؤسسات المصريين أو الأجانب بحد أدنى وثيقة واحدة، وإمكانية الاقتراض بضمان الوثائق."
+      },
+      "tags": [
+        "investment funds",
+        "diversification",
+        "redeem"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "INV-002",
+      "category": "investment_funds",
+      "question": {
+        "en": "What are the four Banque Misr investment funds?",
+        "ar": "ما صناديق استثمار بنك مصر الأربعة وأهدافها؟"
+      },
+      "answer": {
+        "en": "Fund 1 aims for the highest possible investment return, distributed quarterly, while preserving capital and reducing risk by diversifying across listed Egyptian stocks, government and non-government stocks and bonds, bank deposits, treasury bills and units of other funds. Fund 2 has the same aim and a similarly diversified portfolio. Fund 3 aims to maximize capital gains and the periodic return distributed to unit holders through a diversified portfolio of local securities (shares and bonds). Fund 4 is the Islamic fund (Al-Hisn): it invests in shares listed on the Egyptian stock exchange in line with Islamic law to achieve capital growth with a possible semi-annual return distribution, and spreads risk across Shariah-permitted sectors.",
+        "ar": "الصندوق الأول: استثمار الأموال لتحقيق وتوزيع أكبر عائد استثماري ممكن (يوزع ربع سنوي) مع الحفاظ على أموال الصندوق وتقليل المخاطر عبر تنويع المحفظة (الأسهم المقيدة في البورصة المصرية والأسهم والسندات الحكومية وغير الحكومية والودائع المصرفية وأذون الخزانة ووثائق الصناديق الأخرى). الصندوق الثاني: له الهدف نفسه ومحفظة متنوعة مشابهة. الصندوق الثالث: تعظيم الأرباح الرأسمالية والعائد الدوري الموزع على حملة الوثائق من خلال الاستثمار في محفظة متنوعة من الأوراق المالية المحلية من أسهم وسندات. الصندوق الرابع الإسلامي (الحصن): استثمار الأموال في الأسهم المقيدة بالبورصة المصرية وفقاً لأحكام الشريعة الإسلامية وتحقيق نمو رأسمالي مع إمكانية توزيع عائد نصف سنوي، وتوزيع المخاطر على القطاعات المباحة شرعاً."
+      },
+      "tags": [
+        "fund 1",
+        "fund 2",
+        "fund 3",
+        "hisn",
+        "islamic fund"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "INV-003",
+      "category": "investment_funds",
+      "question": {
+        "en": "What is the Omr fund?",
+        "ar": "ما هو صندوق العمر؟"
+      },
+      "answer": {
+        "en": "Omr fund aims to achieve the largest possible capital growth while preserving capital. It guarantees the paid-in capital after three years from the date of subscription, encourages saving by letting the investor pay the value in installments over ten years, includes life insurance for natural persons (when buying in installments), and reduces risk by diversifying investments across bonds, shares, treasury bills and investment fund units. It is promoted as a fund with a cumulative return and capital guarantee.",
+        "ar": "يهدف صندوق العمر إلى تحقيق أكبر نمو رأسمالي ممكن مع المحافظة على رأس المال، وضمان رأس المال المدفوع بعد ثلاث سنوات من تاريخ الاشتراك، وتشجيع الادخار عن طريق تقسيط قيمة ما يدفعه المستثمر على مدى عشر سنوات، ووجود ميزة التأمين على الحياة للأشخاص الطبيعيين (في حالة الشراء بالتقسيط)، والحد من المخاطر عن طريق تنويع الاستثمارات في السندات والأسهم وأذون الخزانة ووثائق الاستثمار. ويُقدَّم باعتباره صندوقاً ذا عائد تراكمي مع ضمان رأس المال."
+      },
+      "tags": [
+        "omr fund",
+        "capital guarantee",
+        "insurance"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "INV-004",
+      "category": "investment_funds",
+      "question": {
+        "en": "What are the Misr Capital monthly-income fund and the Egyptian Sports Fund?",
+        "ar": "ما صندوق مصر كابيتال ذو العائد الدوري (كل شهر) وصندوق الرياضة المصري؟"
+      },
+      "answer": {
+        "en": "The Misr Capital fund for investing in debt instruments with periodic (monthly) returns offers a medium-term savings and investment vehicle that maximizes return by diversifying across debt instruments issued by the government, banks and companies, bank savings certificates and similar funds, with periodic distributions; units can be bought daily with monthly distributions. The Egyptian Sports Fund is a charity fund whose profits and returns from its investments are directed until its end to spending on sports, tournaments and supporting athletes.",
+        "ar": "صندوق استثمار مصر كابيتال للاستثمار في أدوات الدين ذو العائد الدوري (كل شهر) وعاء ادخاري واستثماري متوسط الأجل لتعظيم العائد على الأموال المستثمرة بتنويع الاستثمارات على أدوات الدين الصادرة عن الحكومة والبنوك والشركات وشهادات الادخار البنكية ووثائق الصناديق المشابهة مع توزيعات دورية، ويتيح الشراء يومياً وتوزيعات شهرية. أما صندوق الرياضة المصري فهو صندوق خيري يوجه كافة الأرباح والعوائد الناتجة عن استثماراته حتى انتهائه للإنفاق على دعم وتمويل الرياضات وإقامة البطولات الرياضية ودعم الرياضيين."
+      },
+      "tags": [
+        "misr capital",
+        "monthly",
+        "sports fund",
+        "charity"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "SME-001",
+      "category": "sme_finance",
+      "question": {
+        "en": "What kinds of businesses and activities does Banque Misr finance?",
+        "ar": "ما أنواع المشروعات والأنشطة التي يمولها بنك مصر؟"
+      },
+      "answer": {
+        "en": "Banque Misr supports existing projects for development, expansion, replacement and renewal, and finances projects that create permanent jobs and increase production and income. It finances all types of establishments (sole proprietorships, partnerships and capital companies) in all industrial, commercial or service activities, professions, medical activities, clinics and pharmacies, and environmentally friendly activities.",
+        "ar": "يساهم البنك في مساندة المشروعات القائمة على التطوير والتوسع والإحلال والتجديد، من خلال تمويل مشروعات توفر فرص عمل دائمة وتعمل على زيادة الإنتاج والدخل، ويموّل كافة أنواع المنشآت الفردية وشركات الأشخاص وشركات الأموال في كافة الأنشطة سواء كانت صناعية أو تجارية أو خدمية أو مهن حرة، وكذلك الأنشطة الطبية والعيادات والصيدليات والأنشطة صديقة البيئة وغيرها."
+      },
+      "tags": [
+        "SME",
+        "business finance",
+        "projects"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "SME-002",
+      "category": "sme_finance",
+      "question": {
+        "en": "How much can micro projects borrow and for how long?",
+        "ar": "كم يمكن لمشروع متناهي الصغر اقتراضه ولأي مدة؟"
+      },
+      "answer": {
+        "en": "Micro-project finance ranges from EGP 30,000 up to EGP 400,000, covering commercial, industrial and service sectors, with repayment terms from 6 to 36 months.",
+        "ar": "يتم تمويل المشروعات متناهية الصغر بقيمة تبدأ من 30,000 جنيه وحتى 400,000 جنيه، ويتم تمويل القطاعات التجارية والصناعية والخدمية بمدد سداد تبدأ من 6 إلى 36 شهراً."
+      },
+      "tags": [
+        "micro",
+        "30,000",
+        "400,000"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "SME-003",
+      "category": "sme_finance",
+      "question": {
+        "en": "How much can small projects borrow and for how long?",
+        "ar": "كم يمكن لمشروع صغير اقتراضه ولأي مدة؟"
+      },
+      "answer": {
+        "en": "Small projects are financed through short, medium and long-term loans to finance working capital, machinery and equipment (local and imported, new or used) and means of transport. Loan values range from EGP 100,000 to EGP 8 million to finance existing and new activities, with terms from one year to 5 years including the grace period, according to the nature of the project.",
+        "ar": "يتم تمويل المشروعات الصغيرة من خلال قروض قصيرة ومتوسطة وطويلة الأجل لتمويل رأس المال العامل ولتمويل الآلات والمعدات المحلية والمستوردة (الجديدة أو المستعملة) ووسائل النقل. تتراوح قيمة القرض من 100 ألف جنيه حتى 8 مليون جنيه لتمويل الأنشطة القائمة والجديدة، وتتراوح مدة القرض من سنة وحتى 5 سنوات متضمنة فترة السماح طبقاً لطبيعة المشروع."
+      },
+      "tags": [
+        "small business",
+        "100,000",
+        "8 million"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "SME-004",
+      "category": "sme_finance",
+      "question": {
+        "en": "How are medium-sized projects financed?",
+        "ar": "كيف يتم تمويل المشروعات المتوسطة؟"
+      },
+      "answer": {
+        "en": "Financing solutions for medium-sized projects are provided according to the credit study of the project.",
+        "ar": "يتم تقديم الحلول التمويلية للمشروعات المتوسطة طبقاً للدراسة الائتمانية للمشروع."
+      },
+      "tags": [
+        "medium",
+        "credit study"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "SME-005",
+      "category": "sme_finance",
+      "question": {
+        "en": "What non-financial services does Banque Misr offer to small businesses (Nile Pioneers)?",
+        "ar": "ما الخدمات غير المالية التي يقدمها بنك مصر لأصحاب المشروعات (رواد النيل)؟"
+      },
+      "answer": {
+        "en": "Non-financial services are provided to owners of small, medium and micro projects, such as consulting, training and capacity building, marketing, networking and other services that support projects, through the bank's business development centers (Nile Pioneers).",
+        "ar": "يتم تقديم الخدمات غير المالية لأصحاب المشروعات الصغيرة والمتوسطة ومتناهية الصغر، مثل خدمات الاستشارات وخدمات تدريبية وبناء القدرات والتسويق والتشبيك وغيرها من الخدمات المهمة لدعم المشروعات، عن طريق مراكز تطوير الأعمال ببنك مصر (رواد النيل)."
+      },
+      "tags": [
+        "non-financial",
+        "nile pioneers",
+        "training"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "SME-006",
+      "category": "sme_finance",
+      "question": {
+        "en": "What is Banque Misr Express for small project loans?",
+        "ar": "ما هو بنك مصر إكسبريس لتمويل المشروعات الصغيرة؟"
+      },
+      "answer": {
+        "en": "It is described as the first digital loan in Egypt for financing small projects online: the simplest steps and procedures, the fastest turnaround of about 5 days, and online without going to the bank.",
+        "ar": "هو قرض تمويل المشروعات الصغيرة أونلاين، ويوصف بأنه أول قرض ديجيتال في مصر، بأبسط الخطوات والإجراءات وأسرع وقت (5 أيام) وأونلاين دون الذهاب للبنك."
+      },
+      "tags": [
+        "express",
+        "digital loan",
+        "online"
+      ],
+      "source_file": "BM_services_guide_for_Egyptians_residing_abroad.pdf"
+    },
+    {
+      "id": "RGT-001",
+      "category": "customer_rights",
+      "question": {
+        "en": "What is the Customer Rights Protection Policy?",
+        "ar": "ما هي سياسة حماية حقوق العملاء؟"
+      },
+      "answer": {
+        "en": "It is Banque Misr's policy for protecting customer rights in line with the Central Bank of Egypt's customer protection regulations issued in February 2019. It sets principles for fair treatment, disclosure and transparency, financial awareness, data protection, protection in digital services, and a fair complaint-handling process, and applies to the bank, payment service providers, their agents and outsourced service providers.",
+        "ar": "هي سياسة بنك مصر لحماية حقوق العملاء بما يتماشى مع لوائح حماية العملاء الصادرة عن البنك المركزي المصري في فبراير 2019. وتضع مبادئ المعاملة العادلة والإفصاح والشفافية ونشر الوعي المصرفي وحماية البيانات وحماية العملاء في الخدمات الرقمية وآلية عادلة لمعالجة الشكاوى، وتسري على البنك ومقدمي خدمات الدفع ووكلائهم ومقدمي الخدمات الخارجيين."
+      },
+      "tags": [
+        "policy",
+        "central bank",
+        "2019"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-002",
+      "category": "customer_rights",
+      "question": {
+        "en": "What happens if my request for a product or service is declined?",
+        "ar": "ماذا يحدث إذا رُفض طلبي للحصول على منتج أو خدمة؟"
+      },
+      "answer": {
+        "en": "The bank must give you a clear explanation if a product or service request is declined, in compliance with the relevant laws, and allow you to retrieve the original documents you submitted during the application.",
+        "ar": "يلتزم البنك بتقديم تفسير واضح في حالة رفض طلب الحصول على منتج أو خدمة وفقاً للقوانين ذات الصلة، ويتيح للعميل استرداد المستندات الأصلية التي قدمها أثناء التقدم بالطلب."
+      },
+      "tags": [
+        "declined request",
+        "explanation",
+        "documents"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-003",
+      "category": "customer_rights",
+      "question": {
+        "en": "Will I be refunded for unauthorized charges on a stolen card or fraud?",
+        "ar": "هل أحصل على تعويض عن المعاملات غير المصرح بها على بطاقة مسروقة أو عمليات احتيال؟"
+      },
+      "answer": {
+        "en": "Yes. Unauthorized charges related to stolen cards or fraudulent account activity are refunded, unless the bank's records or the service provider's systems confirm that the transaction was authorized by the customer or resulted from fraudulent actions on their part. Customers must promptly notify the bank of any unauthorized transaction, fraud or misappropriation of funds on their cards.",
+        "ar": "نعم. يتم رد أي مبالغ غير مصرح بها متعلقة ببطاقات مسروقة أو أنشطة احتيالية على الحساب، ما لم تؤكد سجلات البنك أو أنظمة مقدم الخدمة أن المعاملة تمت بتصريح من العميل أو نتجت عن أفعال احتيالية من جانبه. ويجب على العميل إخطار البنك فوراً بأي معاملات غير مصرح بها أو احتيال أو استيلاء على الأموال في بطاقات الخصم أو الائتمان."
+      },
+      "tags": [
+        "refund",
+        "stolen card",
+        "fraud",
+        "unauthorized"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-004",
+      "category": "customer_rights",
+      "question": {
+        "en": "How quickly must the bank handle a dispute about data it sent me?",
+        "ar": "ما المدة التي يلتزم بها البنك لمعالجة نزاع بشأن بيانات أرسلها لي؟"
+      },
+      "answer": {
+        "en": "The bank reviews customer disputes related to data sent by the bank and takes corrective action within 15 business days of receiving the complaint. This does not apply to disputes involving third-party transactions, which may need more processing time while the customer is kept informed.",
+        "ar": "يراجع البنك نزاعات العملاء المتعلقة بالبيانات المرسلة من البنك ويتخذ إجراءً تصحيحياً خلال 15 يوم عمل من استلام الشكوى. ولا ينطبق ذلك على النزاعات المتعلقة بمعاملات الأطراف الثالثة، التي قد تتطلب وقتاً إضافياً للمعالجة مع إبقاء العميل على علم."
+      },
+      "tags": [
+        "dispute",
+        "15 business days",
+        "corrective action"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-005",
+      "category": "customer_rights",
+      "question": {
+        "en": "Can I be charged fees that were not stated in my contract?",
+        "ar": "هل يمكن تحصيل رسوم لم تُذكر في عقدي؟"
+      },
+      "answer": {
+        "en": "No. Customers are not charged fees or commissions that are not explicitly stated in the contract, not activated, or not communicated before executing electronic transactions.",
+        "ar": "لا. لا يتم تحميل العملاء برسوم أو عمولات غير منصوص عليها صراحة في العقد أو غير مفعلة أو لم يتم إبلاغهم بها قبل تنفيذ المعاملات الإلكترونية."
+      },
+      "tags": [
+        "fees",
+        "contract",
+        "transparency"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-006",
+      "category": "customer_rights",
+      "question": {
+        "en": "Can I cancel a banking product I have not activated?",
+        "ar": "هل يمكنني إلغاء منتج مصرفي لم أفعّله؟"
+      },
+      "answer": {
+        "en": "Yes. Customers can cancel unactivated banking products or services (excluding savings products) within two business days from contract signing, without fees or penalties.",
+        "ar": "نعم. يمكن للعملاء إلغاء المنتجات أو الخدمات المصرفية غير المفعّلة (باستثناء منتجات الادخار) خلال يومي عمل من توقيع العقد، دون رسوم أو غرامات."
+      },
+      "tags": [
+        "cancel",
+        "two business days",
+        "unactivated"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-007",
+      "category": "customer_rights",
+      "question": {
+        "en": "What fees apply if I terminate a contract by repaying early?",
+        "ar": "ما الرسوم عند إنهاء العقد بالسداد الكلي أو الجزئي المبكر؟"
+      },
+      "answer": {
+        "en": "Reasonable fees and penalties are applied based on the actual costs incurred in cases of contract termination due to full or partial repayment. The bank must also clearly outline the cancellation process for any product or service, including the required notice period and applicable deductions.",
+        "ar": "يتم تطبيق رسوم وغرامات معقولة بناءً على التكاليف الفعلية المتكبدة في حالات إنهاء العقد بسبب السداد الكلي أو الجزئي. كما يلتزم البنك بتوضيح إجراءات إلغاء أي منتج أو خدمة مصرفية بوضوح، بما في ذلك فترة الإخطار المطلوبة والخصومات المطبقة."
+      },
+      "tags": [
+        "early repayment",
+        "fees",
+        "cancellation"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-008",
+      "category": "customer_rights",
+      "question": {
+        "en": "What does the bank do after I fully repay my loan?",
+        "ar": "ماذا يفعل البنك بعد سداد مديونيتي بالكامل؟"
+      },
+      "answer": {
+        "en": "The bank promptly updates the customer's credit status with the Egyptian Credit Bureau (I-Score) upon full repayment of outstanding obligations, and gives the customer their signed checks and a clearance statement detailing the facility and its settlement.",
+        "ar": "يقوم البنك فوراً بتحديث الحالة الائتمانية للعميل لدى الشركة المصرية للاستعلام الائتماني (I-Score) عند السداد الكامل للالتزامات القائمة، ويسلّم العميل الشيكات الموقعة وإفادة مخالصة توضح التسهيل وتسويته."
+      },
+      "tags": [
+        "I-Score",
+        "clearance",
+        "repayment",
+        "checks"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-009",
+      "category": "customer_rights",
+      "question": {
+        "en": "Can the bank change my interest rate or fees without telling me?",
+        "ar": "هل يمكن للبنك تغيير سعر العائد أو الرسوم دون إخطاري؟"
+      },
+      "answer": {
+        "en": "No. The bank obtains the customer's consent before changing fixed interest rates on credit facilities, and notifies customers through the communication method agreed in the contract of any adjustments to variable interest rates, fees or charges and their impact on the facility terms.",
+        "ar": "لا. يحصل البنك على موافقة العميل قبل تغيير أسعار العائد الثابتة على التسهيلات الائتمانية، ويخطر العملاء بالوسيلة المتفق عليها في العقد بأي تعديل في أسعار العائد المتغيرة أو الرسوم أو الأعباء وأثرها على شروط التسهيل."
+      },
+      "tags": [
+        "interest rate change",
+        "consent",
+        "notification"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-010",
+      "category": "customer_rights",
+      "question": {
+        "en": "What information must the bank give me before I sign a contract?",
+        "ar": "ما المعلومات التي يلتزم البنك بإعطائها لي قبل توقيع أي عقد؟"
+      },
+      "answer": {
+        "en": "Comprehensive, accurate and non-misleading information, so that the customer fully understands the product terms, key benefits and potential risks: the rights and obligations of both parties, pricing, applicable fees and penalties, termination procedures and consequences, and available alternative products and services. Actual interest rates and service fees are disclosed through branches, the website, the media and direct communications, and all terms and conditions are on the bank's website.",
+        "ar": "معلومات شاملة ودقيقة وغير مضللة تضمن إدراك العميل التام لشروط المنتج وفوائده الرئيسية ومخاطره المحتملة، وتشمل حقوق والتزامات الطرفين والتسعير والرسوم والغرامات المطبقة وإجراءات إنهاء العقد وآثاره والمنتجات والخدمات البديلة المتاحة. ويتم الإفصاح عن أسعار العائد الفعلية ورسوم الخدمات المصرفية عبر الفروع والموقع الإلكتروني ووسائل الإعلام والتواصل المباشر، وتتوفر جميع الشروط والأحكام على موقع البنك."
+      },
+      "tags": [
+        "disclosure",
+        "transparency",
+        "contract"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-011",
+      "category": "customer_rights",
+      "question": {
+        "en": "What help is available if I am facing financial difficulty?",
+        "ar": "ما المساعدة المتاحة إذا واجهت صعوبات مالية؟"
+      },
+      "answer": {
+        "en": "The bank must give customers facing financial difficulties adequate information on their rights and obligations under the contract, including restructuring or settlement options so that repayment plans fit their financial circumstances, and notify them of all measures that will be taken in case of non-payment.",
+        "ar": "يلتزم البنك بتزويد العملاء المتعثرين بمعلومات كافية عن حقوقهم والتزاماتهم وفقاً لشروط العقد، بما في ذلك خيارات إعادة الهيكلة أو التسوية لتتوافق خطط السداد مع ظروفهم المالية، وإخطارهم بكافة الإجراءات التي ستُتخذ في حالة عدم السداد."
+      },
+      "tags": [
+        "financial difficulty",
+        "restructuring",
+        "settlement"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-012",
+      "category": "customer_rights",
+      "question": {
+        "en": "How long can I get account statements for?",
+        "ar": "إلى متى يمكنني الحصول على كشوف الحساب؟"
+      },
+      "answer": {
+        "en": "The bank fulfills customer requests for detailed account statements or transaction records for up to five years, within a reasonable time, even if the customer has stopped banking with Banque Misr or any payment service provider, agent or representative. Statements include at least all transactions in the period, opening and closing balances, accrued interest, fees or charges, and the time frame for reviewing and confirming the statement.",
+        "ar": "يلبي البنك طلبات العملاء للحصول على كشوف حساب تفصيلية أو سجلات معاملات لمدة تصل إلى خمس سنوات خلال مدة زمنية معقولة، حتى لو توقف العميل عن التعامل مع بنك مصر أو أي مقدم خدمة دفع أو وكيل أو ممثل. وتتضمن الكشوف كحد أدنى جميع المعاملات خلال الفترة وأرصدة الافتتاح والإقفال والفوائد والرسوم والأعباء المستحقة والمدة الزمنية لمراجعة الكشف وتأكيد دقته."
+      },
+      "tags": [
+        "statements",
+        "five years",
+        "records"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-013",
+      "category": "customer_rights",
+      "question": {
+        "en": "Is my account and personal data confidential?",
+        "ar": "هل حسابي وبياناتي الشخصية سرية؟"
+      },
+      "answer": {
+        "en": "Yes. All financial and personal customer data is strictly confidential and may not be used or shared with third parties without the customer's prior written consent, except as required by law. The bank provides a secure framework for protecting this data, and discloses account information only after verifying the identity of the customer or their legally authorized representative.",
+        "ar": "نعم. تعتبر جميع البيانات المالية والشخصية للعملاء سرية للغاية ولا يجوز استخدامها أو مشاركتها مع أطراف ثالثة دون موافقة كتابية مسبقة من العميل، إلا إذا اقتضت القوانين واللوائح ذلك. ويوفر البنك إطاراً آمناً لحماية هذه البيانات، ولا يفصح عن معلومات الحساب إلا بعد التحقق من هوية العميل أو ممثله القانوني المفوض."
+      },
+      "tags": [
+        "confidentiality",
+        "data protection",
+        "consent"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-014",
+      "category": "customer_rights",
+      "question": {
+        "en": "Who is responsible if I lose money because of a system failure, fraud or a cyber breach in digital banking?",
+        "ar": "من المسؤول إذا تكبدت خسائر بسبب عطل نظام أو احتيال أو اختراق إلكتروني في الخدمات الرقمية؟"
+      },
+      "answer": {
+        "en": "The bank bears full responsibility for damages or losses incurred by the customer due to service disruptions, system malfunctions, fraud or cybersecurity breaches, except where the problem arises from customer negligence or circumstances beyond the bank's control. The bank must also notify customers of all electronic transactions on their accounts, provide a 24/7 hotline and secure channels to report theft, loss or fraud, and keep business continuity plans for its electronic channels.",
+        "ar": "يتحمل البنك المسؤولية الكاملة عن أي أضرار أو خسائر يتكبدها العميل بسبب انقطاع الخدمة أو أعطال الأنظمة أو الاحتيال أو الاختراقات الإلكترونية، إلا في حالة نشوء المشكلة بسبب إهمال العميل أو ظروف خارجة عن إرادة البنك. كما يلتزم البنك بإخطار العملاء بجميع المعاملات الإلكترونية على حساباتهم، وإتاحة خط ساخن على مدار الساعة وقنوات آمنة للإبلاغ عن السرقة أو الفقد أو الاحتيال، ووجود خطط لاستمرارية الأعمال للقنوات الإلكترونية."
+      },
+      "tags": [
+        "digital banking",
+        "liability",
+        "hotline",
+        "cybersecurity"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-015",
+      "category": "customer_rights",
+      "question": {
+        "en": "What should I do to protect my account and cards?",
+        "ar": "ماذا يجب أن أفعل لحماية حسابي وبطاقاتي؟"
+      },
+      "answer": {
+        "en": "Do not disclose sensitive account details to third parties; protect your debit and credit cards, usernames and PINs; read contracts carefully and give the bank accurate information; keep your personal information updated with the bank (home and work addresses, email, phone numbers); and promptly notify the bank of any unauthorized transaction, fraud or misappropriation on your cards. The bank also raises awareness about financial scams and how to recognize them.",
+        "ar": "لا تفصح عن أي تفاصيل حساسة لحسابك لأطراف ثالثة، واتخذ الاحتياطات اللازمة لحماية بطاقات الخصم والائتمان وأسماء المستخدمين والأرقام السرية، واقرأ العقود بعناية وقدّم معلومات دقيقة وواضحة للبنك، وحدّث بياناتك الشخصية لدى البنك (عناوين السكن والعمل والبريد الإلكتروني وأرقام الهاتف)، وأبلغ البنك فوراً بأي معاملات غير مصرح بها أو احتيال أو استيلاء على الأموال في بطاقاتك. كما يعمل البنك على نشر الوعي بعمليات الاحتيال المالي وكيفية التعرف عليها."
+      },
+      "tags": [
+        "security",
+        "PIN",
+        "fraud awareness",
+        "update details"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-016",
+      "category": "customer_rights",
+      "question": {
+        "en": "How do I submit a complaint to Banque Misr?",
+        "ar": "كيف أقدم شكوى إلى بنك مصر؟"
+      },
+      "answer": {
+        "en": "Complaints can be submitted through complaint boxes at branches, digital channels, a dedicated recorded phone line, or direct communication with the Customer Rights Protection Unit. A standardized complaint form is available at branches and through digital channels (submission date, customer details, preferred contact method, space for supporting documents). The complaint process is free of charge. You can also use the contact center on 19888.",
+        "ar": "يمكن تقديم الشكاوى عبر صناديق الشكاوى بالفروع أو القنوات الرقمية أو خط هاتفي مخصص (مع تسجيل المكالمات وإعلام العميل) أو التواصل المباشر مع وحدة حماية حقوق العملاء. ويتوفر نموذج شكوى موحد بالفروع وعبر القنوات الرقمية (تاريخ التقديم وبيانات العميل ووسيلة التواصل المفضلة ومساحة لإرفاق المستندات). وآلية معالجة الشكاوى مجانية. كما يمكنك الاتصال بمركز الاتصال على 19888."
+      },
+      "tags": [
+        "complaint",
+        "how to",
+        "form",
+        "channels"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-017",
+      "category": "customer_rights",
+      "question": {
+        "en": "How long does the bank take to register and respond to my complaint?",
+        "ar": "كم يستغرق البنك لتسجيل شكواي والرد عليها؟"
+      },
+      "answer": {
+        "en": "Your complaint is registered and you receive a reference number for follow-up within a maximum of two business days. The bank responds within a maximum of 15 business days from the date of receipt, except for complaints involving external entities, in which case you are told the estimated processing time.",
+        "ar": "يتم تسجيل الشكوى وإعطاؤك رقماً مرجعياً للمتابعة خلال يومي عمل كحد أقصى، ويرد البنك خلال 15 يوم عمل كحد أقصى من تاريخ الاستلام، باستثناء الشكاوى المتعلقة بمعاملات تتضمن جهات خارجية، وفي هذه الحالة يُبلغ العميل بالمدة التقديرية للمعالجة."
+      },
+      "tags": [
+        "complaint",
+        "timeline",
+        "reference number",
+        "15 business days"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-018",
+      "category": "customer_rights",
+      "question": {
+        "en": "What if I do not accept the bank's response to my complaint?",
+        "ar": "ماذا لو لم أقبل رد البنك على شكواي؟"
+      },
+      "answer": {
+        "en": "Notify the bank in writing within 15 business days of receiving the response, stating the reasons for rejection; otherwise it is considered implicit acceptance. The bank then reviews and reassesses the complaint and gives a final response within 15 business days, with clear justification, and informs you of your right to escalate to the Central Bank of Egypt if you remain unsatisfied.",
+        "ar": "أخطر البنك كتابةً خلال 15 يوم عمل من تاريخ استلام الرد مع بيان أسباب الرفض، وإلا اعتُبر ذلك قبولاً ضمنياً للرد. وعندها يراجع البنك الشكوى ويعيد تقييمها ويقدم رداً نهائياً خلال 15 يوم عمل مع مبررات واضحة، ويبلغك بحقك في التصعيد إلى البنك المركزي المصري إذا بقيت غير راضٍ."
+      },
+      "tags": [
+        "complaint",
+        "reject response",
+        "escalate",
+        "written notice"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-019",
+      "category": "customer_rights",
+      "question": {
+        "en": "Can I complain directly to the Central Bank of Egypt?",
+        "ar": "هل يمكنني تقديم شكوى مباشرة إلى البنك المركزي المصري؟"
+      },
+      "answer": {
+        "en": "Not first. Complaints cannot be submitted to the Central Bank of Egypt before being addressed through the bank's internal complaint resolution process. You can escalate to the Central Bank if you do not receive a response within the designated time frame at any stage, or if you remain unsatisfied with the bank's final response.",
+        "ar": "ليس أولاً. لا يمكن تقديم الشكاوى إلى البنك المركزي المصري قبل معالجتها من خلال آلية حل الشكاوى الداخلية للبنك. ويمكنك التصعيد إلى البنك المركزي إذا لم تحصل على رد خلال المدة المحددة في أي مرحلة، أو إذا بقيت غير راضٍ عن الرد النهائي للبنك."
+      },
+      "tags": [
+        "escalation",
+        "central bank",
+        "complaint"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-020",
+      "category": "customer_rights",
+      "question": {
+        "en": "Is the bank responsible for services provided by third-party providers and agents?",
+        "ar": "هل البنك مسؤول عن الخدمات التي يقدمها مقدمو الخدمات الخارجيون والوكلاء؟"
+      },
+      "answer": {
+        "en": "Yes. Banque Misr assumes full responsibility for all services provided by outsourced service providers, payment service providers, their agents or representatives, and customers are informed of this accountability.",
+        "ar": "نعم. يتحمل بنك مصر المسؤولية الكاملة عن جميع الخدمات المقدمة من مقدمي الخدمات الخارجيين ومقدمي خدمات الدفع ووكلائهم أو ممثليهم، ويتم إبلاغ العملاء بهذه المسؤولية."
+      },
+      "tags": [
+        "outsourcing",
+        "accountability",
+        "agents"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "RGT-021",
+      "category": "customer_rights",
+      "question": {
+        "en": "How long does the bank keep complaint records?",
+        "ar": "كم مدة احتفاظ البنك بسجلات الشكاوى؟"
+      },
+      "answer": {
+        "en": "The bank keeps records of all complaints for a minimum of five years from the date of submission, and sends the Central Bank of Egypt a quarterly report on customer complaints.",
+        "ar": "يحتفظ البنك بسجلات جميع الشكاوى لمدة لا تقل عن خمس سنوات من تاريخ التقديم، ويرفع تقريراً ربع سنوي عن شكاوى العملاء إلى البنك المركزي المصري."
+      },
+      "tags": [
+        "records",
+        "five years",
+        "reporting"
+      ],
+      "source_file": "Customer_Rights_Policy_EN_Translation.pdf"
+    },
+    {
+      "id": "FAW-001",
+      "category": "installment_payment",
+      "question": {
+        "en": "Can I pay my Banque Misr loan or murabaha installments through Fawry?",
+        "ar": "هل يمكنني سداد أقساط قرض أو مرابحة بنك مصر عبر فوري؟"
+      },
+      "answer": {
+        "en": "Yes. Banque Misr lets customers with loans and murabahas pay due installments through the Fawry electronic payment network, at Fawry outlets and branches across Egypt. The amount is deposited into the customer's account instantly.",
+        "ar": "نعم. يتيح بنك مصر لعملائه الحاصلين على قروض ومرابحات إمكانية سداد الأقساط أو المديونية المستحقة من خلال شبكة الدفع الإلكتروني التابعة لشركة فوري، وذلك عبر منافذ وفروع فوري المنتشرة في مختلف أنحاء الجمهورية. ويتم إيداع المبلغ بحساب العميل بشكل لحظي."
+      },
+      "tags": [
+        "fawry",
+        "installments",
+        "payment"
+      ],
+      "source_file": "دفع_القروض_عن_طريق_منافذ_فوري.pdf"
+    },
+    {
+      "id": "FAW-002",
+      "category": "installment_payment",
+      "question": {
+        "en": "How much does it cost to pay through Fawry?",
+        "ar": "كم تبلغ تكلفة السداد عبر فوري؟"
+      },
+      "answer": {
+        "en": "The service fee depends on the amount paid: 1% for EGP 1 to 1,000; 0.9% for EGP 1,001 to 5,000; and 0.8% for amounts above EGP 5,000.",
+        "ar": "تعتمد تكلفة الخدمة على قيمة المبلغ: 1% للمبالغ من 1 إلى 1000 جنيه، و0.9% للمبالغ من 1001 إلى 5000 جنيه، و0.8% للمبالغ الأكبر من 5000 جنيه."
+      },
+      "tags": [
+        "fawry",
+        "fees",
+        "1%",
+        "0.9%",
+        "0.8%"
+      ],
+      "source_file": "دفع_القروض_عن_طريق_منافذ_فوري.pdf"
+    },
+    {
+      "id": "FAW-003",
+      "category": "installment_payment",
+      "question": {
+        "en": "Is the Fawry receipt proof that my whole debt is settled?",
+        "ar": "هل إيصال فوري دليل على سداد كامل مديونيتي؟"
+      },
+      "answer": {
+        "en": "No. The receipt issued by the Fawry device is evidence of the payment operation only, not of settling the full amount due to the bank. Paying through Fawry does not release or discharge the customer from any obligation unless the full amount due is paid under the terms of the contract between the customer and the bank.",
+        "ar": "لا. يُعد الإيصال الصادر من جهاز فوري دليلاً على تنفيذ عملية الدفع فقط، ولا يُعد في حد ذاته دليلاً على تسوية كامل المديونية المستحقة لصالح البنك. ولا يترتب على عملية السداد من خلال منافذ فوري أي إخلاء أو إبراء ذمة إلا إذا تم السداد الكامل للمديونية المستحقة وفقاً لشروط وأحكام العقد المبرم بين العميل والبنك."
+      },
+      "tags": [
+        "fawry",
+        "receipt",
+        "proof",
+        "settlement"
+      ],
+      "source_file": "دفع_القروض_عن_طريق_منافذ_فوري.pdf"
+    },
+    {
+      "id": "FAW-004",
+      "category": "installment_payment",
+      "question": {
+        "en": "Should I keep my Fawry receipt, and who do I contact with questions?",
+        "ar": "هل أحتفظ بإيصال فوري ومع من أتواصل عند وجود استفسار؟"
+      },
+      "answer": {
+        "en": "Yes. Keep the receipt issued by the Fawry device as a reference until you confirm the amount has been posted to your account at the bank. All terms in your loan contract and the credit facility agreement remain valid and enforceable without amendment. For any inquiry or complaint, contact Banque Misr customer service through the official channels or call 19888, around the clock.",
+        "ar": "نعم، يوصى بالاحتفاظ بإيصال السداد الصادر من جهاز فوري كمرجع لحين التأكد من قيد المبلغ بحساب العميل لدى البنك. وتظل جميع الشروط والأحكام الواردة في عقد القرض والتسهيل الائتماني المبرم بين العميل والبنك سارية وواجبة التطبيق دون أي تعديل. وفي حال وجود أي استفسار أو شكوى يرجى التواصل مع خدمة عملاء بنك مصر عبر القنوات الرسمية أو الاتصال على 19888 على مدار 24 ساعة."
+      },
+      "tags": [
+        "fawry",
+        "receipt",
+        "19888",
+        "terms"
+      ],
+      "source_file": "دفع_القروض_عن_طريق_منافذ_فوري.pdf"
+    },
+    {
+      "id": "JOB-001",
+      "category": "careers",
+      "question": {
+        "en": "How can I apply to join Banque Misr?",
+        "ar": "كيف يمكنني التقدم للانضمام إلى بنك مصر؟"
+      },
+      "answer": {
+        "en": "Interested applicants should check the bank's main recruitment channel to see open jobs through its LinkedIn page; applying is done through LinkedIn.",
+        "ar": "يجب على المتقدمين المهتمين تفقد موقعنا الإلكتروني (مجالات التعيين الرئيسية) للتحقق من الوظائف الشاغرة من خلال صفحتنا على LinkedIn، والتقديم يكون عبر LinkedIn."
+      },
+      "tags": [
+        "jobs",
+        "apply",
+        "linkedin"
+      ],
+      "source_file": "FAQ_of_how_to_apply_to_jobs.pdf"
+    },
+    {
+      "id": "JOB-002",
+      "category": "careers",
+      "question": {
+        "en": "What if I can't find a job that suits me on the website?",
+        "ar": "ماذا لو لم أجد وظيفة مناسبة عبر الموقع الإلكتروني؟"
+      },
+      "answer": {
+        "en": "You can still apply: check the vacancies on the bank's LinkedIn page and apply through LinkedIn, and you can also send your CV to BMrecruitment@banquemisr.com. The bank will keep it in its database for future reference.",
+        "ar": "نعم، يمكنك التقدم: تفقد الوظائف الشاغرة من خلال صفحتنا على LinkedIn وقدّم عبرها، كما يمكنك إرسال سيرتك الذاتية المحدثة على BMrecruitment@banquemisr.com وسنحتفظ بها في قاعدة بياناتنا للرجوع إليها في المستقبل."
+      },
+      "tags": [
+        "cv",
+        "email",
+        "database"
+      ],
+      "source_file": "FAQ_of_how_to_apply_to_jobs.pdf"
+    },
+    {
+      "id": "JOB-003",
+      "category": "careers",
+      "question": {
+        "en": "How many chances do I get to take the assessment test?",
+        "ar": "كم مرة تتاح لي فرصة الاختبار التقييمي؟"
+      },
+      "answer": {
+        "en": "You have one chance at the test, so you should be well prepared for it.",
+        "ar": "لديك فرصة واحدة للاختبار، ولذلك يجب أن تكون مستعداً جيداً له."
+      },
+      "tags": [
+        "assessment test",
+        "one chance"
+      ],
+      "source_file": "FAQ_of_how_to_apply_to_jobs.pdf"
+    },
+    {
+      "id": "JOB-004",
+      "category": "careers",
+      "question": {
+        "en": "When will I hear back after applying?",
+        "ar": "متى يصلني الرد بعد التقدم؟"
+      },
+      "answer": {
+        "en": "You will receive confirmation that your application has been received within 48 hours, and you will then be contacted if your qualifications and experience match the vacant position.",
+        "ar": "سيصلك تأكيد باستلام طلبك خلال 48 ساعة، ومن ثم يتم التواصل معك في حال مطابقة مؤهلاتك وخبراتك للوظيفة الشاغرة."
+      },
+      "tags": [
+        "response time",
+        "48 hours"
+      ],
+      "source_file": "FAQ_of_how_to_apply_to_jobs.pdf"
+    },
+    {
+      "id": "JOB-005",
+      "category": "careers",
+      "question": {
+        "en": "Do I need banking experience to apply to Banque Misr?",
+        "ar": "هل يجب أن تكون لدي خبرة في العمل بالقطاع المصرفي للتقدم إلى بنك مصر؟"
+      },
+      "answer": {
+        "en": "It depends on the job or position you apply for. Many technical positions require experience in a similar place or position, unlike some other jobs that do not require it.",
+        "ar": "هذا يعتمد على الوظيفة أو المنصب الذي تتقدم لشغله. العديد من المناصب الفنية / التقنية تتطلب خبرة في مكان أو وظيفة مماثلة، على عكس بعض الوظائف الأخرى التي لا تشترط ذلك."
+      },
+      "tags": [
+        "experience",
+        "requirements"
+      ],
+      "source_file": "FAQ_of_how_to_apply_to_jobs.pdf"
+    }
+  ]
+}

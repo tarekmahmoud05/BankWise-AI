@@ -1,0 +1,796 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr car loan eligibility rules",
+    "version": "1.0",
+    "language": "en",
+    "bank": "Banque Misr",
+    "product": "Car loan pre-eligibility check",
+    "purpose": "Advice and information only. The assistant checks self-declared answers against these rules and refers likely-eligible customers to the nearest branch. It does not receive or verify documents.",
+    "disclaimer": "This is a preliminary, non-binding indication, not an approval. The final decision belongs to Banque Misr after document review and its own credit assessment.",
+    "source_legend": {
+      "C": "Banque Misr car loan calculator data",
+      "S": "Banque Misr car loan descriptive text",
+      "A": "Project assumption, indicative only, to be validated"
+    },
+    "out_of_scope": [
+      "Savings-instrument holder program (no calculator data)"
+    ]
+  },
+  "decisions": {
+    "LIKELY_ELIGIBLE": {
+      "label": "Likely eligible",
+      "message_template": "Based on what you told me, you appear to meet the conditions for the program \"{program_name}\". The estimated monthly installment is {monthly_payment} EGP at an annual rate of {annual_rate}% over {tenor_months} months. Please visit your nearest Banque Misr branch to complete your application. Here is the list of documents the bank usually asks for there.",
+      "next_step": "release_document_checklist_and_refer_to_branch"
+    },
+    "NOT_ELIGIBLE": {
+      "label": "Not eligible at the moment",
+      "message_template": "Based on what you told me, you do not currently meet this condition: {reason}. {suggestion}",
+      "next_step": "explain_failed_rules_and_suggest_changes"
+    },
+    "NEED_MORE_INFO": {
+      "label": "More information needed",
+      "message_template": "To check your eligibility I still need the following: {missing_fields}.",
+      "next_step": "ask_only_for_missing_fields"
+    }
+  },
+  "decision_logic": [
+    "1. Collect inputs. If any always-required input is missing, return NEED_MORE_INFO and ask only for the missing fields.",
+    "2. Evaluate the global rules R1 and R2. If any fails, return NOT_ELIGIBLE with that reason.",
+    "3. Select candidate programs with R6 (employment type, car condition, employer inputs).",
+    "4. Evaluate the deemed-income programs first (they do not need income inputs): R3, R4, R5, R7. If at least one passes, return LIKELY_ELIGIBLE.",
+    "5. If none passes and income inputs are missing, return NEED_MORE_INFO for net_monthly_income, existing_monthly_installments and months_in_current_job_or_business, but only if a non-deemed program is still a candidate after R6.",
+    "6. Evaluate the remaining candidate programs with R3, R4, R5, R7, R8, R9, R10. If at least one passes, return LIKELY_ELIGIBLE.",
+    "7. If several programs pass, present the one with the lowest monthly installment and mention the others briefly.",
+    "8. If no program passes, return NOT_ELIGIBLE and report the failed rules of the candidate program with the fewest failures (ties: lowest interest rate), including suggestions."
+  ],
+  "inputs": [
+    {
+      "id": "nationality",
+      "label": "Nationality",
+      "type": "enum",
+      "values": [
+        {
+          "id": "egyptian",
+          "label": "Egyptian"
+        },
+        {
+          "id": "other",
+          "label": "Other"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "age",
+      "label": "Age in years",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "id": "employment_type",
+      "label": "Employment type",
+      "type": "enum",
+      "values": [
+        {
+          "id": "government_or_public_sector",
+          "label": "Government / public sector employee"
+        },
+        {
+          "id": "private_sector",
+          "label": "Private sector employee"
+        },
+        {
+          "id": "self_employed",
+          "label": "Professional / self-employed / business owner"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "employer_undertaking",
+      "label": "Will the employer undertake to transfer the salary / installment?",
+      "type": "enum",
+      "values": [
+        {
+          "id": "with_salary_transfer",
+          "label": "Yes, with salary transfer"
+        },
+        {
+          "id": "without_salary_transfer",
+          "label": "Undertaking without transfer of dues (public sector)"
+        },
+        {
+          "id": "none",
+          "label": "No undertaking / not sure"
+        }
+      ],
+      "required": false,
+      "default": "none",
+      "ask_only_if": "employment_type != self_employed"
+    },
+    {
+      "id": "employer_contracted_with_bank",
+      "label": "Is the employer contracted with Banque Misr?",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "ask_only_if": "employment_type == government_or_public_sector"
+    },
+    {
+      "id": "car_condition",
+      "label": "Car condition",
+      "type": "enum",
+      "values": [
+        {
+          "id": "new",
+          "label": "New"
+        },
+        {
+          "id": "used",
+          "label": "Used"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "car_price",
+      "label": "Car price (EGP)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "loan_amount",
+      "label": "Requested loan amount (EGP)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "tenor_months",
+      "label": "Requested tenor (months)",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "id": "net_monthly_income",
+      "label": "Net monthly income (EGP)",
+      "type": "number",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    },
+    {
+      "id": "existing_monthly_installments",
+      "label": "Total existing monthly loan / card installments (EGP, 0 if none)",
+      "type": "number",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    },
+    {
+      "id": "months_in_current_job_or_business",
+      "label": "Months in current job or business",
+      "type": "integer",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    }
+  ],
+  "programs": [
+    {
+      "id": "P1",
+      "name": "Deemed income – new car – financing up to 40%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 5000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 26.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 0.4
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "new_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P2",
+      "name": "Deemed income – new car – financing above 40% and up to 50%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 5000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 26.75,
+      "financing_ratio": {
+        "min_exclusive": 0.4,
+        "max_inclusive": 0.5
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "new_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P3",
+      "name": "Deemed income – used car – financing up to 50%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "used"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 2000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 26.95,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 0.5
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "used_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P4",
+      "name": "Deemed income – new car – financing above 50% and up to 60%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 5000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 27.25,
+      "financing_ratio": {
+        "min_exclusive": 0.5,
+        "max_inclusive": 0.6
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "new_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P5",
+      "name": "Deemed income – used car – financing above 50% and up to 60%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "used"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 2000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 27.35,
+      "financing_ratio": {
+        "min_exclusive": 0.5,
+        "max_inclusive": 0.6
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "used_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P6",
+      "name": "Employees – proof of income (salary certificate)",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 27.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P7",
+      "name": "Public-sector employees – proof of income – employer contracted with the bank",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector"
+        ],
+        "employer_contracted_with_bank": true
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 26.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P8",
+      "name": "Employees – employer undertaking to transfer salary / installment",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector"
+        ],
+        "employer_undertaking": [
+          "with_salary_transfer"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 26.25,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate",
+        "employer_undertaking"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P9",
+      "name": "Public-sector employees – employer undertaking without transfer of dues",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector"
+        ],
+        "employer_undertaking": [
+          "without_salary_transfer"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 26.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate",
+        "employer_undertaking"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P10",
+      "name": "Professionals and self-employed – proof of income",
+      "category": "self_employed",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 750000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 28.0,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "self_employed_income_proof"
+      ],
+      "source": "C"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "name": "Egyptian nationality",
+      "scope": "global",
+      "expression": "nationality == \"egyptian\"",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "NATIONALITY",
+        "message": "This loan is available to Egyptian nationals only.",
+        "suggestion": "You can ask a Banque Misr branch about other programs available to you."
+      }
+    },
+    {
+      "id": "R2",
+      "name": "Minimum borrower age",
+      "scope": "global",
+      "parameters": {
+        "min_age": 21
+      },
+      "expression": "age >= min_age",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "MIN_AGE",
+        "message": "The minimum age to borrow is {min_age} years.",
+        "suggestion": "You can apply once you reach {min_age} years of age."
+      }
+    },
+    {
+      "id": "R3",
+      "name": "Loan amount within the program range",
+      "scope": "program",
+      "expression": "program.min_loan_egp <= loan_amount <= program.max_loan_egp",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "LOAN_AMOUNT_RANGE",
+        "message": "The requested amount of {loan_amount} EGP is outside the range for this program ({min_loan} to {max_loan} EGP).",
+        "suggestion": "Choose an amount within this range."
+      }
+    },
+    {
+      "id": "R4",
+      "name": "Tenor within the program range",
+      "scope": "program",
+      "expression": "program.min_tenor_months <= tenor_months <= program.max_tenor_months",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "TENOR_RANGE",
+        "message": "The requested tenor of {tenor_months} months is outside the range for this program ({min_tenor} to {max_tenor} months).",
+        "suggestion": "Choose a tenor within this range."
+      }
+    },
+    {
+      "id": "R5",
+      "name": "Financing ratio within the program band",
+      "scope": "program",
+      "expression": "program.financing_ratio.min_exclusive < (loan_amount / car_price) <= program.financing_ratio.max_inclusive",
+      "notes": "Deemed-income programs are chosen by ratio band: new car up to 40%, 40-50%, 50-60%; used car up to 50%, 50-60%. Other programs only require loan_amount <= car_price. Above 60% no deemed-income program applies.",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "FINANCING_RATIO",
+        "message": "The requested loan is {ratio_pct}% of the car price, which is above the maximum financing ratio of {max_ratio_pct}% for this type of financing.",
+        "suggestion": "Increase your down payment or consider a lower-priced car."
+      }
+    },
+    {
+      "id": "R6",
+      "name": "Program matches employment type and car condition",
+      "scope": "program",
+      "expression": "all conditions in program.applies_when are satisfied by the applicant inputs",
+      "source": "C+S",
+      "indicative": false,
+      "notes": "Used cars are financed only under the deemed-income programs (P3, P5). Programs P6-P10 apply to new cars.",
+      "on_fail": {
+        "reason_code": "NO_MATCHING_PROGRAM",
+        "message": "No financing program matches your employment type and car condition.",
+        "suggestion": "A Banque Misr branch can tell you about other options."
+      }
+    },
+    {
+      "id": "R7",
+      "name": "Maximum age at loan maturity",
+      "scope": "program",
+      "parameters": {
+        "max_age_at_maturity": 65
+      },
+      "expression": "age + tenor_months / 12 <= max_age_at_maturity",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "AGE_AT_MATURITY",
+        "message": "Your age at the end of the loan would be about {age_at_maturity}, above the limit of {max_age_at_maturity}.",
+        "suggestion": "Choose a tenor of at most {max_tenor_for_age} months."
+      }
+    },
+    {
+      "id": "R8",
+      "name": "Debt burden ratio",
+      "scope": "program",
+      "applies_to": "non_deemed_programs",
+      "parameters": {
+        "max_dbr": 0.4
+      },
+      "expression": "(existing_monthly_installments + monthly_payment) / net_monthly_income <= max_dbr",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "DEBT_BURDEN",
+        "message": "With this loan, your monthly installments would be {dbr_pct}% of your income, above the {max_dbr_pct}% limit.",
+        "suggestion": "Choose a longer tenor (within the program limit) or a lower amount. The maximum comfortable loan for your income is about {max_affordable_loan} EGP."
+      }
+    },
+    {
+      "id": "R9",
+      "name": "Minimum net monthly income",
+      "scope": "program",
+      "applies_to": "non_deemed_programs",
+      "parameters": {
+        "min_net_monthly_income_egp": 8000
+      },
+      "expression": "net_monthly_income >= min_net_monthly_income_egp",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "MIN_INCOME",
+        "message": "The minimum net monthly income for this program is {min_income} EGP.",
+        "suggestion": "You may apply once your income reaches this level."
+      }
+    },
+    {
+      "id": "R10",
+      "name": "Minimum time in current job or business",
+      "scope": "program",
+      "applies_to": "non_deemed_programs",
+      "parameters": {
+        "min_months": 6
+      },
+      "expression": "months_in_current_job_or_business >= min_months",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "MIN_TENURE",
+        "message": "A minimum of {min_months} months in your current job or business is required.",
+        "suggestion": "You can apply once you complete {min_months} months."
+      }
+    }
+  ],
+  "formulas": {
+    "monthly_rate": "annual_interest_rate_pct / 100 / 12",
+    "monthly_payment": "loan_amount * (r + r / ((1 + r) ** tenor_months - 1)), where r = monthly_rate; round to 2 decimals",
+    "total_repayment": "monthly_payment * tenor_months",
+    "total_interest": "total_repayment - loan_amount",
+    "financing_ratio": "loan_amount / car_price",
+    "dbr": "(existing_monthly_installments + monthly_payment) / net_monthly_income",
+    "age_at_maturity": "age + tenor_months / 12",
+    "max_tenor_for_age": "floor((max_age_at_maturity - age) * 12)",
+    "max_affordable_loan": "(max_dbr * net_monthly_income - existing_monthly_installments) / (r + r / ((1 + r) ** tenor_months - 1))",
+    "source": "C"
+  },
+  "branch_handoff": {
+    "model_requires_documents": false,
+    "released_when": "LIKELY_ELIGIBLE",
+    "note": "The checklist is shown to the customer for the branch visit only. The assistant never asks for, receives or validates documents.",
+    "referral_message": "Please visit your nearest Banque Misr branch.",
+    "document_groups": {
+      "common": {
+        "label": "All applicants",
+        "documents": [
+          "Valid national ID (copy)",
+          "Original utility bill for the residence (gas, electricity, water or phone)"
+        ]
+      },
+      "new_car": {
+        "label": "New car",
+        "documents": [
+          "Approved price quotation from the dealer"
+        ]
+      },
+      "used_car": {
+        "label": "Used car",
+        "documents": [
+          "Vehicle license (copy)",
+          "Car insurance policy in favor of the bank, fully paid"
+        ]
+      },
+      "employee_salary_certificate": {
+        "label": "Employees",
+        "documents": [
+          "Monthly salary breakdown certificate"
+        ]
+      },
+      "employer_undertaking": {
+        "label": "Employer undertaking",
+        "documents": [
+          "Employer undertaking to transfer the salary / installment"
+        ]
+      },
+      "self_employed_income_proof": {
+        "label": "Professionals and self-employed",
+        "documents": [
+          "Tax card (copy)",
+          "Professional practice license / permit (professionals only)",
+          "Recent official commercial register extract (copy)",
+          "Bank statement for the last 6 months"
+        ]
+      },
+      "self_employed_deemed_extras": {
+        "label": "Self-employed under deemed-income programs",
+        "documents": [
+          "Recent official commercial register extract (copy)",
+          "Professional practice license / permit (professionals only)"
+        ]
+      }
+    },
+    "conditional_groups": [
+      {
+        "when": "program.category == \"deemed_income\" and employment_type == \"self_employed\"",
+        "groups": [
+          "self_employed_deemed_extras"
+        ]
+      }
+    ]
+  }
+}

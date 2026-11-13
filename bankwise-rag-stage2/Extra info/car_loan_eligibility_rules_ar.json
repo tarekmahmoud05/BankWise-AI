@@ -1,0 +1,796 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr car loan eligibility rules",
+    "version": "1.0",
+    "language": "ar",
+    "bank": "بنك مصر",
+    "product": "الفحص المبدئي لأهلية قرض السيارة",
+    "purpose": "للإرشاد والمعلومات فقط. يفحص المساعد إجابات العميل المصرح بها ذاتياً وفق هذه القواعد ويوجه المؤهلين مبدئياً إلى أقرب فرع. لا يستقبل المساعد المستندات ولا يتحقق منها.",
+    "disclaimer": "هذه إفادة مبدئية غير ملزمة وليست موافقة. القرار النهائي لبنك مصر بعد مراجعة المستندات وإجراء التقييم الائتماني الخاص به.",
+    "source_legend": {
+      "C": "بيانات حاسبة قروض السيارات لبنك مصر",
+      "S": "النص الوصفي لقرض السيارة من بنك مصر",
+      "A": "افتراض من المشروع، إرشادي فقط ويحتاج إلى تأكيد"
+    },
+    "out_of_scope": [
+      "برنامج أصحاب الأوعية الادخارية (لا توجد بيانات في الحاسبة)"
+    ]
+  },
+  "decisions": {
+    "LIKELY_ELIGIBLE": {
+      "label": "مؤهل مبدئياً",
+      "message_template": "بناءً على المعلومات التي ذكرتها، يبدو أنك تستوفي شروط برنامج \"{program_name}\". القسط الشهري التقديري {monthly_payment} جنيه بسعر عائد سنوي {annual_rate}% لمدة {tenor_months} شهراً. يرجى التوجه إلى أقرب فرع لبنك مصر لاستكمال طلبك. وفيما يلي قائمة المستندات التي يطلبها البنك عادة في الفرع.",
+      "next_step": "release_document_checklist_and_refer_to_branch"
+    },
+    "NOT_ELIGIBLE": {
+      "label": "غير مؤهل حالياً",
+      "message_template": "بناءً على المعلومات التي ذكرتها، لا تستوفي حالياً الشرط التالي: {reason}. {suggestion}",
+      "next_step": "explain_failed_rules_and_suggest_changes"
+    },
+    "NEED_MORE_INFO": {
+      "label": "معلومات ناقصة",
+      "message_template": "لأتمكن من فحص أهليتك أحتاج إلى المعلومات التالية: {missing_fields}.",
+      "next_step": "ask_only_for_missing_fields"
+    }
+  },
+  "decision_logic": [
+    "1. جمع المدخلات. إذا كان أي مدخل إلزامي ناقصاً يُرجع NEED_MORE_INFO ويُطلب الناقص فقط.",
+    "2. تقييم القواعد العامة R1 وR2. إذا فشلت إحداهما يُرجع NOT_ELIGIBLE مع السبب.",
+    "3. اختيار البرامج المرشحة بالقاعدة R6 (نوع العمل وحالة السيارة ومدخلات جهة العمل).",
+    "4. تقييم برامج الدخل الافتراضي أولاً (لا تحتاج مدخلات الدخل): R3 وR4 وR5 وR7. إذا نجح أحدها يُرجع LIKELY_ELIGIBLE.",
+    "5. إذا لم ينجح أي برنامج وكانت مدخلات الدخل ناقصة يُرجع NEED_MORE_INFO لطلب صافي الدخل والأقساط الحالية ومدة العمل، بشرط أن يبقى برنامج غير افتراضي مرشحاً بعد R6.",
+    "6. تقييم باقي البرامج المرشحة بالقواعد R3 وR4 وR5 وR7 وR8 وR9 وR10. إذا نجح أحدها يُرجع LIKELY_ELIGIBLE.",
+    "7. إذا نجح أكثر من برنامج يُعرض الأقل قسطاً شهرياً مع ذكر الباقي باختصار.",
+    "8. إذا لم ينجح أي برنامج يُرجع NOT_ELIGIBLE ويذكر القواعد الفاشلة للبرنامج الأقل إخفاقاً (عند التساوي الأقل سعر عائد) مع الاقتراحات."
+  ],
+  "inputs": [
+    {
+      "id": "nationality",
+      "label": "الجنسية",
+      "type": "enum",
+      "values": [
+        {
+          "id": "egyptian",
+          "label": "مصري"
+        },
+        {
+          "id": "other",
+          "label": "غير مصري"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "age",
+      "label": "العمر بالسنوات",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "id": "employment_type",
+      "label": "نوع العمل",
+      "type": "enum",
+      "values": [
+        {
+          "id": "government_or_public_sector",
+          "label": "موظف حكومي / قطاع عام"
+        },
+        {
+          "id": "private_sector",
+          "label": "موظف قطاع خاص"
+        },
+        {
+          "id": "self_employed",
+          "label": "صاحب مهنة / عمل حر / نشاط تجاري"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "employer_undertaking",
+      "label": "هل تتعهد جهة العمل بتحويل الراتب / القسط؟",
+      "type": "enum",
+      "values": [
+        {
+          "id": "with_salary_transfer",
+          "label": "نعم، مع تحويل الراتب"
+        },
+        {
+          "id": "without_salary_transfer",
+          "label": "تعهد بدون تحويل مستحقات (قطاع عام)"
+        },
+        {
+          "id": "none",
+          "label": "لا يوجد تعهد / غير متأكد"
+        }
+      ],
+      "required": false,
+      "default": "none",
+      "ask_only_if": "employment_type != self_employed"
+    },
+    {
+      "id": "employer_contracted_with_bank",
+      "label": "هل جهة العمل متعاقدة مع بنك مصر؟",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "ask_only_if": "employment_type == government_or_public_sector"
+    },
+    {
+      "id": "car_condition",
+      "label": "حالة السيارة",
+      "type": "enum",
+      "values": [
+        {
+          "id": "new",
+          "label": "جديدة"
+        },
+        {
+          "id": "used",
+          "label": "مستعملة"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "car_price",
+      "label": "سعر السيارة (جنيه)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "loan_amount",
+      "label": "مبلغ القرض المطلوب (جنيه)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "tenor_months",
+      "label": "مدة التمويل المطلوبة (بالشهور)",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "id": "net_monthly_income",
+      "label": "صافي الدخل الشهري (جنيه)",
+      "type": "number",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    },
+    {
+      "id": "existing_monthly_installments",
+      "label": "إجمالي الأقساط الشهرية الحالية (جنيه، 0 إن لم توجد)",
+      "type": "number",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    },
+    {
+      "id": "months_in_current_job_or_business",
+      "label": "عدد الشهور في العمل أو النشاط الحالي",
+      "type": "integer",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    }
+  ],
+  "programs": [
+    {
+      "id": "P1",
+      "name": "الدخل الافتراضي – السيارات الجديدة – نسبة التمويل 40%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 5000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 26.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 0.4
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "new_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P2",
+      "name": "الدخل الافتراضي – السيارات الجديدة – نسبة التمويل 50%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 5000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 26.75,
+      "financing_ratio": {
+        "min_exclusive": 0.4,
+        "max_inclusive": 0.5
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "new_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P3",
+      "name": "الدخل الافتراضي – السيارات المستعملة – نسبة التمويل 50%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "used"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 2000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 26.95,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 0.5
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "used_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P4",
+      "name": "الدخل الافتراضي – السيارات الجديدة – نسبة التمويل 60%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 5000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 27.25,
+      "financing_ratio": {
+        "min_exclusive": 0.5,
+        "max_inclusive": 0.6
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "new_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P5",
+      "name": "الدخل الافتراضي – السيارات المستعملة – نسبة التمويل 60%",
+      "category": "deemed_income",
+      "applies_when": {
+        "car_condition": [
+          "used"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector",
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 70000,
+      "max_loan_egp": 2000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 27.35,
+      "financing_ratio": {
+        "min_exclusive": 0.5,
+        "max_inclusive": 0.6
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7"
+      ],
+      "document_groups": [
+        "common",
+        "used_car"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P6",
+      "name": "الموظفين – بموجب شهادة دخل",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 27.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P7",
+      "name": "موظفو القطاع العام – إثبات دخل – جهة عمل متعاقدة مع البنك",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector"
+        ],
+        "employer_contracted_with_bank": true
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 26.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P8",
+      "name": "الموظفين – تعهد جهة العمل بتحويل الراتب / القسط",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector",
+          "private_sector"
+        ],
+        "employer_undertaking": [
+          "with_salary_transfer"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 26.25,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate",
+        "employer_undertaking"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P9",
+      "name": "الموظفين بتعهد من جهة العمل – قطاع عام بدون تعهد تحويل مستحقات",
+      "category": "employee",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "government_or_public_sector"
+        ],
+        "employer_undertaking": [
+          "without_salary_transfer"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 26.5,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "employee_salary_certificate",
+        "employer_undertaking"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "P10",
+      "name": "أصحاب المهن / الأعمال الحرة بموجب إثبات دخل",
+      "category": "self_employed",
+      "applies_when": {
+        "car_condition": [
+          "new"
+        ],
+        "employment_type": [
+          "self_employed"
+        ]
+      },
+      "min_loan_egp": 40000,
+      "max_loan_egp": 750000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 28.0,
+      "financing_ratio": {
+        "min_exclusive": 0.0,
+        "max_inclusive": 1.0
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R9",
+        "R10"
+      ],
+      "document_groups": [
+        "common",
+        "new_car",
+        "self_employed_income_proof"
+      ],
+      "source": "C"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "name": "الجنسية المصرية",
+      "scope": "global",
+      "expression": "nationality == \"egyptian\"",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "NATIONALITY",
+        "message": "هذا القرض متاح للمصريين فقط.",
+        "suggestion": "يمكنك الاستفسار في أقرب فرع لبنك مصر عن البرامج الأخرى المتاحة لك."
+      }
+    },
+    {
+      "id": "R2",
+      "name": "الحد الأدنى لعمر المقترض",
+      "scope": "global",
+      "parameters": {
+        "min_age": 21
+      },
+      "expression": "age >= min_age",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "MIN_AGE",
+        "message": "الحد الأدنى لعمر المقترض هو {min_age} عاماً.",
+        "suggestion": "يمكنك التقدم بالطلب عند بلوغك {min_age} عاماً."
+      }
+    },
+    {
+      "id": "R3",
+      "name": "مبلغ القرض ضمن حدود البرنامج",
+      "scope": "program",
+      "expression": "program.min_loan_egp <= loan_amount <= program.max_loan_egp",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "LOAN_AMOUNT_RANGE",
+        "message": "المبلغ المطلوب {loan_amount} جنيه خارج حدود هذا البرنامج (من {min_loan} إلى {max_loan} جنيه).",
+        "suggestion": "اختر مبلغاً ضمن هذا النطاق."
+      }
+    },
+    {
+      "id": "R4",
+      "name": "مدة التمويل ضمن حدود البرنامج",
+      "scope": "program",
+      "expression": "program.min_tenor_months <= tenor_months <= program.max_tenor_months",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "TENOR_RANGE",
+        "message": "المدة المطلوبة {tenor_months} شهراً خارج حدود هذا البرنامج (من {min_tenor} إلى {max_tenor} شهراً).",
+        "suggestion": "اختر مدة ضمن هذا النطاق."
+      }
+    },
+    {
+      "id": "R5",
+      "name": "نسبة التمويل ضمن شريحة البرنامج",
+      "scope": "program",
+      "expression": "program.financing_ratio.min_exclusive < (loan_amount / car_price) <= program.financing_ratio.max_inclusive",
+      "notes": "تُختار برامج الدخل الافتراضي حسب شريحة النسبة: السيارة الجديدة حتى 40% ثم 40–50% ثم 50–60%، والمستعملة حتى 50% ثم 50–60%. باقي البرامج تشترط فقط ألا يتجاوز القرض سعر السيارة. ما فوق 60% لا ينطبق أي برنامج دخل افتراضي.",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "FINANCING_RATIO",
+        "message": "القرض المطلوب يمثل {ratio_pct}% من سعر السيارة، وهي أعلى من الحد الأقصى لنسبة التمويل ({max_ratio_pct}%) لهذا النوع من التمويل.",
+        "suggestion": "قم بزيادة الدفعة المقدمة أو فكّر في سيارة بسعر أقل."
+      }
+    },
+    {
+      "id": "R6",
+      "name": "البرنامج يطابق نوع العمل وحالة السيارة",
+      "scope": "program",
+      "expression": "all conditions in program.applies_when are satisfied by the applicant inputs",
+      "source": "C+S",
+      "indicative": false,
+      "notes": "السيارات المستعملة تُموَّل فقط ضمن برامج الدخل الافتراضي (P3 وP5). برامج P6 إلى P10 تنطبق على السيارات الجديدة.",
+      "on_fail": {
+        "reason_code": "NO_MATCHING_PROGRAM",
+        "message": "لا يوجد برنامج تمويل مطابق لنوع عملك وحالة السيارة.",
+        "suggestion": "يمكن لأقرب فرع لبنك مصر إفادتك بالخيارات الأخرى."
+      }
+    },
+    {
+      "id": "R7",
+      "name": "الحد الأقصى للعمر عند نهاية القرض",
+      "scope": "program",
+      "parameters": {
+        "max_age_at_maturity": 65
+      },
+      "expression": "age + tenor_months / 12 <= max_age_at_maturity",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "AGE_AT_MATURITY",
+        "message": "عمرك عند نهاية القرض سيكون حوالي {age_at_maturity} عاماً، وهو أعلى من الحد الأقصى ({max_age_at_maturity}).",
+        "suggestion": "اختر مدة لا تتجاوز {max_tenor_for_age} شهراً."
+      }
+    },
+    {
+      "id": "R8",
+      "name": "نسبة الأقساط إلى الدخل",
+      "scope": "program",
+      "applies_to": "non_deemed_programs",
+      "parameters": {
+        "max_dbr": 0.4
+      },
+      "expression": "(existing_monthly_installments + monthly_payment) / net_monthly_income <= max_dbr",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "DEBT_BURDEN",
+        "message": "مع هذا القرض ستمثل أقساطك الشهرية {dbr_pct}% من دخلك، وهي أعلى من الحد ({max_dbr_pct}%).",
+        "suggestion": "اختر مدة أطول (ضمن حد البرنامج) أو مبلغاً أقل. الحد الأقصى المناسب لدخلك حوالي {max_affordable_loan} جنيه."
+      }
+    },
+    {
+      "id": "R9",
+      "name": "الحد الأدنى لصافي الدخل الشهري",
+      "scope": "program",
+      "applies_to": "non_deemed_programs",
+      "parameters": {
+        "min_net_monthly_income_egp": 8000
+      },
+      "expression": "net_monthly_income >= min_net_monthly_income_egp",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "MIN_INCOME",
+        "message": "الحد الأدنى لصافي الدخل الشهري لهذا البرنامج هو {min_income} جنيه.",
+        "suggestion": "يمكنك التقدم عندما يصل دخلك إلى هذا الحد."
+      }
+    },
+    {
+      "id": "R10",
+      "name": "الحد الأدنى لمدة العمل أو النشاط الحالي",
+      "scope": "program",
+      "applies_to": "non_deemed_programs",
+      "parameters": {
+        "min_months": 6
+      },
+      "expression": "months_in_current_job_or_business >= min_months",
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "MIN_TENURE",
+        "message": "يشترط قضاء {min_months} شهور على الأقل في العمل أو النشاط الحالي.",
+        "suggestion": "يمكنك التقدم بعد إتمام {min_months} شهور."
+      }
+    }
+  ],
+  "formulas": {
+    "monthly_rate": "annual_interest_rate_pct / 100 / 12",
+    "monthly_payment": "loan_amount * (r + r / ((1 + r) ** tenor_months - 1)), where r = monthly_rate; round to 2 decimals",
+    "total_repayment": "monthly_payment * tenor_months",
+    "total_interest": "total_repayment - loan_amount",
+    "financing_ratio": "loan_amount / car_price",
+    "dbr": "(existing_monthly_installments + monthly_payment) / net_monthly_income",
+    "age_at_maturity": "age + tenor_months / 12",
+    "max_tenor_for_age": "floor((max_age_at_maturity - age) * 12)",
+    "max_affordable_loan": "(max_dbr * net_monthly_income - existing_monthly_installments) / (r + r / ((1 + r) ** tenor_months - 1))",
+    "source": "C"
+  },
+  "branch_handoff": {
+    "model_requires_documents": false,
+    "released_when": "LIKELY_ELIGIBLE",
+    "note": "تُعرض القائمة للعميل لزيارة الفرع فقط. لا يطلب المساعد المستندات ولا يستقبلها ولا يتحقق منها.",
+    "referral_message": "يرجى التوجه إلى أقرب فرع لبنك مصر.",
+    "document_groups": {
+      "common": {
+        "label": "جميع المتقدمين",
+        "documents": [
+          "صورة بطاقة الرقم القومي سارية",
+          "أصل إيصال مرافق على محل الإقامة (غاز – كهرباء – مياه – تليفون)"
+        ]
+      },
+      "new_car": {
+        "label": "سيارة جديدة",
+        "documents": [
+          "عرض أسعار معتمد من المعرض"
+        ]
+      },
+      "used_car": {
+        "label": "سيارة مستعملة",
+        "documents": [
+          "صورة رخصة السيارة",
+          "وثيقة تأمين على السيارة لصالح البنك مسددة القيمة"
+        ]
+      },
+      "employee_salary_certificate": {
+        "label": "الموظفون",
+        "documents": [
+          "شهادة مفردات الراتب الشهري"
+        ]
+      },
+      "employer_undertaking": {
+        "label": "تعهد جهة العمل",
+        "documents": [
+          "تعهد جهة العمل بتحويل الراتب / القسط الشهري"
+        ]
+      },
+      "self_employed_income_proof": {
+        "label": "أصحاب المهن الحرة والأنشطة التجارية والصناعية",
+        "documents": [
+          "صورة البطاقة الضريبية",
+          "صورة ترخيص / تصريح مزاولة المهنة (للمهن الحرة فقط)",
+          "صورة مستخرج رسمي حديث من السجل التجاري",
+          "كشف حساب بنكي لمدة 6 أشهر"
+        ]
+      },
+      "self_employed_deemed_extras": {
+        "label": "أصحاب المهن والأعمال الحرة ببرامج الدخل الافتراضي",
+        "documents": [
+          "صورة مستخرج رسمي حديث من السجل التجاري",
+          "صورة ترخيص / تصريح مزاولة المهنة (للمهن الحرة فقط)"
+        ]
+      }
+    },
+    "conditional_groups": [
+      {
+        "when": "program.category == \"deemed_income\" and employment_type == \"self_employed\"",
+        "groups": [
+          "self_employed_deemed_extras"
+        ]
+      }
+    ]
+  }
+}
