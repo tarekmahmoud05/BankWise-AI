@@ -1,0 +1,1630 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr debit cards FAQ",
+    "version": "1.0",
+    "languages": [
+      "ar"
+    ],
+    "bank": {
+      "en": "Banque Misr",
+      "ar": "بنك مصر"
+    },
+    "accessed": "2026-11-06",
+    "source_files": [
+      "BM Card (Youth Card).pdf",
+      "BM VISA Platinum Debit Card (USD).pdf",
+      "BM Visa Gold debit card.pdf",
+      "Guide to activate Debit and Pre-paid cards through the ATM.pdf",
+      "Mastercard Platinum Debit card.pdf",
+      "Mastercard World Debit card.pdf",
+      "Mastercard World Elite Debit card.pdf",
+      "Mastercard titanium youth card.pdf",
+      "Meeza Debit Card.pdf",
+      "Titanium Debit Mastercard.pdf",
+      "VISA and MasterCard Debit Cards.pdf",
+      "Visa Platinum Debit Card.pdf",
+      "Visa infinite Debit Card.pdf"
+    ],
+    "notes": [
+      "Source: page-printout PDFs of each debit card page (images); text read by OCR and numbers checked against the page image.",
+      "Fees, limits and rates may have changed after the collection date; direct account-specific questions to 19888.",
+      "'NA' on the pages means not specified; the assistant must not interpret it as 'not allowed'.",
+      "Entries flagged needs_review should be checked against the live page.",
+      "Arabic wording is a project rewrite of the English pages, not official bank text."
+    ],
+    "entry_count": 69
+  },
+  "faqs": [
+    {
+      "id": "CARD-classic-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة الخصم فيزا وماستركارد (الكلاسيك)؟"
+      },
+      "answer": {
+        "ar": "بتتربط بحد أقصى 6 حسابات إضافية (جاري أو توفير أو شهادات) إلى جانب الحساب الأساسي، وتقدر تحوّل بين حساباتك من ماكينات بنك مصر، وتستعلم عن أرصدة الحسابات المربوطة من الماكينات ومن الإنترنت البنكي المجاني. مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "VISA and MasterCard Debit Cards",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "VISA and MasterCard Debit Cards.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "VISA and MasterCard Debit Cards"
+    },
+    {
+      "id": "CARD-classic-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة الخصم فيزا وماستركارد (الكلاسيك)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: 150 جنيه، التجديد: 150 جنيه سنوياً، البطاقة الإضافية: 100 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 100 جنيه، إعادة ضبط الرقم السري: 15 جنيه، البطاقة على حساب يوم بيوم: 50 جنيه سنوياً."
+      },
+      "tags": [
+        "VISA and MasterCard Debit Cards",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "VISA and MasterCard Debit Cards.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "VISA and MasterCard Debit Cards"
+    },
+    {
+      "id": "CARD-classic-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة الخصم فيزا وماستركارد (الكلاسيك)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 12 مرة يومياً، الشراء داخل مصر: 350,000 جنيه يومياً وبحد 1,000,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 5 مرات يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "VISA and MasterCard Debit Cards",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "VISA and MasterCard Debit Cards.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "VISA and MasterCard Debit Cards"
+    },
+    {
+      "id": "CARD-classic-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة الخصم فيزا وماستركارد (الكلاسيك)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 10% من قيمة العملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "VISA and MasterCard Debit Cards",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "VISA and MasterCard Debit Cards.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "VISA and MasterCard Debit Cards",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-classic-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أطلع بطاقة الخصم فيزا وماستركارد (الكلاسيك) ومين يقدر يطلعها؟"
+      },
+      "answer": {
+        "ar": "بطاقة الخصم فيزا وماستركارد (الكلاسيك) بتصدر من خلال فتح حساب جاري أو حساب توفير أو حساب يوم بيوم."
+      },
+      "tags": [
+        "VISA and MasterCard Debit Cards",
+        "debit card",
+        "بطاقة خصم",
+        "إصدار",
+        "eligibility",
+        "شروط"
+      ],
+      "source_file": "VISA and MasterCard Debit Cards.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "VISA and MasterCard Debit Cards"
+    },
+    {
+      "id": "CARD-gold-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة بنك مصر فيزا الذهبية (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "بتتربط بحد أقصى 6 حسابات إضافية (جاري أو توفير أو شهادات) إلى جانب الحساب الأساسي، وتقدر تحوّل بين حساباتك من ماكينات بنك مصر، وتستعلم عن أرصدة الحسابات المربوطة من الماكينات ومن الإنترنت البنكي المجاني. بتكسب نقاط مكافآت على المشتريات المحلية والدولية، وتقدر تستبدلها بتذاكر سفر وفنادق وقسائم إلكترونية وشحن رصيد موبايل، والتسجيل من bmrewardsclub.com أو 19888. مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "BM Visa Gold Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "BM Visa Gold debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Visa Gold Debit Card"
+    },
+    {
+      "id": "CARD-gold-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة بنك مصر فيزا الذهبية (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: 200 جنيه، التجديد: 200 جنيه سنوياً، البطاقة الإضافية: 150 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 100 جنيه، إعادة ضبط الرقم السري: 15 جنيه، البطاقة على حساب يوم بيوم: 80 جنيه سنوياً."
+      },
+      "tags": [
+        "BM Visa Gold Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "BM Visa Gold debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Visa Gold Debit Card"
+    },
+    {
+      "id": "CARD-gold-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة بنك مصر فيزا الذهبية (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 12 مرة يومياً، الشراء داخل مصر: 400,000 جنيه يومياً وبحد 1,500,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 5 مرات يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "BM Visa Gold Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "BM Visa Gold debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Visa Gold Debit Card"
+    },
+    {
+      "id": "CARD-gold-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة بنك مصر فيزا الذهبية (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 10% من قيمة العملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "BM Visa Gold Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "BM Visa Gold debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Visa Gold Debit Card",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-gold-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أطلع بطاقة بنك مصر فيزا الذهبية (خصم فوري) ومين يقدر يطلعها؟"
+      },
+      "answer": {
+        "ar": "بطاقة بنك مصر فيزا الذهبية (خصم فوري) بتصدر من خلال فتح حساب جاري أو حساب توفير أو حساب يوم بيوم."
+      },
+      "tags": [
+        "BM Visa Gold Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "إصدار",
+        "eligibility",
+        "شروط"
+      ],
+      "source_file": "BM Visa Gold debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Visa Gold Debit Card"
+    },
+    {
+      "id": "CARD-visa_platinum-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة فيزا بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "بتتربط بحد أقصى 6 حسابات إضافية (جاري أو توفير أو شهادات) إلى جانب الحساب الأساسي، وتقدر تحوّل بين حساباتك من ماكينات بنك مصر، وتستعلم عن أرصدة الحسابات المربوطة من الماكينات ومن الإنترنت البنكي المجاني. بتكسب نقاط مكافآت على المشتريات المحلية والدولية، وتقدر تستبدلها بتذاكر سفر وفنادق وقسائم إلكترونية وشحن رصيد موبايل، والتسجيل من bmrewardsclub.com أو 19888."
+      },
+      "tags": [
+        "Visa Platinum Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Visa Platinum Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Platinum Debit Card"
+    },
+    {
+      "id": "CARD-visa_platinum-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة فيزا بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: 350 جنيه، التجديد: 350 جنيه سنوياً، البطاقة الإضافية: 300 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 250 جنيه، إعادة ضبط الرقم السري: 15 جنيه، البطاقة على حساب يوم بيوم: 200 جنيه سنوياً."
+      },
+      "tags": [
+        "Visa Platinum Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Visa Platinum Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Platinum Debit Card"
+    },
+    {
+      "id": "CARD-visa_platinum-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة فيزا بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 12 مرة يومياً، الشراء داخل مصر: 500,000 جنيه يومياً وبحد 2,000,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 12 مرة يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "Visa Platinum Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Visa Platinum Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Platinum Debit Card"
+    },
+    {
+      "id": "CARD-visa_platinum-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة فيزا بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 10% من قيمة العملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "Visa Platinum Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Visa Platinum Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Platinum Debit Card",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-titanium-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة ماستركارد تيتانيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "بتتربط بحد أقصى 6 حسابات إضافية (جاري أو توفير أو شهادات) إلى جانب الحساب الأساسي، وتقدر تحوّل بين حساباتك من ماكينات بنك مصر، وتستعلم عن أرصدة الحسابات المربوطة من الماكينات ومن الإنترنت البنكي المجاني. بتكسب نقاط مكافآت على المشتريات المحلية والدولية، وتقدر تستبدلها بتذاكر سفر وفنادق وقسائم إلكترونية وشحن رصيد موبايل، والتسجيل من bmrewardsclub.com أو 19888. وفيها دخول مجاني لصالات VIP في المطارات المتعاقد عليها مع ماستركارد وعروض عبر تطبيق Priceless Specials."
+      },
+      "tags": [
+        "Titanium Debit Mastercard",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Titanium Debit Mastercard.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Titanium Debit Mastercard"
+    },
+    {
+      "id": "CARD-titanium-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة ماستركارد تيتانيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: 250 جنيه، التجديد: 250 جنيه سنوياً، البطاقة الإضافية: 200 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 250 جنيه، إعادة ضبط الرقم السري: 15 جنيه، البطاقة على حساب يوم بيوم: 150 جنيه سنوياً."
+      },
+      "tags": [
+        "Titanium Debit Mastercard",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Titanium Debit Mastercard.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Titanium Debit Mastercard"
+    },
+    {
+      "id": "CARD-titanium-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة ماستركارد تيتانيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 12 مرة يومياً، الشراء داخل مصر: 500,000 جنيه يومياً وبحد 1,750,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 10 مرات يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "Titanium Debit Mastercard",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Titanium Debit Mastercard.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Titanium Debit Mastercard"
+    },
+    {
+      "id": "CARD-titanium-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة ماستركارد تيتانيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 10% من قيمة العملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "Titanium Debit Mastercard",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Titanium Debit Mastercard.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Titanium Debit Mastercard",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-meeza-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة ميزة (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "بطاقة خصم فوري بتتصدر بفتح حساب جاري أو توفير أو يوم بيوم، وبتتستخدم في السحب النقدي والشراء داخل مصر، وتقدر تربطها بحد أقصى 6 حسابات إضافية، وتحوّل بين حساباتك من ماكينات بنك مصر. مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "Meeza Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Meeza Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Meeza Debit Card"
+    },
+    {
+      "id": "CARD-meeza-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة ميزة (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: 150 جنيه، التجديد: 150 جنيه سنوياً، البطاقة الإضافية: 100 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 100 جنيه، إعادة ضبط الرقم السري: 15 جنيه، البطاقة على حساب يوم بيوم: 70 جنيه سنوياً."
+      },
+      "tags": [
+        "Meeza Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Meeza Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Meeza Debit Card"
+    },
+    {
+      "id": "CARD-meeza-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة ميزة (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 15,000 جنيه يومياً و300,000 جنيه شهرياً بحد أقصى 5 مرات يومياً، الشراء داخل مصر: 50,000 جنيه يومياً و100,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً و100,000 جنيه شهرياً بحد أقصى 5 مرات يومياً."
+      },
+      "tags": [
+        "Meeza Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Meeza Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Meeza Debit Card"
+    },
+    {
+      "id": "CARD-meeza-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة ميزة (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه."
+      },
+      "tags": [
+        "Meeza Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Meeza Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Meeza Debit Card",
+      "needs_review": false
+    },
+    {
+      "id": "CARD-meeza-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أطلع بطاقة ميزة (خصم فوري) ومين يقدر يطلعها؟"
+      },
+      "answer": {
+        "ar": "بطاقة ميزة (خصم فوري) بتصدر من خلال فتح حساب جاري أو حساب توفير أو حساب يوم بيوم."
+      },
+      "tags": [
+        "Meeza Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "إصدار",
+        "eligibility",
+        "شروط"
+      ],
+      "source_file": "Meeza Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Meeza Debit Card"
+    },
+    {
+      "id": "CARD-youth_bm-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة BM Card للشباب (من 15 إلى 21 سنة)؟"
+      },
+      "answer": {
+        "ar": "بطاقة للشباب من 15 إلى 21 سنة، وبتصدر من خلال فتح حساب توفير، وبيتضاف عائد دوري على رصيد حساب التوفير حسب الرصيد، ومتاح بيها سداد خدمات فوري (فواتير وشحن رصيد) من ماكينات بنك مصر، وفيها عروض وخصومات في المراكز التجارية. مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "BM Card (Youth Card)",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "BM Card (Youth Card).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Card (Youth Card)"
+    },
+    {
+      "id": "CARD-youth_bm-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة BM Card للشباب (من 15 إلى 21 سنة)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: مجاناً، التجديد: 200 جنيه سنوياً، البطاقة الإضافية: مجاناً للإصدار و150 جنيه للتجديد (البطاقة الإضافية)، بدل فاقد أو تالف: 100 جنيه، إعادة ضبط الرقم السري: مجاناً."
+      },
+      "tags": [
+        "BM Card (Youth Card)",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "BM Card (Youth Card).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Card (Youth Card)"
+    },
+    {
+      "id": "CARD-youth_bm-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة BM Card للشباب (من 15 إلى 21 سنة)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 8 مرات يومياً، الشراء داخل مصر: 400,000 جنيه يومياً وبحد 1,500,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 5 مرات يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "BM Card (Youth Card)",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "BM Card (Youth Card).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Card (Youth Card)"
+    },
+    {
+      "id": "CARD-youth_bm-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة BM Card للشباب (من 15 إلى 21 سنة)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 10% من قيمة العملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "BM Card (Youth Card)",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "BM Card (Youth Card).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Card (Youth Card)",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-youth_bm-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أطلع بطاقة BM Card للشباب (من 15 إلى 21 سنة) ومين يقدر يطلعها؟"
+      },
+      "answer": {
+        "ar": "بطاقة BM Card للشباب (من 15 إلى 21 سنة) للشباب من 15 إلى 21 سنة، وبتصدر من خلال فتح حساب توفير."
+      },
+      "tags": [
+        "BM Card (Youth Card)",
+        "debit card",
+        "بطاقة خصم",
+        "إصدار",
+        "eligibility",
+        "شروط"
+      ],
+      "source_file": "BM Card (Youth Card).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM Card (Youth Card)"
+    },
+    {
+      "id": "CARD-youth_titanium-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة)؟"
+      },
+      "answer": {
+        "ar": "بطاقة للشباب من 21 إلى 30 سنة، وبتصدر من خلال فتح حساب توفير، وبيتضاف عائد دوري على رصيد حساب التوفير حسب الرصيد، ومتاح بيها سداد خدمات فوري (فواتير وشحن رصيد) من ماكينات بنك مصر، وفيها عروض وخصومات في المراكز التجارية. مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "Mastercard Titanium Youth Card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Mastercard titanium youth card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Titanium Youth Card"
+    },
+    {
+      "id": "CARD-youth_titanium-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: مجاناً، التجديد: 250 جنيه سنوياً، البطاقة الإضافية: مجاناً للإصدار و200 جنيه للتجديد (البطاقة الإضافية)، بدل فاقد أو تالف: 250 جنيه، إعادة ضبط الرقم السري: مجاناً."
+      },
+      "tags": [
+        "Mastercard Titanium Youth Card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Mastercard titanium youth card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Titanium Youth Card"
+    },
+    {
+      "id": "CARD-youth_titanium-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 8 مرات يومياً، الشراء داخل مصر: 500,000 جنيه يومياً وبحد 1,750,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 5 مرات يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "Mastercard Titanium Youth Card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Mastercard titanium youth card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Titanium Youth Card"
+    },
+    {
+      "id": "CARD-youth_titanium-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 10% من قيمة العملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "Mastercard Titanium Youth Card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Mastercard titanium youth card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Titanium Youth Card",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-youth_titanium-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أطلع بطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة) ومين يقدر يطلعها؟"
+      },
+      "answer": {
+        "ar": "بطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة) للشباب من 21 إلى 30 سنة، وبتصدر من خلال فتح حساب توفير."
+      },
+      "tags": [
+        "Mastercard Titanium Youth Card",
+        "debit card",
+        "بطاقة خصم",
+        "إصدار",
+        "eligibility",
+        "شروط"
+      ],
+      "source_file": "Mastercard titanium youth card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Titanium Youth Card"
+    },
+    {
+      "id": "CARD-mc_platinum-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة ماستركارد بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "من مميزاتها: رسائل SMS مجانية بعد كل عملية، وإمكانية إصدار بطاقات إضافية، وربطها بحد أقصى 6 حسابات إضافية، وبرنامج مكافآت 2 نقطة عن كل 1 جنيه شراء (تُستبدل بقسائم إلكترونية أو استبدال فوري عند تجار مختارين أو كاش باك على بطاقة بنك مصر). مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "Mastercard Platinum Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Mastercard Platinum Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Platinum Debit card"
+    },
+    {
+      "id": "CARD-mc_platinum-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة ماستركارد بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: مجاناً، التجديد: مجاناً، البطاقة الإضافية: مجاناً (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: مجاناً، إعادة ضبط الرقم السري: مجاناً."
+      },
+      "tags": [
+        "Mastercard Platinum Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Mastercard Platinum Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Platinum Debit card"
+    },
+    {
+      "id": "CARD-mc_platinum-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة ماستركارد بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 12 مرة يومياً، الشراء داخل مصر: 750,000 جنيه يومياً وبحد 2,000,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 15 مرة يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "Mastercard Platinum Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Mastercard Platinum Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Platinum Debit card"
+    },
+    {
+      "id": "CARD-mc_platinum-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة ماستركارد بلاتينيوم (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. الصفحة مكتوب فيها NA (غير محدد) للسحب والاستعلام والاستخدام خارج مصر."
+      },
+      "tags": [
+        "Mastercard Platinum Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Mastercard Platinum Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Platinum Debit card",
+      "needs_review": false
+    },
+    {
+      "id": "CARD-mc_world-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة ماستركارد وورلد (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "من مميزاتها: رسائل SMS مجانية بعد كل عملية، وإمكانية إصدار بطاقات إضافية، وربطها بحد أقصى 6 حسابات إضافية، وبرنامج مكافآت 2 نقطة عن كل 1 جنيه شراء (تُستبدل بقسائم إلكترونية أو استبدال فوري عند تجار مختارين أو كاش باك على بطاقة بنك مصر). مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "Mastercard World Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Mastercard World Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Debit card"
+    },
+    {
+      "id": "CARD-mc_world-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة ماستركارد وورلد (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: مجاناً، التجديد: مجاناً، البطاقة الإضافية: 500 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 500 جنيه، إعادة ضبط الرقم السري: مجاناً."
+      },
+      "tags": [
+        "Mastercard World Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Mastercard World Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Debit card"
+    },
+    {
+      "id": "CARD-mc_world-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة ماستركارد وورلد (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 400,000 جنيه شهرياً بحد أقصى 20 مرة يومياً، الشراء داخل مصر: 750,000 جنيه يومياً وبحد 2,000,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 15 مرة يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "Mastercard World Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Mastercard World Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Debit card"
+    },
+    {
+      "id": "CARD-mc_world-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة ماستركارد وورلد (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. الصفحة مكتوب فيها NA (غير محدد) للسحب والاستعلام والاستخدام خارج مصر."
+      },
+      "tags": [
+        "Mastercard World Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Mastercard World Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Debit card",
+      "needs_review": false
+    },
+    {
+      "id": "CARD-mc_world-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أطلع بطاقة ماستركارد وورلد (خصم فوري) ومين يقدر يطلعها؟"
+      },
+      "answer": {
+        "ar": "بطاقة ماستركارد وورلد (خصم فوري) تصدر حصرياً لعملاء BMVIP (فئة BMVIP)."
+      },
+      "tags": [
+        "Mastercard World Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "إصدار",
+        "eligibility",
+        "شروط"
+      ],
+      "source_file": "Mastercard World Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Debit card"
+    },
+    {
+      "id": "CARD-mc_elite-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة ماستركارد وورلد إيليت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "من مميزاتها: رسائل SMS مجانية بعد كل عملية، وإمكانية إصدار بطاقات إضافية، وربطها بحد أقصى 6 حسابات إضافية، وبرنامج مكافآت 2 نقطة عن كل 1 جنيه شراء (تُستبدل بقسائم إلكترونية أو استبدال فوري عند تجار مختارين أو كاش باك على بطاقة بنك مصر). مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "Mastercard World Elite Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Mastercard World Elite Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Elite Debit card"
+    },
+    {
+      "id": "CARD-mc_elite-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة ماستركارد وورلد إيليت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: 8,000 جنيه، التجديد: 8,000 جنيه، البطاقة الإضافية: 1,000 جنيه (إصدار وتجديد البطاقة الإضافية)، بدل فاقد أو تالف: 500 جنيه، إعادة ضبط الرقم السري: مجاناً."
+      },
+      "tags": [
+        "Mastercard World Elite Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Mastercard World Elite Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Elite Debit card"
+    },
+    {
+      "id": "CARD-mc_elite-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة ماستركارد وورلد إيليت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل مصر: 800,000 جنيه شهرياً بحد أقصى 20 مرة يومياً، الشراء داخل مصر: 1,000,000 جنيه يومياً وبحد 3,000,000 جنيه شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 15 مرة يومياً، السحب من نقاط البيع (POS) بنك مصر داخل مصر: 250,000 جنيه يومياً. الصفحة مكتوب فيها NA (غير محدد) للحدود خارج مصر، فمفيش حد منشور للاستخدام الخارجي."
+      },
+      "tags": [
+        "Mastercard World Elite Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Mastercard World Elite Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Elite Debit card"
+    },
+    {
+      "id": "CARD-mc_elite-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة ماستركارد وورلد إيليت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاعتراض على عملية غير مستحقة للعميل: 50 جنيه. الصفحة مكتوب فيها NA (غير محدد) للسحب والاستعلام والاستخدام خارج مصر."
+      },
+      "tags": [
+        "Mastercard World Elite Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Mastercard World Elite Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Elite Debit card",
+      "needs_review": false
+    },
+    {
+      "id": "CARD-infinite-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة فيزا إنفينيت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "من مميزاتها: التحويل بين حساباتك من ماكينات بنك مصر، وكسب 2 نقطة عن كل 1 جنيه تنفقه محلياً، والاستعلام عن الرصيد من ماكينات بنك مصر 24 ساعة ومن الإنترنت البنكي. مدة صلاحية البطاقة 5 سنوات."
+      },
+      "tags": [
+        "Visa Infinite Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "مميزات",
+        "benefits"
+      ],
+      "source_file": "Visa infinite Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Infinite Debit Card"
+    },
+    {
+      "id": "CARD-infinite-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد وبدل فاقد بطاقة فيزا إنفينيت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة: مجاناً، التجديد: مجاناً، البطاقة الإضافية: مجاناً للبطاقة الأولى والثانية، و1,000 جنيه من البطاقة الثالثة، بدل فاقد أو تالف: مجاناً (إعادة الإصدار والاستبدال)، إعادة ضبط الرقم السري: مجاناً."
+      },
+      "tags": [
+        "Visa Infinite Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "رسوم",
+        "fees",
+        "issuance",
+        "renewal"
+      ],
+      "source_file": "Visa infinite Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Infinite Debit Card"
+    },
+    {
+      "id": "CARD-infinite-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام والسحب والشراء بـبطاقة فيزا إنفينيت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء داخل مصر: 1,000,000 جنيه يومياً وبحد 3,000,000 جنيه شهرياً بحد أقصى 100 مرة يومياً و400 مرة شهرياً، السحب النقدي من ماكينات بنك مصر وماكينات البنوك الأخرى داخل مصر: 30,000 جنيه يومياً بحد أقصى 15 مرة يومياً."
+      },
+      "tags": [
+        "Visa Infinite Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "حدود",
+        "limits",
+        "سحب",
+        "شراء"
+      ],
+      "source_file": "Visa infinite Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Infinite Debit Card"
+    },
+    {
+      "id": "CARD-infinite-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام والاستخدام بـبطاقة فيزا إنفينيت (خصم فوري)؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر: مجاناً، الاستعلام عن الرصيد من ماكينات بنك مصر: مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر: 5 جنيه، السحب من نقاط بيع البنوك الأخرى داخل مصر: 10 جنيه + 0.33%، السحب من ATM/POS البنوك الأخرى خارج مصر: 50 جنيه + 13%، الاستعلام عن الرصيد من ماكينات البنوك الأخرى داخل مصر: 2 جنيه للعملية، الاستعلام عن الرصيد من ماكينات البنوك الأخرى خارج مصر: 3 جنيه للعملية، الاستخدام الخارجي: 5% من قيمة العملية، ملحوظة من الصفحة: قد تُطبق رسوم لو لم يتم الحفاظ على الحد الأدنى للرصيد. (نسبة 13% منشورة كما هي في الصفحة؛ يُفضل التأكد منها من البنك)."
+      },
+      "tags": [
+        "Visa Infinite Debit Card",
+        "debit card",
+        "بطاقة خصم",
+        "عمولات",
+        "سحب",
+        "atm",
+        "استعلام"
+      ],
+      "source_file": "Visa infinite Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Infinite Debit Card",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-mc_platinum-006",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه العروض والمميزات الإضافية في ماستركارد بلاتينيوم؟"
+      },
+      "answer": {
+        "ar": "مميزات إضافية: خصم 20% على طلبات طلبات (Talabat) كل شهر باستخدام البرومو كود MASTERCARD، ودخول مجاني لأكتر من 25 صالة مطار حول العالم عن طريق تطبيق Mastercard Travel Pass بعد التسجيل بالبطاقة، وعروض وخصومات من خلال تطبيق Priceless Specials."
+      },
+      "tags": [
+        "Mastercard Platinum Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "عروض",
+        "offers",
+        "lounge"
+      ],
+      "source_file": "Mastercard Platinum Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard Platinum Debit card"
+    },
+    {
+      "id": "CARD-mc_world-006",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه العروض والمميزات الإضافية في ماستركارد وورلد؟"
+      },
+      "answer": {
+        "ar": "مميزات إضافية: الدفع بتقنية Contactless، ودخول مجاني غير محدود لأكتر من 1200 صالة مطار عن طريق تطبيق Mastercard Travel Pass، و3 خدمات Fast Track في السنة بالمطارات، و6 رحلات من وإلى المطار عبر تطبيق Careem، واشتراك مجاني 6 شهور في Amazon Prime، وخصم 20% على طلبات طلبات كل شهر بالبرومو كود MASTERCARD، وعروض خصم على Carrefour وفنادق Jaz وتأجير السيارات (10% عبر تطبيق Rentalcars) بأكواد ترويجية حسب العرض، وعروض عبر تطبيقي Mastercard for You وPriceless Specials."
+      },
+      "tags": [
+        "Mastercard World Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "عروض",
+        "offers",
+        "lounge",
+        "amazon prime",
+        "careem"
+      ],
+      "source_file": "Mastercard World Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Debit card"
+    },
+    {
+      "id": "CARD-mc_elite-006",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه العروض والمميزات الإضافية في ماستركارد وورلد إيليت؟"
+      },
+      "answer": {
+        "ar": "مميزات إضافية: اشتراك مجاني 6 شهور في Amazon Prime، وخصم 20% على طلبات طلبات كل شهر بالبرومو كود MASTERCARD، و3 خدمات Fast Track في السنة بالمطارات، و6 رحلات من وإلى المطار عبر تطبيق Careem، وخصم 10% على تأجير السيارات عبر تطبيق Rentalcars، ودخول مجاني غير محدود لأكتر من 1200 صالة مطار عن طريق تطبيق Mastercard Travel Pass، وعروض عبر تطبيقي Mastercard for You وPriceless Specials."
+      },
+      "tags": [
+        "Mastercard World Elite Debit card",
+        "debit card",
+        "بطاقة خصم",
+        "عروض",
+        "offers",
+        "lounge",
+        "amazon prime",
+        "careem"
+      ],
+      "source_file": "Mastercard World Elite Debit card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Mastercard World Elite Debit card"
+    },
+    {
+      "id": "CARD-infinite-006",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أفعّل بطاقة فيزا إنفينيت؟"
+      },
+      "answer": {
+        "ar": "التفعيل من ماكينة ATM: اختار اللغة، اكتب أي رقم من 4 أرقام واضغط Continue، هيوصلك كود تفعيل (OTP) على الموبايل المسجل مع البنك، اكتبه واضغط تأكيد، وبعدها اضغط Continue وحدد الرقم السري (PIN) وأكّده. التفعيل من تطبيق BM Online: لما تظهر البطاقة في التطبيق اضغط Activate، واكتب تاريخ انتهاء البطاقة، وأدخل كود الـ OTP اللي هيوصل على الموبايل المسجل في البنك، وبعدها Set PIN لتحديد الرقم السري وتأكيده، ولاحقاً تقدر تغيّره من Reset PIN. وبعد إنشاء أو تغيير الرقم السري، لازم تعمل استعلام عن الرصيد من أي ماكينة بنك مصر لإتمام التفعيل."
+      },
+      "tags": [
+        "Visa Infinite Debit Card",
+        "debit card",
+        "تفعيل",
+        "activation",
+        "pin",
+        "bm online"
+      ],
+      "source_file": "Visa infinite Debit Card.pdf",
+      "accessed": "2026-11-06",
+      "card_type": "Visa Infinite Debit Card",
+      "needs_review": true,
+      "review_note": "صفحة Visa Infinite بتذكر كلمة credit card في جزء التطبيق؛ تأكد إن خطوات التطبيق لبطاقة الخصم."
+    },
+    {
+      "id": "CARD-usd-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه مميزات بطاقة بنك مصر فيزا بلاتينيوم بالدولار؟"
+      },
+      "answer": {
+        "ar": "البطاقة بتتصدر للحسابات بالدولار فقط، ومدة صلاحيتها 5 سنوات، وتقدر تستعلم عن رصيد الحسابات المربوطة بيها من ماكينات بنك مصر ومن الإنترنت البنكي المجاني، وفيها عروض وخصومات في أفضل المراكز التجارية داخل وخارج مصر من خلال تطبيق VISA Explore."
+      },
+      "tags": [
+        "BM VISA Platinum Debit Card (USD)",
+        "debit card",
+        "بطاقة خصم",
+        "دولار",
+        "USD",
+        "مميزات"
+      ],
+      "source_file": "BM VISA Platinum Debit Card (USD).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM VISA Platinum Debit Card (USD)"
+    },
+    {
+      "id": "CARD-usd-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إصدار وتجديد بطاقة الدولار بلاتينيوم؟"
+      },
+      "answer": {
+        "ar": "الرسوم المنشورة: إصدار البطاقة 20 دولار، التجديد 10 دولار سنوياً، إصدار البطاقة الإضافية 20 دولار وتجديدها 10 دولار، بدل فاقد أو تالف 20 دولار، إعادة ضبط الرقم السري 5 دولار."
+      },
+      "tags": [
+        "BM VISA Platinum Debit Card (USD)",
+        "debit card",
+        "بطاقة خصم",
+        "دولار",
+        "USD",
+        "رسوم",
+        "fees"
+      ],
+      "source_file": "BM VISA Platinum Debit Card (USD).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM VISA Platinum Debit Card (USD)"
+    },
+    {
+      "id": "CARD-usd-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود الاستخدام لبطاقة الدولار بلاتينيوم؟"
+      },
+      "answer": {
+        "ar": "حدود الاستخدام المنشورة: الشراء أونلاين داخل وخارج مصر 5,000 دولار أسبوعياً، الشراء داخل وخارج مصر 20,000 دولار يومياً و50,000 دولار شهرياً، السحب من ماكينات بنك مصر وماكينات البنوك الأخرى ونقاط البيع داخل مصر 30,000 جنيه، السحب من نقاط البيع بنك مصر داخل مصر 250,000 جنيه، السحب من ATM وPOS خارج مصر 2,000 دولار يومياً و5,000 دولار شهرياً."
+      },
+      "tags": [
+        "BM VISA Platinum Debit Card (USD)",
+        "debit card",
+        "بطاقة خصم",
+        "دولار",
+        "USD",
+        "حدود",
+        "limits"
+      ],
+      "source_file": "BM VISA Platinum Debit Card (USD).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM VISA Platinum Debit Card (USD)"
+    },
+    {
+      "id": "CARD-usd-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولات السحب والاستعلام بكارت الدولار بلاتينيوم؟"
+      },
+      "answer": {
+        "ar": "عمولات الاستخدام المنشورة: السحب من ماكينات ونقاط بيع بنك مصر مجاناً، السحب من ماكينات البنوك الأخرى داخل مصر 5 جنيه، السحب خارج مصر بالدولار 3% + 1.6 دولار، السحب خارج مصر بعملات أخرى 1.5 دولار + 3% + 1.6 دولار، الاستعلام عن الرصيد من ماكينات بنك مصر مجاناً ومن ماكينات البنوك الأخرى داخل مصر 0.06 دولار ومن خارج مصر 0.1 دولار، الاستخدام الخارجي بعملات غير الدولار 1.5% وبالدولار مجاناً، الاعتراض على عملية غير مستحقة للعميل 50 جنيه."
+      },
+      "tags": [
+        "BM VISA Platinum Debit Card (USD)",
+        "debit card",
+        "بطاقة خصم",
+        "دولار",
+        "USD",
+        "عمولات",
+        "سحب"
+      ],
+      "source_file": "BM VISA Platinum Debit Card (USD).pdf",
+      "accessed": "2026-11-06",
+      "card_type": "BM VISA Platinum Debit Card (USD)"
+    },
+    {
+      "id": "CARD-gen-001",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه أنواع بطاقات الخصم الفوري اللي بنك مصر بيقدمها؟"
+      },
+      "answer": {
+        "ar": "بطاقات الخصم الفوري المنشورة على موقع بنك مصر: بطاقة الخصم فيزا وماستركارد (الكلاسيك)؛ بطاقة بنك مصر فيزا الذهبية (خصم فوري)؛ بطاقة فيزا بلاتينيوم (خصم فوري)؛ بطاقة ماستركارد تيتانيوم (خصم فوري)؛ بطاقة ميزة (خصم فوري)؛ بطاقة BM Card للشباب (من 15 إلى 21 سنة)؛ بطاقة ماستركارد تيتانيوم للشباب (من 21 إلى 30 سنة)؛ بطاقة ماستركارد بلاتينيوم (خصم فوري)؛ بطاقة ماستركارد وورلد (خصم فوري)؛ بطاقة ماستركارد وورلد إيليت (خصم فوري)؛ بطاقة فيزا إنفينيت (خصم فوري)؛ وبطاقة بنك مصر فيزا بلاتينيوم بالدولار (للحسابات بالدولار)."
+      },
+      "tags": [
+        "debit card",
+        "أنواع",
+        "types"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-002",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أفعّل بطاقة الخصم الجديدة من ماكينة الـ ATM؟"
+      },
+      "answer": {
+        "ar": "الخطوات من ماكينة ATM بنك مصر: 1) اختار لغة العملية. 2) اكتب أي رقم من 4 أرقام. 3) هتظهر رسالة إن البطاقة غير مفعّلة، اضغط Continue. 4) وافق على الشروط والأحكام؛ هيتبعت كود التفعيل على رقم الموبايل المسجل في البنك (وده مسؤوليتك الشخصية)، ولو الرسالة ماوصلتش روح الفرع أو كلّم 19888. 5) اكتب كود التفعيل (6 أرقام) واضغط Confirm. 6) اضغط Continue لإنشاء رقم سري جديد وأكّده. 7) هتدخل على قائمة الخدمات الرئيسية."
+      },
+      "tags": [
+        "تفعيل",
+        "activation",
+        "atm",
+        "pin"
+      ],
+      "source_file": "Guide to activate Debit and Pre-paid cards through the ATM.pdf",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-003",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه بطاقات الخصم اللي إصدارها مجاني؟"
+      },
+      "answer": {
+        "ar": "حسب الصفحات المنشورة، إصدار البطاقة مجاني في: بطاقة BM Card للشباب، وماستركارد تيتانيوم للشباب، وماستركارد بلاتينيوم، وماستركارد وورلد، وفيزا إنفينيت. وتجديد ماستركارد بلاتينيوم ووورلد وإنفينيت مجاني كذلك. أما التجديد في بطاقتي الشباب فعليه رسوم سنوية."
+      },
+      "tags": [
+        "رسوم",
+        "fees",
+        "free",
+        "مجاني"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-004",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه الفرق في رسوم الإصدار بين بطاقات الخصم؟"
+      },
+      "answer": {
+        "ar": "رسوم الإصدار المنشورة: الكلاسيك فيزا وماستركارد 150 جنيه، ميزة 150 جنيه، الذهبية 200 جنيه، تيتانيوم 250 جنيه، فيزا بلاتينيوم 350 جنيه، وورلد إيليت 8,000 جنيه. وماستركارد بلاتينيوم ووورلد وفيزا إنفينيت وبطاقتي الشباب مجاناً."
+      },
+      "tags": [
+        "رسوم",
+        "fees",
+        "مقارنة",
+        "comparison"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-005",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم السحب من ماكينة بنك تاني بكارت الخصم؟"
+      },
+      "answer": {
+        "ar": "السحب من ماكينات البنوك الأخرى داخل مصر 5 جنيه للعملية، والسحب من نقاط بيع البنوك الأخرى داخل مصر 10 جنيه + 0.33% (في البطاقات المنشور فيها ده)، والسحب من ماكينات ونقاط بيع بنك مصر مجاناً. والاستعلام عن الرصيد من ماكينات بنك مصر مجاناً ومن ماكينات البنوك الأخرى داخل مصر 2 جنيه للعملية."
+      },
+      "tags": [
+        "سحب",
+        "atm",
+        "عمولة",
+        "fees"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-006",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "أقدر أربط كام حساب ببطاقة الخصم؟"
+      },
+      "answer": {
+        "ar": "معظم بطاقات الخصم الفوري بتتربط بحد أقصى 6 حسابات إضافية (جاري أو توفير أو شهادات) إلى جانب الحساب الأساسي، وتقدر تحوّل من حساب لحساب من ماكينات بنك مصر."
+      },
+      "tags": [
+        "ربط حسابات",
+        "linked accounts"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-007",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم إعادة ضبط الرقم السري للكارت؟"
+      },
+      "answer": {
+        "ar": "رسوم إعادة ضبط الرقم السري: 15 جنيه في الكلاسيك وميزة والذهبية وفيزا بلاتينيوم وتيتانيوم، ومجاناً في بطاقتي الشباب وماستركارد بلاتينيوم ووورلد وإيليت وفيزا إنفينيت، و5 دولار في بطاقة الدولار."
+      },
+      "tags": [
+        "pin",
+        "رقم سري",
+        "رسوم"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-008",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "أقدر أستخدم كارت الخصم خارج مصر؟"
+      },
+      "answer": {
+        "ar": "ده بيختلف حسب البطاقة. الصفحات بتذكر عمولة السحب من ATM/POS خارج مصر 50 جنيه + 13% (مع استخدام خارجي 10%، أو 5% في إنفينيت) في بطاقات الكلاسيك والذهبية وفيزا بلاتينيوم وتيتانيوم والشباب وإنفينيت. أما ميزة وماستركارد بلاتينيوم ووورلد وإيليت فمكتوب لها NA (غير محدد) خارج مصر، فمعلوماتها غير واضحة في الصفحة. وبطاقة الدولار ليها حدود وعمولات بالدولار خارج مصر. للتأكد من استخدام بطاقتك بره مصر كلّم 19888."
+      },
+      "tags": [
+        "خارج مصر",
+        "outside egypt",
+        "abroad"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06",
+      "needs_review": true
+    },
+    {
+      "id": "CARD-gen-009",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه برنامج مكافآت بطاقات الخصم؟"
+      },
+      "answer": {
+        "ar": "بطاقات ماستركارد بلاتينيوم ووورلد ووورلد إيليت: 2 نقطة عن كل 1 جنيه شراء، وتُستبدل بقسائم إلكترونية، أو استبدال فوري عند تجار مختارين، أو كاش باك على بطاقة بنك مصر. وبطاقات فيزا إنفينيت: 2 نقطة عن كل 1 جنيه محلياً. والذهبية وفيزا بلاتينيوم وتيتانيوم فيها مكافآت BM Rewards Club وتستبدل بتذاكر سفر وفنادق وقسائم إلكترونية وشحن رصيد موبايل، وللتسجيل bmrewardsclub.com أو 19888."
+      },
+      "tags": [
+        "rewards",
+        "نقاط",
+        "مكافآت"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "CARD-gen-010",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "الكارت ضاع أو اتسرق أعمل إيه وكام بدل الفاقد؟"
+      },
+      "answer": {
+        "ar": "الصفحات المنشورة بتحدد رسوم بدل الفاقد أو التالف فقط: 100 جنيه في الكلاسيك وميزة والذهبية وبطاقة BM Card للشباب، و250 جنيه في فيزا بلاتينيوم وتيتانيوم وتيتانيوم للشباب، و500 جنيه في وورلد وإيليت، و20 دولار في بطاقة الدولار، ومجاناً في ماستركارد بلاتينيوم وإنفينيت. للإبلاغ عن فقد البطاقة وإيقافها كلّم خدمة العملاء 19888 فوراً."
+      },
+      "tags": [
+        "فقد",
+        "lost",
+        "replacement",
+        "بدل فاقد"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06",
+      "needs_review": true,
+      "review_note": "إجراء الإيقاف غير مذكور في صفحات البطاقات؛ التوجيه لـ 19888 توجيه عام."
+    },
+    {
+      "id": "CARD-gen-011",
+      "category": "cards",
+      "topic": "debit_cards",
+      "scope": "in_scope",
+      "question": {
+        "ar": "الخدمات اللي تقدر تعملها بكارت الخصم على ماكينة بنك مصر؟"
+      },
+      "answer": {
+        "ar": "ماكينات بنك مصر بتتيح: السحب النقدي، التحويل بين حساباتك، الاستعلام عن الرصيد، وفي بطاقتي الشباب خدمات فوري (سداد فواتير وشحن رصيد). والماكينات شغالة 24 ساعة."
+      },
+      "tags": [
+        "atm",
+        "خدمات الماكينة"
+      ],
+      "source_file": "Debit Cards pages (banquemisr.com) + ATM activation guide",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

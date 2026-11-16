@@ -1,0 +1,5 @@
+car loan id : d5de4d5e-5a9c-4c7c-975e-4304b1b68ac1
+
+personal loan id : 257a5aef-78ee-41ad-8b10-371d4de1c39b 
+
+ids of the bank to fetch data from api

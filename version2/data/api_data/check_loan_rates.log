@@ -1,0 +1,19 @@
+2026-11-09 12:12:28,606 INFO personal_loan: no changes applied (22 bank programs checked)
+2026-11-09 12:12:29,222 INFO car_loan: no changes applied (10 bank programs checked)
+2026-11-09 12:14:08,395 WARNING personal_loan: PL01 [القرض اللحظي الرقمي (لعملاء المرتبات)] rate 22.0 -> 23.0
+2026-11-09 12:14:08,397 INFO personal_loan: dry run, file not modified
+2026-11-09 12:14:09,005 INFO car_loan: no changes applied (10 bank programs checked)
+2026-11-09 12:14:39,187 WARNING personal_loan: PL01 [القرض اللحظي الرقمي (لعملاء المرتبات)] LIMIT min_loan_egp: file=50000 bank=5000
+2026-11-09 12:14:39,192 INFO personal_loan: no changes applied (22 bank programs checked)
+2026-11-09 12:14:39,904 INFO car_loan: no changes applied (10 bank programs checked)
+2026-11-09 12:14:53,771 INFO personal_loan: no changes applied (22 bank programs checked)
+2026-11-09 12:14:54,742 INFO car_loan: no changes applied (10 bank programs checked)
+2026-11-09 12:18:17,716 WARNING personal_loan: PL01 [القرض اللحظي الرقمي (لعملاء المرتبات)] rate 22.0 -> 23.0
+2026-11-09 12:18:17,724 INFO personal_loan: rules file updated. backup: C:\DEPI round 5\grad project\version2\data\api_data\backups\personal_loan_eligibility_rules_ar_20261109_121817.json
+2026-11-09 12:18:18,484 INFO car_loan: no changes applied (10 bank programs checked)
+2026-11-09 12:19:23,385 WARNING personal_loan: PL01 [القرض اللحظي الرقمي (لعملاء المرتبات)] LIMIT min_loan_egp: file=50000 bank=5000
+2026-11-09 12:19:23,385 INFO personal_loan: no changes applied (22 bank programs checked)
+2026-11-09 12:19:24,153 INFO car_loan: no changes applied (10 bank programs checked)
+2026-11-09 12:20:36,901 WARNING personal_loan: PL01 [القرض اللحظي الرقمي (لعملاء المرتبات)] LIMIT min_loan_egp: file=50000 bank=5000
+2026-11-09 12:20:36,909 INFO personal_loan: rules file updated. backup: C:\DEPI round 5\grad project\version2\data\api_data\backups\personal_loan_eligibility_rules_ar_20261109_122036.json
+2026-11-09 12:20:37,688 INFO car_loan: no changes applied (10 bank programs checked)
