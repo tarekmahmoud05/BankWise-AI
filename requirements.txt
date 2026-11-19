@@ -1,0 +1,37 @@
+# BankWise AI - Python requirements
+# Python 3.10 or newer. Versions are intentionally not pinned yet:
+# once everything works, run `pip freeze > requirements.lock` and commit it.
+#
+# ---------- Data and rules (module 1) ----------
+pyyaml              
+pydantic            
+pandas              
+numpy
+faker               # synthetic customers
+
+# ---------- RAG (module 2) ----------
+chromadb            
+sentence-transformers   
+# langchain-text-splitters   
+
+# ---------- Agent and tools (module 3) ----------
+# Install ONLY the SDK of the LLM provider you choose (see chatbot/llm_clients.py):
+anthropic           # Claude            -> LLM_PROVIDER=anthropic
+# openai            # OpenAI AND Gemini -> LLM_PROVIDER=openai | gemini (Gemini uses its OpenAI-compatible endpoint)
+python-dotenv       # load API keys from .env
+
+# ---------- Backend (module 4) ----------
+fastapi
+uvicorn[standard]
+slowapi             
+pydantic-settings   
+httpx               
+
+# ---------- Frontend and dashboard (module 5) ----------
+streamlit
+plotly              
+
+# ---------- Testing and code quality (everyone) ----------
+pytest
+ruff
+
