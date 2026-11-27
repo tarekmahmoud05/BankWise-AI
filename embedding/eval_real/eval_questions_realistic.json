@@ -1,0 +1,453 @@
+[
+  {
+    "type": "faq",
+    "query": "السلام عليكم لو سمحت عايزة افتح حساب في البنك بس معرفش محتاجة ايه",
+    "expected_id": [
+      "ACCR-013",
+      "ACCR-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "انا مرتبي بيتحول على بنك مصر وعايز اخد فلوس بسرعة ينفع",
+    "expected_id": [
+      "LOAN-flash-001",
+      "LOAN-gen-006",
+      "LOAN-payroll_bm-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ازاي اقدر اشوف كشف حسابي من الموبايل",
+    "expected_id": [
+      "ACCR-014",
+      "DIG-001",
+      "RGT-012"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "بكام السحب من الفرع",
+    "expected_id": "ACCR-008"
+  },
+  {
+    "type": "faq",
+    "query": "عايز شهادة تجيبلي عائد كل شهر",
+    "expected_id": [
+      "CER-003",
+      "CER-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "فيه حاجة اسمها صندوق يوم بيوم؟",
+    "expected_id": "ACC-006"
+  },
+  {
+    "type": "faq",
+    "query": "انا لسه متخرج وعايز كارت يناسبني",
+    "expected_id": [
+      "CARD-youth_bm-001",
+      "CARD-youth_titanium-001",
+      "CARD-gen-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "بنك مصر بيشتغل في بلاد تانية ولا في مصر بس",
+    "expected_id": "ABT-003"
+  },
+  {
+    "type": "faq",
+    "query": "مين اللي اسس البنك وامتى",
+    "expected_id": "ABT-001"
+  },
+  {
+    "type": "faq",
+    "query": "عندي محل صغير وعايز تمويل للمشروع",
+    "expected_id": [
+      "SME-001",
+      "SME-003",
+      "SME-006"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "هو لازم يبقى معايا ضامن في التمويل العقاري",
+    "expected_id": "ABR-003"
+  },
+  {
+    "type": "faq",
+    "query": "ايه الفرق بين المرابحة والقرض العادي",
+    "expected_id": "RET-001"
+  },
+  {
+    "type": "faq",
+    "query": "لو عايز اخلص القرض بدري البنك هياخد عمولة",
+    "expected_id": [
+      "LOAN-gen-002",
+      "RGT-007"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ابويا على المعاش وعايز ياخد قرض يعمل ايه",
+    "expected_id": "LOAN-pension-001"
+  },
+  {
+    "type": "faq",
+    "query": "انا ظابط احتياط ينفع اخد قرض",
+    "expected_id": "LOAN-reserve_officers-001"
+  },
+  {
+    "type": "faq",
+    "query": "عندي شركة صغيرة وعايز قرض بس معنديش مرتب ثابت",
+    "expected_id": [
+      "LOAN-business_owners-001",
+      "LOAN-liberal-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "انا محامي وعايز قرض شخصي",
+    "expected_id": "LOAN-liberal-001"
+  },
+  {
+    "type": "faq",
+    "query": "المرتب بيتأخر عليا وعايز سلفة لحد اول الشهر",
+    "expected_id": "LOAN-salary_advance-001"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اشتري عربية جديدة ومحتاج اعرف الشروط",
+    "expected_id": [
+      "CAR-002",
+      "CAR-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ينفع ارخص العربية باسم اخويا",
+    "expected_id": "CAR-011"
+  },
+  {
+    "type": "faq",
+    "query": "هل لازم اعمل حظر بيع على العربية",
+    "expected_id": "CAR-013"
+  },
+  {
+    "type": "faq",
+    "query": "انا موظف حكومة ومحتاج ايه عشان قرض عربية",
+    "expected_id": "CAR-004"
+  },
+  {
+    "type": "faq",
+    "query": "انا شغال حر ومحتاج ايه عشان قرض العربية",
+    "expected_id": "CAR-005"
+  },
+  {
+    "type": "faq",
+    "query": "معايا فلوس في شهادة ينفع اقترض بضمانها",
+    "expected_id": "LOAN-secured_cash-001"
+  },
+  {
+    "type": "faq",
+    "query": "ايه برنامج النقاط والمكافآت بتاع الكروت",
+    "expected_id": [
+      "CARD-gen-009",
+      "CRD-004"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ازاي افعل الكارت الجديد من الATM",
+    "expected_id": "CARD-gen-002"
+  },
+  {
+    "type": "faq",
+    "query": "اتسحب من كارتي فلوس وانا مسحبتش حاجة",
+    "expected_id": [
+      "RGT-003",
+      "RGT-014"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "عايز اتأكد ان بياناتي وحسابي سرية",
+    "expected_id": "RGT-013"
+  },
+  {
+    "type": "faq",
+    "query": "البنك رفض طلبي ليه وهعمل ايه",
+    "expected_id": "RGT-002"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع الغي كارت لسه مفعلتوش",
+    "expected_id": "RGT-006"
+  },
+  {
+    "type": "faq",
+    "query": "هل ممكن البنك يغير الفايدة من غير ما يقولي",
+    "expected_id": "RGT-009"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع اشتكي للبنك المركزي مباشرة",
+    "expected_id": "RGT-019"
+  },
+  {
+    "type": "faq",
+    "query": "في طريقة اكلم بيها حد من البنك على الواتس",
+    "expected_id": "CON-005"
+  },
+  {
+    "type": "faq",
+    "query": "في ايميل ابعتله استفسار للبنك",
+    "expected_id": "CON-006"
+  },
+  {
+    "type": "faq",
+    "query": "انا برا مصر وعايز اشتري شهادات دولار ازاي",
+    "expected_id": [
+      "CON-009",
+      "CON-008"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "الحوالات اللي بتيجي من برا بتتحول ازاي وبتتعاملوا مع مين",
+    "expected_id": [
+      "REM-002",
+      "REM-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "كارت حوالتي ده لمين",
+    "expected_id": "REM-004"
+  },
+  {
+    "type": "faq",
+    "query": "انا عمري 18 سنة ينفع اخد كارت",
+    "expected_id": [
+      "CARD-youth_bm-005",
+      "CARD-youth_bm-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "الكروت المدفوعة مقدما عندكم منها ايه",
+    "expected_id": "CRD-003"
+  },
+  {
+    "type": "faq",
+    "query": "سددت القسط بفوري افضل محتفظ بالايصال",
+    "expected_id": [
+      "FAW-004",
+      "FAW-001"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "حد السحب اليومي بالكارت البلاتينيوم كام",
+    "expected_id": [
+      "CARD-visa_platinum-003",
+      "CARD-mc_platinum-003"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "الحساب الجاري ليه حد ادنى للرصيد ولا هتتخصم عمولة",
+    "expected_id": [
+      "ACCR-005",
+      "ACCR-002"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "ايه الفرق بين حساب التوفير والحساب الجاري",
+    "expected_id": [
+      "ACC-001",
+      "ACC-003",
+      "ACC-004"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "صندوق العمر ده بيعمل ايه",
+    "expected_id": "INV-003"
+  },
+  {
+    "type": "faq",
+    "query": "عندكم تأمين بنكي",
+    "expected_id": "VIP-003"
+  },
+  {
+    "type": "faq",
+    "query": "عبقرينو ده بيرد على ايه",
+    "expected_id": "CON-004"
+  },
+  {
+    "type": "faq",
+    "query": "ايه رؤية بنك مصر ورسالته",
+    "expected_id": "ABT-005"
+  },
+  {
+    "type": "faq",
+    "query": "ينفع افتح حساب توفير لبنتي الصغيرة",
+    "expected_id": "ACC-002"
+  },
+  {
+    "type": "faq",
+    "query": "القرض الشخصي بيتأمن عليه ولا لا",
+    "expected_id": [
+      "LOAN-gen-004",
+      "RET-008"
+    ]
+  },
+  {
+    "type": "faq",
+    "query": "عايز اسدد قرض واخده من بنك تاني ينفع",
+    "expected_id": "RET-010"
+  },
+  {
+    "type": "faq",
+    "query": "ايه شروط القرض التكميلي توب اب",
+    "expected_id": "LOAN-gen-005"
+  },
+  {
+    "type": "faq",
+    "query": "كام رسوم اصدار كارت الدولار",
+    "expected_id": "CARD-usd-002"
+  },
+  {
+    "type": "faq",
+    "query": "عايز اخد قرض شخسي وكريدت كارد",
+    "expected_id": [
+      "LOAN-gen-001",
+      "RET-005",
+      "CRD-001"
+    ]
+  },
+  {
+    "type": "followup",
+    "context": "عايز اخد قرض شخصي",
+    "query": "طب والمستندات المطلوبة ايه",
+    "expected_id": "LOAN-gen-007"
+  },
+  {
+    "type": "followup",
+    "context": "بسأل عن بطاقة بنك مصر فيزا الذهبية",
+    "query": "وكام رسوم الاصدار",
+    "expected_id": "CARD-gold-002"
+  },
+  {
+    "type": "followup",
+    "context": "عايز قرض عربية",
+    "query": "طب وبتمولوا المستعمل",
+    "expected_id": "CAR-007"
+  },
+  {
+    "type": "followup",
+    "context": "بسأل عن الحساب الجاري",
+    "query": "طب والحد الادنى لفتحه كام",
+    "expected_id": "ACCR-002"
+  },
+  {
+    "type": "followup",
+    "context": "كارت ميزة",
+    "query": "وحدود السحب بتاعه كام",
+    "expected_id": "CARD-meeza-003"
+  },
+  {
+    "type": "tool",
+    "query": "مرتبي 15 الف اقدر اخد قرض 200 الف على 5 سنين",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "القسط الشهري لو اخدت 300 الف على 4 سنين هيبقى كام",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "انا عمري 58 وعايز قرض عربية 400 الف مناسب ولا لا",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "هل انا مؤهل لقرض شخصي",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "عايز احسب قسط قرض 100 الف على 36 شهر",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "لو مرتبي 20 الف اقصى مبلغ اقدر اقترضه كام",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "انا دكتور عمري 40 وعايز قرض 500 الف ينفع",
+    "expected_id": null
+  },
+  {
+    "type": "tool",
+    "query": "عربية بـ 800 الف وهدفع مقدم 400 الف القسط كام",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "سعر الدولار النهاردة كام",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "ايه احسن موبايل اشتريه",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "الطقس النهاردة ايه",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "اكتبلي قصيدة عن الحب",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "البنك الاهلي احسن ولا بنك مصر",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "عايز وصفة كشري",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "سعر الذهب النهاردة",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "ازيك عامل ايه",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "شكرا ليك",
+    "expected_id": null
+  },
+  {
+    "type": "out_of_scope",
+    "query": "عايز مساعدة",
+    "expected_id": null
+  }
+]

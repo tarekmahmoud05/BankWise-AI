@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr regular current account FAQ",
+    "version": "1.0",
+    "languages": [
+      "ar"
+    ],
+    "bank": {
+      "en": "Banque Misr",
+      "ar": "بنك مصر"
+    },
+    "source_files": [
+      "banque_misr_regular_current_account.json"
+    ],
+    "official_sources": [
+      {
+        "title": "صفحة الحسابات الجارية - بنك مصر",
+        "url": "https://www.banquemisr.com/ar-EG/SMEs/Retail-Banking/Accounts-And-Deposits/Current-Accounts/Details?sc_lang=ar-EG",
+        "used_for": "خصائص الحساب الجاري والحد الأدنى والمميزات."
+      },
+      {
+        "title": "جدول الرسوم والمصاريف - حسابات العملاء الأفراد",
+        "url": "https://www.banquemisr.com/-/media/Schedule-of-Charges-Individual-Accounts-AR.ashx",
+        "document_date": "2025-10-26",
+        "used_for": "رسوم فتح الحساب والحد الأدنى وعمولات الخدمات."
+      }
+    ],
+    "fees_document_date": "2025-10-26",
+    "notes": [
+      "Built only from banque_misr_regular_current_account.json prepared by the team; regular current account (EGP) only, excluding Super Cash, Al Mongez and Hawalaty.",
+      "Fees come from the schedule dated 2025-10-26 and may have changed.",
+      "Opening documents, transfer fees and card limits are not published on the product page; those entries direct the user to 19888/branch.",
+      "accessed is null: fill in the date the page and fee schedule were collected."
+    ],
+    "entry_count": 17
+  },
+  "faqs": [
+    {
+      "id": "ACCR-001",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه هو الحساب الجاري العادي للأفراد في بنك مصر ومميزاته؟"
+      },
+      "answer": {
+        "ar": "الحساب الجاري العادي بالجنيه المصري بيتيح: السحب والإيداع في أي وقت، وإجراء المعاملات من خلال فروع بنك مصر، وإصدار دفتر شيكات، وفتح حساب مشترك باسم أكتر من شخص، والاستعلام وتنفيذ معظم المعاملات من الإنترنت البنكي وتطبيق BM Online (والبنك بيذكر إن معظمها مجاني)، وإصدار بطاقة خصم فوري بالجنيه، واستخدام ماكينات الصراف 24 ساعة، وشراء شهادات ادخار بنك مصر وخصم قيمتها من الحساب، وسداد أقساط التأمين والالتزامات بتعليمات مستديمة، وتحويل المرتبات والمعاشات للحساب."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "مميزات",
+        "features"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-002",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام الحد الأدنى لفتح الحساب الجاري العادي؟"
+      },
+      "answer": {
+        "ar": "الحد الأدنى لفتح الحساب الجاري العادي 2,500 جنيه."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "حد أدنى",
+        "minimum balance",
+        "فتح حساب"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-003",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "هل الحساب الجاري العادي بيدّي عائد أو فايدة؟"
+      },
+      "answer": {
+        "ar": "لا، الحساب الجاري العادي لا يتم احتساب عائد على رصيده، والبنك بيذكر ده صراحة."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "عائد",
+        "فايدة",
+        "interest"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-004",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم فتح الحساب الجاري؟"
+      },
+      "answer": {
+        "ar": "حسب جدول الرسوم المنشور بتاريخ 26 أكتوبر 2025: رسوم فتح الحساب 150 جنيه داخل مصر و250 جنيه خارج مصر. الرسوم ممكن تتغير، فراجع أحدث تعريفة قبل الفتح."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "رسوم",
+        "فتح حساب",
+        "fees"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-005",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه عمولة الحد الأدنى للرصيد في الحساب الجاري؟"
+      },
+      "answer": {
+        "ar": "لو رصيد الحساب نزل عن الحد الأدنى المطلوب (2,500 جنيه) بتتحصل عمولة 30 جنيه شهرياً، حسب جدول الرسوم المنشور بتاريخ 26 أكتوبر 2025."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "عمولة",
+        "minimum balance",
+        "30"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-006",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم دفتر الشيكات؟"
+      },
+      "answer": {
+        "ar": "رسوم دفتر الشيكات 10 جنيه عن كل شيك، حسب جدول الرسوم المنشور بتاريخ 26 أكتوبر 2025. وإصدار دفتر شيكات متاح على الحساب الجاري العادي."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "شيكات",
+        "checkbook",
+        "رسوم"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-007",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم كشف الحساب الورقي أو على الإيميل؟"
+      },
+      "answer": {
+        "ar": "كشف الحساب الورقي بطلب العميل: للسنة الحالية 10 جنيه للصفحة بحد أدنى 100 جنيه، وللسنة السابقة 10 جنيه للصفحة بحد أدنى 150 جنيه. وكشف الحساب على الإيميل 10 جنيه لكل فترة. (جدول الرسوم بتاريخ 26 أكتوبر 2025)."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "كشف حساب",
+        "statement",
+        "رسوم"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-008",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم السحب النقدي من الفرع؟"
+      },
+      "answer": {
+        "ar": "السحب النقدي من الفرع لمبلغ أقل من 30,000 جنيه رسومه 40 جنيه، والتعريفة المنشورة فيها إعفاء لعملاء ذوي الهمم (جدول الرسوم بتاريخ 26 أكتوبر 2025)."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "سحب",
+        "فرع",
+        "رسوم"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-009",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم الإيداع النقدي في نفس اليوم؟"
+      },
+      "answer": {
+        "ar": "الإيداع النقدي في نفس اليوم رسومه 0.2% (اثنان في الألف) بحد أدنى 50 جنيه (جدول الرسوم بتاريخ 26 أكتوبر 2025)."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "إيداع",
+        "deposit",
+        "رسوم"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-010",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم التعليمات المستديمة؟"
+      },
+      "answer": {
+        "ar": "رسوم إنشاء تعليمات مستديمة جديدة 50 جنيه، ورسوم تنفيذ كل عملية 40 جنيه. ولا تُطبق الرسوم في حالة التحويل بين حسابات العميل أو لجهات خيرية داخل البنك (جدول الرسوم بتاريخ 26 أكتوبر 2025)."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "تعليمات مستديمة",
+        "standing instructions",
+        "رسوم"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "source_document_date": "2025-10-26"
+    },
+    {
+      "id": "ACCR-011",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "أقدر أطلع كارت خصم على الحساب الجاري؟"
+      },
+      "answer": {
+        "ar": "أيوه، ممكن إصدار بطاقة خصم فوري على الحساب الجاري بالجنيه. صفحة الحساب مبتحددش نوع البطاقة ولا رسوم إصدارها، فراجع تعريفة وأنواع بطاقات الخصم."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "كارت خصم",
+        "debit card"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-012",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "أقدر أفتح حساب جاري مشترك؟"
+      },
+      "answer": {
+        "ar": "أيوه، الحساب الجاري العادي يمكن فتحه باسم أكتر من شخص (حساب مشترك)."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "حساب مشترك",
+        "joint account"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-013",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لفتح حساب جاري؟"
+      },
+      "answer": {
+        "ar": "صفحة المنتج المنشورة مبتعرضش قايمة تفصيلية بالمستندات المطلوبة لفتح الحساب، فمقدرش أحددها بدقة. الأفضل تتأكد من المستندات وشروط الأهلية من الفرع أو من خدمة العملاء 19888."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "مستندات",
+        "documents",
+        "فتح حساب"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "needs_review": true,
+      "review_note": "لم تُنشر المستندات في صفحة المنتج؛ يحسن إضافتها لو توفرت."
+    },
+    {
+      "id": "ACCR-014",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "أقدر أتابع حسابي وأعمل معاملات من الموبايل؟"
+      },
+      "answer": {
+        "ar": "أيوه، الاستعلام عن الحساب وتنفيذ معظم المعاملات البنكية متاح من خلال الإنترنت البنكي وتطبيق BM Online، والبنك بيذكر إن معظم المعاملات مجانية."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "bm online",
+        "تطبيق",
+        "إنترنت بنكي"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-015",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه الخدمات اللي أقدر أعملها من الحساب الجاري؟"
+      },
+      "answer": {
+        "ar": "من الحساب الجاري تقدر: تشتري شهادات ادخار بنك مصر بالجنيه والعملات الأجنبية وتخصم قيمتها من الحساب، وتسدد أقساط التأمين، وتسدد التزاماتك بتعليمات مستديمة، وتحوّل مرتبك أو معاشك للحساب."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "خدمات",
+        "services",
+        "شهادات"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    },
+    {
+      "id": "ACCR-016",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام رسوم التحويلات وحدود استقبالها على الحساب الجاري؟"
+      },
+      "answer": {
+        "ar": "صفحة الحساب الجاري المنشورة مبتفصّلش رسوم التحويلات المحلية أو الدولية ولا قنوات وحدود استقبال التحويلات، فمقدرش أقول رقم. للتفاصيل كلّم خدمة العملاء 19888 أو راجع تعريفة البنك."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "تحويلات",
+        "transfers",
+        "رسوم"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null,
+      "needs_review": true
+    },
+    {
+      "id": "ACCR-017",
+      "category": "accounts_deposits",
+      "topic": "current_account",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه حدود السحب والشراء اليومية بكارت الحساب الجاري؟"
+      },
+      "answer": {
+        "ar": "الحدود بتختلف حسب نوع بطاقة الخصم وتعريفتها، ومش محددة في صفحة الحساب الجاري. راجع بطاقة الخصم اللي معاك (الكلاسيك، الذهبية، بلاتينيوم، ميزة...) أو كلّم 19888."
+      },
+      "tags": [
+        "الحساب الجاري العادي",
+        "Regular Current Account",
+        "current account",
+        "حساب جاري",
+        "حدود",
+        "limits",
+        "كارت"
+      ],
+      "source_file": "banque_misr_regular_current_account.json",
+      "accessed": null
+    }
+  ]
+}

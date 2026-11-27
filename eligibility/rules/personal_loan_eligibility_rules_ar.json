@@ -1,0 +1,1216 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr personal loan eligibility rules",
+    "version": "1.0",
+    "language": "ar",
+    "bank": "بنك مصر",
+    "product": "الفحص المبدئي لأهلية القرض الشخصي",
+    "purpose": "للإرشاد والمعلومات فقط. يفحص المساعد إجابات العميل المصرح بها ذاتياً وفق هذه القواعد ويوجه المؤهلين مبدئياً إلى أقرب فرع. لا يستقبل المساعد المستندات ولا يتحقق منها.",
+    "disclaimer": "هذه إفادة مبدئية غير ملزمة وليست موافقة. القرار النهائي لبنك مصر بعد مراجعة المستندات وإجراء التقييم الائتماني الخاص به، بما في ذلك السجل الائتماني الذي لا يفحصه المساعد.",
+    "accessed": "2026-10-22",
+    "source_legend": {
+      "C": "بيانات حاسبة القروض الشخصية لبنك مصر (personal loan details.txt)",
+      "S": "النص الوصفي لصفحة القروض الشخصية لبنك مصر",
+      "F": "الأسئلة الشائعة لبنك مصر (RET-002)",
+      "A": "افتراض من المشروع، إرشادي فقط ويحتاج إلى تأكيد"
+    },
+    "out_of_scope": [
+      "سلفة على الراتب",
+      "القرض النقدي المضمون",
+      "السحب على المكشوف بضمان أو مقابل المكافأة السنوية",
+      "السجل الائتماني وموافقة جهة العمل (لا يفحصهما المساعد)"
+    ],
+    "notes": [
+      "برامج الحاسبة التي تتطابق شروطها (مثل 'والمستحقات' و'دون المستحقات') دُمجت في برنامج واحد وأُدرجت أسماؤها في calculator_names.",
+      "برامج الدخل الافتراضي (deemed) لا تُطبق عليها قاعدة نسبة القسط للدخل لأن الدخل يُحتسب بصيغة البرنامج؛ هذا افتراض إرشادي. ما عداPL18",
+      "سن البرامج المصنفة A لم تنشره الصفحة؛ استُخدمت الحدود العامة 21 و65.",
+      "حدود الصفحة والحاسبة قد تختلف (مثل المعاشات: الصفحة 1,000,000 والحاسبة 500,000 لبعض البرامج)؛ الملف يتبع الحاسبة."
+    ]
+  },
+  "decisions": {
+    "LIKELY_ELIGIBLE": {
+      "label": "مؤهل مبدئياً",
+      "message_template": "بناءً على المعلومات التي ذكرتها، يبدو أنك تستوفي شروط برنامج \"{program_name}\". القسط الشهري التقديري {monthly_payment} جنيه بسعر عائد سنوي {annual_rate}% لمدة {tenor_months} شهراً. هذه إفادة مبدئية وليست موافقة. يرجى التوجه إلى أقرب فرع لبنك مصر لاستكمال طلبك، وفيما يلي المستندات التي يطلبها البنك عادة.",
+      "next_step": "release_document_checklist_and_refer_to_branch"
+    },
+    "NOT_ELIGIBLE": {
+      "label": "غير مؤهل حالياً",
+      "message_template": "بناءً على المعلومات التي ذكرتها، لا تستوفي حالياً الشرط التالي: {reason}. {suggestion}",
+      "next_step": "explain_failed_rules_and_suggest_changes"
+    },
+    "NEED_MORE_INFO": {
+      "label": "معلومات ناقصة",
+      "message_template": "لأتمكن من فحص أهليتك أحتاج إلى المعلومات التالية: {missing_fields}.",
+      "next_step": "ask_only_for_missing_fields"
+    },
+    "INVALID_INPUT": {
+      "label": "مدخلات غير صالحة",
+      "message_template": "بعض القيم غير صالحة: {errors}. من فضلك صحّحها.",
+      "next_step": "ask_user_to_correct_values"
+    }
+  },
+  "decision_logic": [
+    "1. التحقق من المدخلات. أي قيمة غير صالحة تُرجع INVALID_INPUT، وأي مدخل إلزامي ناقص يُرجع NEED_MORE_INFO.",
+    "2. اختيار البرامج المرشحة من شروط applies_when (نوع العمل وتعهد الجهة وغيرها). إن لم يوجد برنامج يُرجع NOT_ELIGIBLE بسبب NO_MATCHING_PROGRAM.",
+    "3. تقييم قواعد كل برنامج مرشح حسب rules_evaluated، وتُتخطى القواعد المعطلة (enabled=false).",
+    "4. إذا نجح برنامج أو أكثر يُرجع LIKELY_ELIGIBLE بالبرنامج الأقل قسطاً مع ذكر الباقي باختصار وقائمة المستندات.",
+    "5. إذا لم ينجح أي برنامج وبقي برنامج مرشح تنقصه مدخلات الدخل أو تاريخ التسريح، يُرجع NEED_MORE_INFO لطلب الناقص فقط.",
+    "6. إذا لم ينجح أي برنامج يُرجع NOT_ELIGIBLE بالقواعد الفاشلة للبرنامج الأقل إخفاقاً (عند التساوي الأقل سعر عائد) مع الاقتراحات."
+  ],
+  "inputs": [
+    {
+      "id": "employment_type",
+      "label": "نوع العمل",
+      "type": "enum",
+      "required": true,
+      "values": [
+        {
+          "id": "government_public",
+          "label": "موظف حكومي / قطاع عام"
+        },
+        {
+          "id": "private",
+          "label": "موظف قطاع خاص"
+        },
+        {
+          "id": "bank_telecom",
+          "label": "موظف بنك أو شركة اتصالات"
+        },
+        {
+          "id": "doctor",
+          "label": "طبيب"
+        },
+        {
+          "id": "liberal_professional",
+          "label": "صاحب مهنة حرة"
+        },
+        {
+          "id": "business_owner",
+          "label": "صاحب عمل / نشاط تجاري"
+        },
+        {
+          "id": "pensioner",
+          "label": "صاحب معاش أو مستفيد من معاش"
+        },
+        {
+          "id": "reserve_officer",
+          "label": "ضابط احتياط بالقوات المسلحة"
+        },
+        {
+          "id": "judicial",
+          "label": "عضو هيئة قضائية"
+        },
+        {
+          "id": "university_professor",
+          "label": "أستاذ أو دكتور بجامعة مصرية"
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "label": "العمر بالسنوات",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "id": "loan_amount",
+      "label": "مبلغ القرض المطلوب (جنيه)",
+      "type": "number",
+      "required": true
+    },
+    {
+      "id": "tenor_months",
+      "label": "مدة التمويل المطلوبة (بالشهور)",
+      "type": "integer",
+      "required": true
+    },
+    {
+      "id": "net_monthly_income",
+      "label": "صافي الدخل الشهري (جنيه)",
+      "type": "number",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    },
+    {
+      "id": "existing_monthly_installments",
+      "label": "إجمالي الأقساط الشهرية الحالية (جنيه، 0 إن لم توجد)",
+      "type": "number",
+      "required": "conditional",
+      "required_when": "no deemed-income program passes"
+    },
+    {
+      "id": "employer_undertaking",
+      "label": "هل تتعهد جهة العمل بتحويل الراتب / القسط؟",
+      "type": "enum",
+      "required": false,
+      "default": "none",
+      "ask_only_if": "employment_type in [government_public, private]",
+      "values": [
+        {
+          "id": "with_pledge",
+          "label": "نعم، يوجد تعهد من جهة العمل"
+        },
+        {
+          "id": "none",
+          "label": "لا يوجد تعهد / غير متأكد"
+        }
+      ]
+    },
+    {
+      "id": "employer_contracted",
+      "label": "هل جهة العمل متعاقدة مع بنك مصر؟",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "ask_only_if": "employment_type in [government_public, private]"
+    },
+    {
+      "id": "salary_transferred_to_bm",
+      "label": "هل راتبك محوّل على بنك مصر؟",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "ask_only_if": "employment_type in [government_public, private, reserve_officer]"
+    },
+    {
+      "id": "income_documented",
+      "label": "هل تستطيع إثبات دخلك بمستندات؟",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "ask_only_if": "employment_type == doctor"
+    },
+    {
+      "id": "pension_holder",
+      "label": "هل أنت صاحب المعاش أم مستفيد منه؟",
+      "type": "enum",
+      "required": false,
+      "default": "owner",
+      "ask_only_if": "employment_type == pensioner",
+      "values": [
+        {
+          "id": "owner",
+          "label": "صاحب المعاش"
+        },
+        {
+          "id": "beneficiary",
+          "label": "مستفيد من المعاش"
+        }
+      ]
+    },
+    {
+      "id": "pension_armed_forces",
+      "label": "هل المعاش من القوات المسلحة؟",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "ask_only_if": "employment_type == pensioner"
+    },
+    {
+      "id": "has_savings_vessel",
+      "label": "هل لديك وعاء ادخاري لدى بنك مصر؟",
+      "type": "boolean",
+      "required": false,
+      "default": false ,
+      "ask_only_if": "(employment_type in [private, government_public] and employer_undertaking == none) or employment_type in [doctor, liberal_professional, business_owner, judicial, university_professor]"
+    },
+    {
+      "id": "months_until_discharge",
+      "label": "عدد الشهور المتبقية حتى تاريخ التسريح",
+      "type": "integer",
+      "required": "conditional",
+      "required_when": "employment_type == reserve_officer",
+      "ask_only_if": "employment_type == reserve_officer"
+    },
+    {
+      "id": "months_in_current_job_or_business",
+      "label": "عدد الشهور في العمل أو النشاط الحالي",
+      "type": "integer",
+      "required": false,
+      "note": "لا يُستخدم إلا إذا فُعّلت القاعدة R8"
+    }
+  ],
+  "programs": [
+    {
+      "id": "PL01",
+      "name": "القرض اللحظي الرقمي (لعملاء المرتبات)",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "salary_transferred_to_bm": [
+          true
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 750000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 23.0,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "A"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "القرض اللحظي بدون مستندات."
+      ],
+      "calculator_names": [
+        "القرض اللحظي- الرقمي"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL02",
+      "name": "قرض نقدي للأطباء بإثبات الدخل",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "doctor"
+        ],
+        "income_documented": [
+          true
+        ]
+      },
+      "min_loan_egp": 25000,
+      "max_loan_egp": 7000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 25.0,
+      "age": {
+        "min_age": 25,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "صورة تصريح مزاولة المهنة",
+        "صورة البطاقة الضريبية",
+        "وكشف حساب بنكي عن آخر 6 شهور باسم العميل أو شركته (أو كشف حساب معاملات ماكينة POS)"
+      ],
+      "calculator_names": [
+        "قرض نقدي للأطباء - بإثبات الدخل"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL03",
+      "name": "قرض موظفي البنوك وشركات الاتصالات",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "bank_telecom"
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 1500000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 21.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة بالدخل الشهري"
+      ],
+      "calculator_names": [
+        "موظفي البنوك وشركات الاتصالات"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL04",
+      "name": "قرض نقدي لأصحاب المهن الحرة بإثبات الدخل",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "liberal_professional"
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 7000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 25.25,
+      "age": {
+        "min_age": 25,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "صورة تصريح مزاولة المهنة",
+        "صورة البطاقة الضريبية",
+        "وكشف حساب بنكي عن آخر 6 شهور باسم العميل أو شركته (أو كشف حساب معاملات ماكينة POS)"
+      ],
+      "calculator_names": [
+        "قرض نقدي أصحاب المهن الحرة بأثبات الدخل"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL05",
+      "name": "قرض بإثبات الدخل - حكومي / قطاع عام - جهة غير متعاقدة",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "government_public"
+        ],
+        "employer_undertaking": [
+          "none"
+        ],
+        "employer_contracted": [
+          false
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 1500000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 24.0,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة بالدخل الشهري"
+      ],
+      "calculator_names": [
+        "قرض اثبات دخل جهات غير متعاقدة تحويل مرتبات (موظفين حكومي – قطاع عام)"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL06",
+      "name": "قرض نقدي لأصحاب الأعمال بإثبات الدخل",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "business_owner"
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 7000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 72,
+      "annual_interest_rate_pct": 25.0,
+      "age": {
+        "min_age": 25,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "سجل تجاري حديث",
+        "صورة البطاقة الضريبية",
+        "صورة من آخر تعديل لعقد تأسيس الشركة",
+        "وكشف حساب بنكي عن آخر 6 شهور باسم العميل أو باسم شركته (أو كشف حساب معاملات ماكينة POS)"
+      ],
+      "calculator_names": [
+        "قرض نقدي لاصحاب الاعمال باثبات الدخل"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL07",
+      "name": "قرض بضمان تعهد جهة العمل - حكومي / قطاع عام - جهة متعاقدة",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "government_public"
+        ],
+        "employer_undertaking": [
+          "with_pledge"
+        ],
+        "employer_contracted": [
+          true
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 3000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 144,
+      "annual_interest_rate_pct": 21.75,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "وشهادة حديثة بمفردات الراتب (في حالة عدم تحويل الراتب على بنك مصر)",
+        "وخطاب تعهد الجهة"
+      ],
+      "calculator_names": [
+        "بضمان تعهد تحويل الراتب /القسط والمستحقات - قطاع عام / حكومي – جهات متعاقدة",
+        "بضمان تعهد تحويل الراتب /القسط دون المستحقات - قطاع عام / حكومي – جهات متعاقدة"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL08",
+      "name": "قرض بضمان تعهد جهة العمل - حكومي / قطاع عام - جهة غير متعاقدة",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "government_public"
+        ],
+        "employer_undertaking": [
+          "with_pledge"
+        ],
+        "employer_contracted": [
+          false
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 3000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 144,
+      "annual_interest_rate_pct": 22.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "وشهادة حديثة بمفردات الراتب (في حالة عدم تحويل الراتب على بنك مصر)",
+        "وخطاب تعهد الجهة"
+      ],
+      "calculator_names": [
+        "بضمان تعهد تحويل الراتب/القسط والمستحقات - قطاع عام / حكومي – جهات غير متعاقدة",
+        "بضمان تعهد تحويل الراتب القسط دون المستحقات – قطاع عام حكومي جهات غير متعاقدة"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL09",
+      "name": "قرض بضمان تعهد جهة العمل - قطاع خاص",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "private"
+        ],
+        "employer_undertaking": [
+          "with_pledge"
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 1500000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 21.75,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "وشهادة حديثة بمفردات الراتب (في حالة عدم تحويل الراتب على بنك مصر)",
+        "وخطاب تعهد الجهة"
+      ],
+      "calculator_names": [
+        "بضمان تعهد تحويل الراتب أو القسط - قطاع خاص"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL10",
+      "name": "قرض بإثبات الدخل - قطاع خاص - جهة غير متعاقدة",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "private"
+        ],
+        "employer_undertaking": [
+          "none"
+        ],
+        "employer_contracted": [
+          false
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 1500000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 96,
+      "annual_interest_rate_pct": 24.0,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة بالدخل الشهري"
+      ],
+      "calculator_names": [
+        "قرض بإثبات الدخل جهات غير متعاقدة تحويل مرتبات قطاع خاص"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL11",
+      "name": "قرض بإثبات الدخل - حساب مرتبات بنك مصر (جهة متعاقدة، بدون تعهد)",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "government_public",
+          "private"
+        ],
+        "employer_undertaking": [
+          "none"
+        ],
+        "employer_contracted": [
+          true
+        ],
+        "salary_transferred_to_bm": [
+          true
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 3000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 21.75,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "وإيصال مرافق حديث"
+      ],
+      "calculator_names": [
+        "قرض بدون تعهد جهة العمل جهات متعاقدة لتحويل المرتبات حكومي – قطاع خاص"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL12",
+      "name": "قرض أصحاب المعاشات - القوات المسلحة (صاحب معاش)",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "pensioner"
+        ],
+        "pension_holder": [
+          "owner"
+        ],
+        "pension_armed_forces": [
+          true
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 21.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 70,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة معاش حديثة"
+      ],
+      "calculator_names": [
+        "قرض اصحاب المعاشات (قوات مسلحة)"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL13",
+      "name": "قرض المعاشات - القوات المسلحة (مستفيد من المعاش)",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "pensioner"
+        ],
+        "pension_holder": [
+          "beneficiary"
+        ],
+        "pension_armed_forces": [
+          true
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 1000000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 22.0,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 70,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة معاش حديثة"
+      ],
+      "calculator_names": [
+        "قرض مستفيد المعاشات (قوات مسلحة)"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL14",
+      "name": "قرض المستفيدين من المعاش",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "pensioner"
+        ],
+        "pension_holder": [
+          "beneficiary"
+        ],
+        "pension_armed_forces": [
+          false
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 500000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 22.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 70,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة معاش حديثة"
+      ],
+      "calculator_names": [
+        "قروض المستفيدين من المعاش"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL15",
+      "name": "قرض أصحاب المعاشات",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "pensioner"
+        ],
+        "pension_holder": [
+          "owner"
+        ],
+        "pension_armed_forces": [
+          false
+        ]
+      },
+      "min_loan_egp": 5000,
+      "max_loan_egp": 500000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 21.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 70,
+        "source": "S"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "إيصال مرافق حديث",
+        "وشهادة معاش حديثة"
+      ],
+      "calculator_names": [
+        "قروض اصحاب معاشات"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL16",
+      "name": "قرض ضباط الاحتياط بالقوات المسلحة (تحويل الراتب على بنك مصر)",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "employment_type": [
+          "reserve_officer"
+        ],
+        "salary_transferred_to_bm": [
+          true
+        ]
+      },
+      "min_loan_egp": 10000,
+      "max_loan_egp": 70000,
+      "min_tenor_months": 6,
+      "max_tenor_months": 30,
+      "annual_interest_rate_pct": 22.25,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": null,
+        "source": "A"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R7",
+        "R8",
+        "R6"
+      ],
+      "documents": [
+        "صورة بطاقة رقم قومي سارية",
+        "ومستند يفيد رتبة الضابط الحالية وموقفه من التجنيد (ضابط احتياط) وتاريخ التسريح"
+      ],
+      "calculator_names": [
+        "برنامج ضباط الاحتياط بالقوات المسلحة المحول رواتبهم على حسابات مرتبات بنك مصر"
+      ],
+      "source": "C",
+      "extra_required_inputs": [
+        "months_until_discharge"
+      ]
+    },
+    {
+      "id": "PL17",
+      "name": "قرض أعضاء الهيئات القضائية بموجب بدل العلاج",
+      "category": "deemed",
+      "income_basis": "deemed",
+      "applies_when": {
+        "employment_type": [
+          "judicial"
+        ]
+      },
+      "min_loan_egp": 50000,
+      "max_loan_egp": 500000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 120,
+      "annual_interest_rate_pct": 25.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "A"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "documents": [
+        "لم تُنشر قائمة مستندات تفصيلية لهذا البرنامج في صفحة البنك؛ يُرجى الاستفسار في الفرع."
+      ],
+      "calculator_names": [
+        "لأعضاء الهيئات القضائية بموجب بدل العلاج"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL18",
+      "name": "قرض الدخل الافتراضي لأصحاب الأوعية الادخارية",
+      "category": "documented",
+      "income_basis": "documented",
+      "applies_when": {
+        "has_savings_vessel": [
+          true
+        ]
+      },
+      "min_loan_egp": 50000,
+      "max_loan_egp": 4000000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 22.75,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "A"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "documents": [
+        "لم تُنشر قائمة مستندات تفصيلية لهذا البرنامج في صفحة البنك؛ يُرجى الاستفسار في الفرع."
+      ],
+      "calculator_names": [
+        "الدخل الافتراضي لأصحاب الأوعية الادخارية"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL19",
+      "name": "قرض الأطباء بموجب عدد سنوات الخبرة",
+      "category": "deemed",
+      "income_basis": "deemed",
+      "applies_when": {
+        "employment_type": [
+          "doctor"
+        ],
+        "income_documented": [
+          false
+        ]
+      },
+      "min_loan_egp": 50000,
+      "max_loan_egp": 1300000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 25.5,
+      "age": {
+        "min_age": 25,
+        "max_age_at_maturity": 65,
+        "source": "A"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "documents": [
+        "لم تُنشر قائمة مستندات تفصيلية لهذا البرنامج في صفحة البنك؛ يُرجى الاستفسار في الفرع."
+      ],
+      "calculator_names": [
+        "برنامج القروض الشخصية للأطباء بموجب عدد سنوات الخبرة"
+      ],
+      "source": "C"
+    },
+    {
+      "id": "PL20",
+      "name": "قرض دكاترة وأساتذة الجامعات المصرية",
+      "category": "deemed",
+      "income_basis": "deemed",
+      "applies_when": {
+        "employment_type": [
+          "university_professor"
+        ]
+      },
+      "min_loan_egp": 50000,
+      "max_loan_egp": 1100000,
+      "min_tenor_months": 12,
+      "max_tenor_months": 84,
+      "annual_interest_rate_pct": 25.5,
+      "age": {
+        "min_age": 21,
+        "max_age_at_maturity": 65,
+        "source": "A"
+      },
+      "rules_evaluated": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "documents": [
+        "لم تُنشر قائمة مستندات تفصيلية لهذا البرنامج في صفحة البنك؛ يُرجى الاستفسار في الفرع."
+      ],
+      "calculator_names": [
+        "دكاترة وأساتذة الجامعات المصرية"
+      ],
+      "source": "C"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "name": "الحد الأدنى لعمر المقترض",
+      "scope": "program",
+      "check": "min_age",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "MIN_AGE",
+        "message": "الحد الأدنى لعمر المقترض في هذا البرنامج هو {min_age} عاماً.",
+        "suggestion": "يمكنك التقدم بالطلب عند بلوغك {min_age} عاماً."
+      },
+      "note": "الحد الأدنى للسن يأتي من الحقل age في كل برنامج (٢١ أو ٢٥ حسب الصفحة)."
+    },
+    {
+      "id": "R2",
+      "name": "الحد الأقصى للعمر عند نهاية القرض",
+      "scope": "program",
+      "check": "max_age_at_maturity",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "AGE_AT_MATURITY",
+        "message": "عمرك عند نهاية القرض سيكون حوالي {age_at_maturity} عاماً، وهو أعلى من الحد الأقصى ({max_age_at_maturity}).",
+        "suggestion": "اختر مدة لا تتجاوز {max_tenor_for_age} شهراً."
+      },
+      "note": "٦٥ سنة لمعظم البرامج و٧٠ للمعاشات؛ الحد في الحقل age لكل برنامج. البرامج التي لم تنشر الصفحة سنها مصنفة A."
+    },
+    {
+      "id": "R3",
+      "name": "مبلغ القرض ضمن حدود البرنامج",
+      "scope": "program",
+      "check": "amount_range",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "LOAN_AMOUNT_RANGE",
+        "message": "المبلغ المطلوب {loan_amount} جنيه خارج حدود هذا البرنامج (من {min_loan} إلى {max_loan} جنيه).",
+        "suggestion": "اختر مبلغاً ضمن هذا النطاق."
+      }
+    },
+    {
+      "id": "R4",
+      "name": "مدة التمويل ضمن حدود البرنامج",
+      "scope": "program",
+      "check": "tenor_range",
+      "source": "C",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "TENOR_RANGE",
+        "message": "المدة المطلوبة {tenor_months} شهراً خارج حدود هذا البرنامج (من {min_tenor} إلى {max_tenor} شهراً).",
+        "suggestion": "اختر مدة ضمن هذا النطاق."
+      }
+    },
+    {
+      "id": "R5",
+      "name": "نسبة الأقساط إلى الدخل",
+      "scope": "program",
+      "check": "dbr",
+      "parameters": {
+        "max_dbr": 0.5
+      },
+      "source": "F",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "DEBT_BURDEN",
+        "message": "مع هذا القرض ستمثل أقساطك الشهرية {dbr_pct}% من دخلك، وهي أعلى من الحد ({max_dbr_pct}%).",
+        "suggestion": "اختر مدة أطول (ضمن حد البرنامج) أو مبلغاً أقل. الحد الأقصى المناسب لدخلك حوالي {max_affordable_loan} جنيه."
+      },
+      "note": "المصدر FAQ بنك مصر (RET-002): قسط التمويل بحد أقصى 50% من الدخل الشهري. الصفحة لا توضح هل الدخل إجمالي أم صافي، ولذلك يُسأل العميل عن صافي الدخل الشهري كتحفظ."
+    },
+    {
+      "id": "R6",
+      "name": "مدة التمويل لا تتجاوز المدة المتبقية حتى التسريح",
+      "scope": "program",
+      "check": "tenor_until_discharge",
+      "source": "S",
+      "indicative": false,
+      "on_fail": {
+        "reason_code": "TENOR_UNTIL_DISCHARGE",
+        "message": "مدة التمويل المطلوبة {tenor_months} شهراً تتجاوز المدة المتبقية حتى تاريخ التسريح ({months_until_discharge} شهراً).",
+        "suggestion": "اختر مدة لا تتجاوز {months_until_discharge} شهراً."
+      }
+    },
+    {
+      "id": "R7",
+      "name": "الحد الأدنى لصافي الدخل الشهري",
+      "scope": "program",
+      "check": "min_income",
+      "parameters": {
+        "min_net_monthly_income_egp": 8000
+      },
+      "enabled": false,
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "MIN_INCOME",
+        "message": "الحد الأدنى لصافي الدخل الشهري لهذا البرنامج هو {min_income} جنيه.",
+        "suggestion": "يمكنك التقدم عندما يصل دخلك إلى هذا الحد."
+      },
+      "note": "غير منشور من البنك. معطّلة افتراضياً؛ الرقم افتراض من المشروع (نفس افتراض ملف قرض السيارة)."
+    },
+    {
+      "id": "R8",
+      "name": "الحد الأدنى لمدة العمل أو النشاط الحالي",
+      "scope": "program",
+      "check": "min_months",
+      "parameters": {
+        "min_months": 6
+      },
+      "enabled": false,
+      "source": "A",
+      "indicative": true,
+      "on_fail": {
+        "reason_code": "MIN_TENURE",
+        "message": "يشترط قضاء {min_months} شهور على الأقل في العمل أو النشاط الحالي.",
+        "suggestion": "يمكنك التقدم بعد إتمام {min_months} شهور."
+      },
+      "note": "غير منشور من البنك. معطّلة افتراضياً."
+    }
+  ],
+  "formulas": {
+    "monthly_rate": "annual_interest_rate_pct / 100 / 12",
+    "monthly_payment": "loan_amount * (r + r / ((1 + r) ** tenor_months - 1)), where r = monthly_rate; round to 2 decimals",
+    "total_repayment": "monthly_payment * tenor_months",
+    "total_interest": "total_repayment - loan_amount",
+    "dbr": "(existing_monthly_installments + monthly_payment) / net_monthly_income",
+    "age_at_maturity": "age + tenor_months / 12",
+    "max_tenor_for_age": "floor((max_age_at_maturity - age) * 12)",
+    "max_affordable_loan": "(max_dbr * net_monthly_income - existing_monthly_installments) / (r + r / ((1 + r) ** tenor_months - 1))",
+    "source": "C"
+  },
+  "branch_handoff": {
+    "model_requires_documents": false,
+    "released_when": "LIKELY_ELIGIBLE",
+    "note": "تُعرض القائمة للعميل لزيارة الفرع فقط. لا يطلب المساعد المستندات ولا يستقبلها ولا يتحقق منها.",
+    "referral_message": "يرجى التوجه إلى أقرب فرع لبنك مصر."
+  }
+}

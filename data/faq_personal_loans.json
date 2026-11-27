@@ -1,0 +1,1649 @@
+{
+  "metadata": {
+    "name": "BankWise AI – Banque Misr personal loans FAQ",
+    "version": "1.0",
+    "languages": [
+      "ar",
+      "en"
+    ],
+    "bank": {
+      "en": "Banque Misr",
+      "ar": "بنك مصر"
+    },
+    "accessed": "2026-10-22",
+    "source_files": [
+      "personal loans.pdf",
+      "القروض الشخصية .pdf",
+      "personal loan details.txt",
+      "banque_misr_faq.json (RET-001..010 moved here)"
+    ],
+    "notes": [
+      "LOAN-<program>-001/002 come from the Personal Loans page (English page for numbers, Arabic page for the early-repayment notice); text read by OCR and checked visually.",
+      "LOAN-calc-NN are generated from the calculator program list (personal loan details.txt); the same file feeds the eligibility tool, so numbers must stay in one place.",
+      "RET-001..010 were moved here from the general FAQ to avoid duplicate answers; they describe murabaha-based retail finance.",
+      "Rates, limits and fees change; direct account-specific questions to 19888.",
+      "Car loans are not covered here."
+    ],
+    "entry_count": 69
+  },
+  "faqs": [
+    {
+      "id": "RET-001",
+      "category": "retail_finance",
+      "question": {
+        "en": "What is Murabaha, and what is Murabaha by agency?",
+        "ar": "ما المقصود بالمرابحة وبالمرابحة بالوكالة؟"
+      },
+      "answer": {
+        "en": "Murabaha is a form of Islamic sale contracts in which goods are sold at their purchase cost plus a known profit agreed by both parties; it is a method permitted in Islamic law. Murabaha by agency is a Murabaha transaction in which the customer is appointed as agent to buy and receive the goods on the bank's behalf, because the customer is an expert in the type and places of sale of the goods and the bank cannot do it itself, given the difficulty of obtaining a price offer.",
+        "ar": "المرابحة أحد أشكال عقود البيوع الإسلامية عن طريق بيع السلعة بتكلفة شرائها مع زيادة ربح معلوم اتفق عليه الطرفان، وهو أسلوب جائز شرعاً مشروع بالكتاب والسنة والإجماع. والمرابحة بالوكالة هي عملية مرابحة يتم فيها توكيل العميل لشراء واستلام البضاعة نيابة عن البنك، حيث إن العميل خبير بها ولديه الدراية الكافية عن نوعية وأماكن بيع السلعة، ويتعذر على البنك القيام بذلك بنفسه مع صعوبة إحضار عرض سعر."
+      },
+      "tags": [
+        "murabaha",
+        "islamic",
+        "agency"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-002",
+      "category": "retail_finance",
+      "question": {
+        "en": "What is the maximum installment allowed relative to income?",
+        "ar": "ما هو الحد الأقصى لقسط التمويل بالنسبة للدخل؟"
+      },
+      "answer": {
+        "en": "The finance installment is calculated at a maximum of 50% of the monthly income, except for real estate finance loans where it is a maximum of 40% of the net monthly income.",
+        "ar": "يتم احتساب قسط التمويل بحد أقصى 50% من الدخل الشهري، فيما عدا قروض التمويل العقاري فيكون الحد الأقصى 40% من صافي الدخل الشهري."
+      },
+      "tags": [
+        "installment",
+        "income",
+        "50%",
+        "40%",
+        "debt burden"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-003",
+      "category": "retail_finance",
+      "question": {
+        "en": "Can other income be counted when calculating the finance amount?",
+        "ar": "هل يُحتسب دخل آخر عند احتساب قيمة التمويل؟"
+      },
+      "answer": {
+        "en": "Yes. Additional income can be counted if it comes from additional work with another employer, a monthly pension, rental income from properties, or savings instruments held at the bank.",
+        "ar": "نعم. يمكن احتساب دخل إضافي ناتج عن عمل إضافي بجهة أخرى، أو معاش شهري، أو إيجار أملاك، أو أوعية ادخارية طرف مصرفنا."
+      },
+      "tags": [
+        "additional income",
+        "pension",
+        "rent"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-004",
+      "category": "retail_finance",
+      "question": {
+        "en": "What are the benefits of transferring my salary to Banque Misr when getting finance?",
+        "ar": "ما مزايا تحويل الراتب إلى بنك مصر عند الحصول على التمويل؟"
+      },
+      "answer": {
+        "en": "Benefits include a lower return rate, a longer finance term, and one-time administrative fees deducted when the finance is disbursed, with no other fees during the life of the finance.",
+        "ar": "تشمل المزايا: سعر عائد أقل، ومدة تمويل أطول، ومصروفات إدارية تُخصم مرة واحدة عند صرف التمويل ولا توجد أي مصروفات أخرى خلال عمر التمويل."
+      },
+      "tags": [
+        "salary transfer",
+        "benefits",
+        "fees"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-005",
+      "category": "retail_finance",
+      "question": {
+        "en": "How can I apply for personal finance?",
+        "ar": "كيف يمكنني التقدم للحصول على التمويل الشخصي؟"
+      },
+      "answer": {
+        "en": "You can apply by going to the nearest branch or through the online banking application.",
+        "ar": "يمكنك التقدم من خلال التوجه لأقرب فرع أو من خلال تطبيق online banking."
+      },
+      "tags": [
+        "apply",
+        "personal finance",
+        "branch",
+        "app"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-006",
+      "category": "retail_finance",
+      "question": {
+        "en": "How is the return rate calculated?",
+        "ar": "كيف يتم احتساب معدل العائد؟"
+      },
+      "answer": {
+        "en": "The return rate is calculated according to the prices announced by the bank at the time the finance request is submitted.",
+        "ar": "يتم احتساب معدل العائد وفقاً للأسعار المعلنة من قبل البنك وقت تقديم طلب الحصول على التمويل."
+      },
+      "tags": [
+        "return rate",
+        "interest",
+        "announced prices"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-007",
+      "category": "retail_finance",
+      "question": {
+        "en": "What are administrative fees and how are they paid?",
+        "ar": "ما المقصود بالمصاريف الإدارية وكيف تُسدد؟"
+      },
+      "answer": {
+        "en": "Administrative fees are the fees the customer bears in return for the procedures of obtaining the finance. They are paid by deducting a percentage once, when the finance is disbursed.",
+        "ar": "هي المصاريف التي يتحملها العميل مقابل إجراءات الحصول على التمويل. ويتم سدادها بخصم نسبة المصاريف الإدارية مرة واحدة عند صرف التمويل."
+      },
+      "tags": [
+        "administrative fees",
+        "one-time"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-008",
+      "category": "retail_finance",
+      "question": {
+        "en": "Is the customer insured when getting finance?",
+        "ar": "هل يتم التأمين على العميل عند الحصول على التمويل؟"
+      },
+      "answer": {
+        "en": "Yes. The customer's life is insured free of charge, with regard to Murabaha by agency (Islamic cash finance with Takaful insurance).",
+        "ar": "نعم، يتم التأمين على حياة العميل مجاناً فيما يخص المرابحة بالوكالة (التمويل النقدي الإسلامي بتأمين تكافلي)."
+      },
+      "tags": [
+        "insurance",
+        "life",
+        "takaful",
+        "free"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-009",
+      "category": "retail_finance",
+      "question": {
+        "en": "What does refinancing a cash loan against personal guarantee mean, and when can it be done?",
+        "ar": "ما المقصود بتجديد القرض النقدي بالضمان الشخصي ومتى يمكن عمله؟"
+      },
+      "answer": {
+        "en": "Refinancing (renewing) a loan means getting a new loan, closing the old one and paying the difference to the customer. It can be done 3 months after the disbursement date of the previous loan, and there is no maximum limit on the number of times it can be done.",
+        "ar": "المقصود بالاستعاضة (تجديد القرض) الحصول على قرض جديد وغلق القرض القديم وصرف الفرق للعميل. ويمكن عملها بعد مرور 3 أشهر من تاريخ صرف القرض السابق، وبدون حد أقصى لعدد مرات الاستعاضة."
+      },
+      "tags": [
+        "refinance",
+        "renewal",
+        "3 months"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "RET-010",
+      "category": "retail_finance",
+      "question": {
+        "en": "Can Banque Misr pay off finance I took from another bank?",
+        "ar": "هل يمكن لبنك مصر سداد تمويلات حصلت عليها من بنك آخر؟"
+      },
+      "answer": {
+        "en": "Yes. The debt can be settled with the other banks, with the customer exempted from 50% of the administrative fees, within the limit of the purchased debt.",
+        "ar": "نعم، يمكن سداد المديونية طرف البنوك الأخرى مع إعفاء العميل من 50% من المصاريف الإدارية في حدود المديونية المشتراة."
+      },
+      "tags": [
+        "debt transfer",
+        "settle other bank",
+        "50% fee waiver"
+      ],
+      "source_file": "الأسئلة_الشائعة_للتجزئة_المصرفية.pdf",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "accessed": null,
+      "moved_from": "banque_misr_faq.json",
+      "note": "مصدر قديم (الأسئلة الشائعة للتجزئة المصرفية). أسئلة التمويل بصيغة المرابحة؛ راجع تاريخ الجمع."
+    },
+    {
+      "id": "LOAN-employer_letter-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط القرض الشخصي بموجب خطاب تعهد الجهة (تحويل الراتب)؟"
+      },
+      "answer": {
+        "ar": "مواصفات القرض الشخصي بموجب خطاب تعهد الجهة (تحويل الراتب): أعلى قيمة قرض 3 مليون جنيه، وأطول مدة 12 سنة، وسعر عائد مميز ومصاريف إدارية هي الأقل، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد مديونيات أخرى طرف بنك مصر أو بنوك تانية، وإعفاء من مصاريف فتح الحساب، وإمكانية الاستعاضة بعد 3 شهور، والسن من 21 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية قرض تكميلي حسب العبء الشهري للعميل، وإمكانية احتساب دخل إضافي. جهة العميل غير ضامنة للقرض."
+      },
+      "tags": [
+        "القرض الشخصي بموجب خطاب تعهد الجهة (تحويل الراتب)",
+        "Employer letter of obligation",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Employer letter of obligation",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-employer_letter-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـالقرض الشخصي بموجب خطاب تعهد الجهة (تحويل الراتب)؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، وشهادة حديثة بمفردات الراتب (في حالة عدم تحويل الراتب على بنك مصر)، وخطاب تعهد الجهة. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "القرض الشخصي بموجب خطاب تعهد الجهة (تحويل الراتب)",
+        "Employer letter of obligation",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Employer letter of obligation"
+    },
+    {
+      "id": "LOAN-business_owners-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض نقدي لأصحاب الأعمال بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض نقدي لأصحاب الأعمال بإثبات الدخل: أعلى قيمة قرض 7,000,000 جنيه، وأطول مدة 6 سنوات، وبدون مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 6 شهور حسب العبء الشهري، والسن من 25 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي، وإعفاء من مصاريف فتح الحساب الجاري."
+      },
+      "tags": [
+        "قرض نقدي لأصحاب الأعمال بإثبات الدخل",
+        "Business-owners",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Business-owners",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-business_owners-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض نقدي لأصحاب الأعمال بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق حديث، سجل تجاري حديث، صورة البطاقة الضريبية، صورة من آخر تعديل لعقد تأسيس الشركة، وكشف حساب بنكي عن آخر 6 شهور باسم العميل أو باسم شركته (أو كشف حساب معاملات ماكينة POS). وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض نقدي لأصحاب الأعمال بإثبات الدخل",
+        "Business-owners",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Business-owners"
+    },
+    {
+      "id": "LOAN-doctors-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض نقدي للأطباء بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض نقدي للأطباء بإثبات الدخل: أعلى قيمة قرض 7,000,000 جنيه، وأطول مدة 7 سنوات، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 6 شهور حسب العبء الشهري، والسن من 25 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي، وإعفاء من مصاريف فتح الحساب الجاري."
+      },
+      "tags": [
+        "قرض نقدي للأطباء بإثبات الدخل",
+        "Doctors Income proof",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Doctors Income proof",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-doctors-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض نقدي للأطباء بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق حديث، صورة تصريح مزاولة المهنة، صورة البطاقة الضريبية، وكشف حساب بنكي عن آخر 6 شهور باسم العميل أو شركته (أو كشف حساب معاملات ماكينة POS). وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض نقدي للأطباء بإثبات الدخل",
+        "Doctors Income proof",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Doctors Income proof"
+    },
+    {
+      "id": "LOAN-flash-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط القرض اللحظي الرقمي (Flash Loan) لعملاء المرتبات؟"
+      },
+      "answer": {
+        "ar": "مواصفات القرض اللحظي الرقمي (Flash Loan) لعملاء المرتبات: أول قرض رقمي لعملاء المرتبات: بدون مستندات، وبدون مصاريف إدارية، وأعلى قيمة قرض 750 ألف جنيه، وأطول مدة 10 سنوات، وسعر عائد مميز، ووثيقة تأمين مجانية على الحياة والعجز الكلي. عملاء الكروت يقدموا من خلال الرابط الرقمي المخصص على موقع البنك، وعملاء حسابات المرتبات يقدموا من خلال تطبيق BM Online."
+      },
+      "tags": [
+        "القرض اللحظي الرقمي (Flash Loan) لعملاء المرتبات",
+        "Flash Loan",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Flash Loan",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-flash-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـالقرض اللحظي الرقمي (Flash Loan) لعملاء المرتبات؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: القرض بدون مستندات. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "القرض اللحظي الرقمي (Flash Loan) لعملاء المرتبات",
+        "Flash Loan",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Flash Loan"
+    },
+    {
+      "id": "LOAN-liberal-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض نقدي لأصحاب المهن الحرة بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض نقدي لأصحاب المهن الحرة بإثبات الدخل: أعلى قيمة قرض 7,000,000 جنيه، وأطول مدة 6 سنوات، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 6 شهور حسب العبء الشهري، والسن من 25 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي."
+      },
+      "tags": [
+        "قرض نقدي لأصحاب المهن الحرة بإثبات الدخل",
+        "Liberal professions",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Liberal professions",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-liberal-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض نقدي لأصحاب المهن الحرة بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق حديث، صورة تصريح مزاولة المهنة، صورة البطاقة الضريبية، وكشف حساب بنكي عن آخر 6 شهور باسم العميل أو شركته (أو كشف حساب معاملات ماكينة POS). وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض نقدي لأصحاب المهن الحرة بإثبات الدخل",
+        "Liberal professions",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Liberal professions"
+    },
+    {
+      "id": "LOAN-reserve_officers-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط القرض الشخصي لضباط الاحتياط بالقوات المسلحة (تحويل الرواتب على بنك مصر)؟"
+      },
+      "answer": {
+        "ar": "مواصفات القرض الشخصي لضباط الاحتياط بالقوات المسلحة (تحويل الرواتب على بنك مصر): أعلى قيمة قرض 70,000 جنيه، وأطول مدة 30 شهر (بحد أقصى تاريخ تسريح الضابط)، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وإمكانية احتساب دخل إضافي، وإعفاء من مصاريف فتح الحساب الجاري."
+      },
+      "tags": [
+        "القرض الشخصي لضباط الاحتياط بالقوات المسلحة (تحويل الرواتب على بنك مصر)",
+        "Personal loan for reserved Officers of Armed force",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Personal loan for reserved Officers of Armed force",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-reserve_officers-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـالقرض الشخصي لضباط الاحتياط بالقوات المسلحة (تحويل الرواتب على بنك مصر)؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، ومستند يفيد رتبة الضابط الحالية وموقفه من التجنيد (ضابط احتياط) وتاريخ التسريح. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "القرض الشخصي لضباط الاحتياط بالقوات المسلحة (تحويل الرواتب على بنك مصر)",
+        "Personal loan for reserved Officers of Armed force",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Personal loan for reserved Officers of Armed force"
+    },
+    {
+      "id": "LOAN-non_payroll-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض بإثبات الدخل - جهات غير متعاقدة (موظفو الحكومة والقطاع العام والخاص)؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض بإثبات الدخل - جهات غير متعاقدة (موظفو الحكومة والقطاع العام والخاص): أعلى قيمة قرض 1,500,000 جنيه، وأطول مدة 8 سنوات، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 3 شهور حسب العبء الشهري، والسن من 21 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي."
+      },
+      "tags": [
+        "قرض بإثبات الدخل - جهات غير متعاقدة (موظفو الحكومة والقطاع العام والخاص)",
+        "Income proof non-Payroll (Government/Public and private sector employees)",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Income proof non-Payroll (Government/Public and private sector employees)",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-non_payroll-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض بإثبات الدخل - جهات غير متعاقدة (موظفو الحكومة والقطاع العام والخاص)؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق حديث، وشهادة بالدخل الشهري. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض بإثبات الدخل - جهات غير متعاقدة (موظفو الحكومة والقطاع العام والخاص)",
+        "Income proof non-Payroll (Government/Public and private sector employees)",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Income proof non-Payroll (Government/Public and private sector employees)"
+    },
+    {
+      "id": "LOAN-banks_telecom-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض موظفي البنوك وشركات الاتصالات؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض موظفي البنوك وشركات الاتصالات: أعلى قيمة قرض 1,500,000 جنيه، وأطول مدة 10 سنوات، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 3 شهور حسب العبء الشهري، والسن من 21 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي."
+      },
+      "tags": [
+        "قرض موظفي البنوك وشركات الاتصالات",
+        "Employee of banks and telecommunications companies",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Employee of banks and telecommunications companies",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-banks_telecom-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض موظفي البنوك وشركات الاتصالات؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق حديث، وشهادة بالدخل الشهري. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض موظفي البنوك وشركات الاتصالات",
+        "Employee of banks and telecommunications companies",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Employee of banks and telecommunications companies"
+    },
+    {
+      "id": "LOAN-payroll_bm-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض بإثبات الدخل - حساب مرتبات بنك مصر؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض بإثبات الدخل - حساب مرتبات بنك مصر: أعلى قيمة قرض 3,000,000 جنيه، وأطول مدة 10 سنوات، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 3 شهور حسب العبء الشهري، والسن من 21 لـ65 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي، وإعفاء من مصاريف فتح الحساب الجاري."
+      },
+      "tags": [
+        "قرض بإثبات الدخل - حساب مرتبات بنك مصر",
+        "Income proof Payroll Banque Misr",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Income proof Payroll Banque Misr",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-payroll_bm-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض بإثبات الدخل - حساب مرتبات بنك مصر؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، وإيصال مرافق حديث. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض بإثبات الدخل - حساب مرتبات بنك مصر",
+        "Income proof Payroll Banque Misr",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Income proof Payroll Banque Misr"
+    },
+    {
+      "id": "LOAN-pension-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط قرض أصحاب المعاشات والمستفيدين من المعاش؟"
+      },
+      "answer": {
+        "ar": "مواصفات قرض أصحاب المعاشات والمستفيدين من المعاش: أعلى قيمة قرض 1,000,000 جنيه (كما هو منشور)، وأطول مدة 10 سنوات، وسعر عائد مميز وأقل مصاريف إدارية، ووثيقة تأمين مجانية على الحياة، وإمكانية سداد المديونيات الأخرى، وقرض تكميلي/Top Up بعد 3 شهور حسب العبء الشهري، والسن من 21 لـ70 سنة عند تاريخ استحقاق القرض، وإمكانية احتساب دخل إضافي، وإعفاء من مصاريف فتح الحساب الجاري."
+      },
+      "tags": [
+        "قرض أصحاب المعاشات والمستفيدين من المعاش",
+        "Pension owners and beneficiaries",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Pension owners and beneficiaries",
+      "needs_review": true,
+      "review_note": "في حاسبة البنك بعض برامج المعاش حدها الأقصى 500,000 وبعضها 1,000,000؛ راجع البرنامج المناسب."
+    },
+    {
+      "id": "LOAN-pension-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـقرض أصحاب المعاشات والمستفيدين من المعاش؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق حديث، وشهادة معاش حديثة. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "قرض أصحاب المعاشات والمستفيدين من المعاش",
+        "Pension owners and beneficiaries",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Pension owners and beneficiaries"
+    },
+    {
+      "id": "LOAN-salary_advance-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط سلفة على الراتب؟"
+      },
+      "answer": {
+        "ar": "مواصفات سلفة على الراتب: أعلى سلفة تصل إلى 65% من مبلغ الراتب الشهري بحد أقصى 20,000 جنيه، وأطول مدة سداد سنتين وقابلة للتجديد من غير مستندات جديدة، وأقل سعر عائد وأقل مصاريف إدارية، وتقدر تسحب وتسدد السلفة أكتر من مرة في نفس الشهر، وتقدر تسحبها كاملة أو على أجزاء من الـATM، وبتتسدد تلقائياً عند تحويل الراتب على الحساب."
+      },
+      "tags": [
+        "سلفة على الراتب",
+        "Salary advance",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Salary advance",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-salary_advance-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـسلفة على الراتب؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية، إيصال مرافق لا يزيد عمره عن 3 شهور، وكشف حساب مرتب لآخر 3 شهور أو خطاب رسمي مختوم من الجهة بتفاصيل المرتب لآخر شهرين. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "سلفة على الراتب",
+        "Salary advance",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Salary advance"
+    },
+    {
+      "id": "LOAN-secured_cash-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط القرض النقدي المضمون (Secured cash loan)؟"
+      },
+      "answer": {
+        "ar": "مواصفات القرض النقدي المضمون (Secured cash loan): أعلى قيمة قرض تصل إلى 100 مليون جنيه (من غير حد أقصى لعدد القروض)، وأطول مدة 10 سنوات، وهامش إقراض يصل إلى 90%، وسعر عائد مميز وأقل مصاريف إدارية."
+      },
+      "tags": [
+        "القرض النقدي المضمون (Secured cash loan)",
+        "Secured cash loan",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Secured cash loan",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-secured_cash-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـالقرض النقدي المضمون (Secured cash loan)؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية (للمصريين) أو صورة جواز سفر ساري (للأجانب). وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "القرض النقدي المضمون (Secured cash loan)",
+        "Secured cash loan",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Secured cash loan"
+    },
+    {
+      "id": "LOAN-secured_overdraft-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط السحب على المكشوف بضمان (Secured Overdraft)؟"
+      },
+      "answer": {
+        "ar": "مواصفات السحب على المكشوف بضمان (Secured Overdraft): حد التسهيل من غير حد أقصى للمبلغ، وأطول مدة للتسهيل سنتين وقابلة للتجديد، وهامش إقراض يصل إلى 90%، وسعر عائد مميز، وإمكانية منح التسهيل بعملات أجنبية (دولار - يورو - جنيه إسترليني)."
+      },
+      "tags": [
+        "السحب على المكشوف بضمان (Secured Overdraft)",
+        "Secured Overdraft",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Secured Overdraft",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-secured_overdraft-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـالسحب على المكشوف بضمان (Secured Overdraft)؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: صورة بطاقة رقم قومي سارية (جواز سفر ساري للأجانب). وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "السحب على المكشوف بضمان (Secured Overdraft)",
+        "Secured Overdraft",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Secured Overdraft"
+    },
+    {
+      "id": "LOAN-bonus_overdraft-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه تفاصيل وشروط السحب على المكشوف مقابل المكافأة السنوية (Overdraft against annual bonus)؟"
+      },
+      "answer": {
+        "ar": "مواصفات السحب على المكشوف مقابل المكافأة السنوية (Overdraft against annual bonus): بيُقدم لرؤساء وأعضاء مجالس إدارات الشركات الحكومية والخاصة، وأطول مدة للتسهيل سنة وتتجدد، وهامش إقراض يصل إلى 75% من متوسط قيمة الأرباح/الحوافز/المكافآت السنوية لآخر سنتين، وأعلى قيمة للتسهيل مليون جنيه، ووثيقة تأمين مجانية على الحياة والعجز الكلي، وإمكانية إصدار بطاقة خصم/دفتر شيكات على حساب التسهيل."
+      },
+      "tags": [
+        "السحب على المكشوف مقابل المكافأة السنوية (Overdraft against annual bonus)",
+        "Overdraft against annual bonus",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "شروط",
+        "سن",
+        "مدة",
+        "حد أقصى"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Overdraft against annual bonus",
+      "needs_review": false
+    },
+    {
+      "id": "LOAN-bonus_overdraft-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات المطلوبة لـالسحب على المكشوف مقابل المكافأة السنوية (Overdraft against annual bonus)؟"
+      },
+      "answer": {
+        "ar": "المستندات المطلوبة: شهادة بالدخل الشهري، صورة بطاقة رقم قومي سارية، خطاب معتمد بالأرباح/الحوافز/المكافآت السنوية لآخر سنتين، وإيصال مرافق حديث. وتُطبق الشروط والأحكام."
+      },
+      "tags": [
+        "السحب على المكشوف مقابل المكافأة السنوية (Overdraft against annual bonus)",
+        "Overdraft against annual bonus",
+        "personal loan",
+        "قرض شخصي",
+        "تمويل شخصي",
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22",
+      "program": "Overdraft against annual bonus"
+    },
+    {
+      "id": "LOAN-gen-001",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه برامج القروض الشخصية اللي بنك مصر بيقدمها؟"
+      },
+      "answer": {
+        "ar": "برامج التمويل الشخصي المنشورة: القرض الشخصي بموجب خطاب تعهد الجهة (تحويل الراتب)؛ قرض نقدي لأصحاب الأعمال بإثبات الدخل؛ قرض نقدي للأطباء بإثبات الدخل؛ القرض اللحظي الرقمي (Flash Loan) لعملاء المرتبات؛ قرض نقدي لأصحاب المهن الحرة بإثبات الدخل؛ القرض الشخصي لضباط الاحتياط بالقوات المسلحة (تحويل الرواتب على بنك مصر)؛ قرض بإثبات الدخل - جهات غير متعاقدة (موظفو الحكومة والقطاع العام والخاص)؛ قرض موظفي البنوك وشركات الاتصالات؛ قرض بإثبات الدخل - حساب مرتبات بنك مصر؛ قرض أصحاب المعاشات والمستفيدين من المعاش؛ سلفة على الراتب؛ القرض النقدي المضمون (Secured cash loan)؛ السحب على المكشوف بضمان (Secured Overdraft)؛ السحب على المكشوف مقابل المكافأة السنوية (Overdraft against annual bonus). وفي كمان برامج الدخل الافتراضي: لأصحاب الأوعية الادخارية (مجمدة وغير مجمدة)، وللأطباء بموجب سنوات الخبرة، وللهيئات القضائية بموجب بدل العلاج، ولأساتذة الجامعات المصرية بموجب الدرجة الوظيفية."
+      },
+      "tags": [
+        "برامج",
+        "programs",
+        "personal loan"
+      ],
+      "source_file": "القروض الشخصية .pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-002",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام عمولة السداد المعجل للقرض الشخصي؟"
+      },
+      "answer": {
+        "ar": "تنويه من صفحة القروض الشخصية بنك مصر (النسخة العربية): تم تعديل عمولة السداد المعجل للقروض الشخصية بالضمان الشخصي لتصبح 7% في حالة سداد التمويل نقداً، و12% في حالة سداد التمويل من خلال بنك آخر."
+      },
+      "tags": [
+        "سداد معجل",
+        "early repayment",
+        "عمولة"
+      ],
+      "source_file": "القروض الشخصية .pdf",
+      "accessed": "2026-10-22",
+      "needs_review": true,
+      "review_note": "التنويه ظاهر في النسخة العربية فقط؛ تأكد من سريانه على برنامجك."
+    },
+    {
+      "id": "LOAN-gen-003",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه شروط السن للحصول على قرض شخصي من بنك مصر؟"
+      },
+      "answer": {
+        "ar": "السن بيختلف حسب البرنامج: من 21 لـ65 سنة عند تاريخ استحقاق القرض في برامج الموظفين (خطاب تعهد الجهة، إثبات الدخل، موظفو البنوك والاتصالات، حساب المرتبات)، ومن 25 لـ65 سنة في برامج الأطباء وأصحاب الأعمال وأصحاب المهن الحرة، ومن 21 لـ70 سنة في برنامج المعاشات. وبرنامج ضباط الاحتياط مدته محددة بتاريخ تسريح الضابط."
+      },
+      "tags": [
+        "سن",
+        "age",
+        "شروط"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-004",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "القرض الشخصي بيتأمّن عليه ومجاناً؟"
+      },
+      "answer": {
+        "ar": "في أغلب البرامج المنشورة في وثيقة تأمين مجانية على الحياة والعجز الكلي، وفي برنامج المعاشات التأمين مجاني على الحياة. ولو التمويل مرابحة بالوكالة (تمويل إسلامي) فالتأمين على الحياة مجاني بتأمين تكافلي."
+      },
+      "tags": [
+        "تأمين",
+        "insurance"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-005",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه شروط القرض التكميلي (Top Up) أو الاستعاضة؟"
+      },
+      "answer": {
+        "ar": "بيختلف حسب البرنامج: بعد 3 شهور في برامج إثبات الدخل وموظفي البنوك والاتصالات وحساب المرتبات والمعاشات، وبعد 6 شهور في برامج الأطباء وأصحاب الأعمال وأصحاب المهن الحرة، وبعد 3 شهور في برنامج خطاب تعهد الجهة (الاستعاضة). والقرض التكميلي بيكون حسب العبء الشهري للعميل."
+      },
+      "tags": [
+        "top up",
+        "استعاضة",
+        "قرض تكميلي"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-006",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إزاي أقدّم على القرض اللحظي (Flash Loan)؟"
+      },
+      "answer": {
+        "ar": "القرض اللحظي بدون مستندات. عملاء حسابات المرتبات يقدموا من خلال تطبيق BM Online، وعملاء الكروت يقدموا من الرابط الرقمي المخصص على موقع بنك مصر. الحد الأقصى 750 ألف جنيه ولمدة تصل إلى 10 سنوات."
+      },
+      "tags": [
+        "flash loan",
+        "تقديم",
+        "bm online"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-007",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "إيه المستندات الأساسية المطلوبة للقرض الشخصي؟"
+      },
+      "answer": {
+        "ar": "المستندات بتختلف حسب البرنامج، لكن الأساسي غالباً: صورة بطاقة رقم قومي سارية، وإيصال مرافق حديث، وإثبات دخل (شهادة بالدخل الشهري أو مفردات الراتب أو شهادة معاش حسب فئتك). وأصحاب الأعمال والمهن الحرة والأطباء بيضافلهم مستندات النشاط (سجل تجاري/تصريح مزاولة مهنة، بطاقة ضريبية، كشف حساب بنكي 6 شهور). والقرض اللحظي بدون مستندات."
+      },
+      "tags": [
+        "مستندات",
+        "documents",
+        "أوراق"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-008",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "أقدر أحصل على قرض شخصي بكام وعلى كام سنة؟"
+      },
+      "answer": {
+        "ar": "الحد الأقصى بيختلف حسب البرنامج: من 70 ألف جنيه (ضباط الاحتياط) لحد 7 مليون جنيه (الأطباء وأصحاب الأعمال والمهن الحرة)، ما عدا القروض المضمونة اللي ليها حدود تانية، والمدة من 30 شهر لحد 12 سنة. مثلاً: خطاب تعهد الجهة لحد 3 مليون و12 سنة، وإثبات الدخل غير المتعاقدة لحد 1.5 مليون و8 سنوات. ولمعرفة برنامجك بالظبط قولّي نوع جهة عملك."
+      },
+      "tags": [
+        "حد أقصى",
+        "مبلغ",
+        "مدة"
+      ],
+      "source_file": "personal loans.pdf",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-gen-009",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد على القروض الشخصية؟"
+      },
+      "answer": {
+        "ar": "سعر العائد بيختلف حسب البرنامج. في حاسبة بنك مصر على الموقع (وقت جمع البيانات) تراوح العائد السنوي المتناقص بين 21.5% و25.5% حسب البرنامج. والبنك بيحتسب العائد حسب الأسعار المعلنة وقت تقديم الطلب. ولتقدير القسط الشهري استخدم حاسبة القرض."
+      },
+      "tags": [
+        "سعر العائد",
+        "interest rate",
+        "فايدة"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22"
+    },
+    {
+      "id": "LOAN-calc-01",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج القرض اللحظي- الرقمي؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج القرض اللحظي- الرقمي: المبلغ من 5,000 لـ750,000 جنيه، والمدة من 6 لـ120 شهر، وسعر العائد السنوي المتناقص 23%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "القرض اللحظي- الرقمي"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-02",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض نقدي للأطباء - بإثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض نقدي للأطباء - بإثبات الدخل: المبلغ من 25,000 لـ7,000,000 جنيه، والمدة من 6 لـ84 شهر، وسعر العائد السنوي المتناقص 25%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض نقدي للأطباء - بإثبات الدخل"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-03",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج موظفي البنوك وشركات الاتصالات؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج موظفي البنوك وشركات الاتصالات: المبلغ من 10,000 لـ1,500,000 جنيه، والمدة من 6 لـ120 شهر، وسعر العائد السنوي المتناقص 21.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "موظفي البنوك وشركات الاتصالات"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-04",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض نقدي أصحاب المهن الحرة بأثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض نقدي أصحاب المهن الحرة بأثبات الدخل: المبلغ من 10,000 لـ7,000,000 جنيه، والمدة من 6 لـ72 شهر، وسعر العائد السنوي المتناقص 25.25%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض نقدي أصحاب المهن الحرة بأثبات الدخل"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-05",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض اثبات دخل جهات غير متعاقدة تحويل مرتبات (موظفين حكومي – قطاع عام)؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض اثبات دخل جهات غير متعاقدة تحويل مرتبات (موظفين حكومي – قطاع عام): المبلغ من 10,000 لـ1,500,000 جنيه، والمدة من 6 لـ96 شهر، وسعر العائد السنوي المتناقص 24%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض اثبات دخل جهات غير متعاقدة تحويل مرتبات (موظفين حكومي – قطاع عام)"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-06",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض نقدي لاصحاب الاعمال باثبات الدخل؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض نقدي لاصحاب الاعمال باثبات الدخل: المبلغ من 10,000 لـ7,000,000 جنيه، والمدة من 6 لـ72 شهر، وسعر العائد السنوي المتناقص 25%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض نقدي لاصحاب الاعمال باثبات الدخل"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-07",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج بضمان تعهد تحويل الراتب /القسط والمستحقات - قطاع عام / حكومي – جهات متعاقدة؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج بضمان تعهد تحويل الراتب /القسط والمستحقات - قطاع عام / حكومي – جهات متعاقدة: المبلغ من 5,000 لـ3,000,000 جنيه، والمدة من 6 لـ144 شهر، وسعر العائد السنوي المتناقص 21.75%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "بضمان تعهد تحويل الراتب /القسط والمستحقات - قطاع عام / حكومي – جهات متعاقدة"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-08",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج بضمان تعهد تحويل الراتب/القسط والمستحقات - قطاع عام / حكومي – جهات غير متعاقدة؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج بضمان تعهد تحويل الراتب/القسط والمستحقات - قطاع عام / حكومي – جهات غير متعاقدة: المبلغ من 5,000 لـ3,000,000 جنيه، والمدة من 6 لـ144 شهر، وسعر العائد السنوي المتناقص 22.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "بضمان تعهد تحويل الراتب/القسط والمستحقات - قطاع عام / حكومي – جهات غير متعاقدة"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-09",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج بضمان تعهد تحويل الراتب /القسط دون المستحقات - قطاع عام / حكومي – جهات متعاقدة؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج بضمان تعهد تحويل الراتب /القسط دون المستحقات - قطاع عام / حكومي – جهات متعاقدة: المبلغ من 5,000 لـ3,000,000 جنيه، والمدة من 6 لـ144 شهر، وسعر العائد السنوي المتناقص 21.75%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "بضمان تعهد تحويل الراتب /القسط دون المستحقات - قطاع عام / حكومي – جهات متعاقدة"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-10",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج بضمان تعهد تحويل الراتب القسط دون المستحقات – قطاع عام حكومي جهات غير متعاقدة؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج بضمان تعهد تحويل الراتب القسط دون المستحقات – قطاع عام حكومي جهات غير متعاقدة: المبلغ من 5,000 لـ3,000,000 جنيه، والمدة من 6 لـ144 شهر، وسعر العائد السنوي المتناقص 22.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "بضمان تعهد تحويل الراتب القسط دون المستحقات – قطاع عام حكومي جهات غير متعاقدة"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-11",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج بضمان تعهد تحويل الراتب أو القسط - قطاع خاص؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج بضمان تعهد تحويل الراتب أو القسط - قطاع خاص: المبلغ من 5,000 لـ1,500,000 جنيه، والمدة من 12 لـ120 شهر، وسعر العائد السنوي المتناقص 21.75%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "بضمان تعهد تحويل الراتب أو القسط - قطاع خاص"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-12",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض اصحاب المعاشات (قوات مسلحة)؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض اصحاب المعاشات (قوات مسلحة): المبلغ من 5,000 لـ1,000,000 جنيه، والمدة من 6 لـ120 شهر، وسعر العائد السنوي المتناقص 21.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض اصحاب المعاشات (قوات مسلحة)"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-13",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض مستفيد المعاشات (قوات مسلحة)؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض مستفيد المعاشات (قوات مسلحة): المبلغ من 5,000 لـ1,000,000 جنيه، والمدة من 6 لـ120 شهر، وسعر العائد السنوي المتناقص 22%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض مستفيد المعاشات (قوات مسلحة)"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-14",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قروض المستفيدين من المعاش؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قروض المستفيدين من المعاش: المبلغ من 5,000 لـ500,000 جنيه، والمدة من 6 لـ84 شهر، وسعر العائد السنوي المتناقص 22.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قروض المستفيدين من المعاش"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-15",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قروض اصحاب معاشات؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قروض اصحاب معاشات: المبلغ من 5,000 لـ500,000 جنيه، والمدة من 6 لـ120 شهر، وسعر العائد السنوي المتناقص 21.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قروض اصحاب معاشات"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-16",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج برنامج ضباط الاحتياط بالقوات المسلحة المحول رواتبهم على حسابات مرتبات بنك مصر؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج برنامج ضباط الاحتياط بالقوات المسلحة المحول رواتبهم على حسابات مرتبات بنك مصر: المبلغ من 10,000 لـ70,000 جنيه، والمدة من 6 لـ30 شهر، وسعر العائد السنوي المتناقص 22.25%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "برنامج ضباط الاحتياط بالقوات المسلحة المحول رواتبهم على حسابات مرتبات بنك مصر"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-17",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج لأعضاء الهيئات القضائية بموجب بدل العلاج؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج لأعضاء الهيئات القضائية بموجب بدل العلاج: المبلغ من 50,000 لـ500,000 جنيه، والمدة من 12 لـ120 شهر، وسعر العائد السنوي المتناقص 25.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "لأعضاء الهيئات القضائية بموجب بدل العلاج"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-18",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج الدخل الافتراضي لأصحاب الأوعية الادخارية؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج الدخل الافتراضي لأصحاب الأوعية الادخارية: المبلغ من 50,000 لـ4,000,000 جنيه، والمدة من 12 لـ84 شهر، وسعر العائد السنوي المتناقص 22.75%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "الدخل الافتراضي لأصحاب الأوعية الادخارية"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-19",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج برنامج القروض الشخصية للأطباء بموجب عدد سنوات الخبرة؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج برنامج القروض الشخصية للأطباء بموجب عدد سنوات الخبرة: المبلغ من 50,000 لـ1,300,000 جنيه، والمدة من 12 لـ84 شهر، وسعر العائد السنوي المتناقص 25.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "برنامج القروض الشخصية للأطباء بموجب عدد سنوات الخبرة"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-20",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض بإثبات الدخل جهات غير متعاقدة تحويل مرتبات قطاع خاص؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض بإثبات الدخل جهات غير متعاقدة تحويل مرتبات قطاع خاص: المبلغ من 10,000 لـ1,500,000 جنيه، والمدة من 6 لـ96 شهر، وسعر العائد السنوي المتناقص 24%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض بإثبات الدخل جهات غير متعاقدة تحويل مرتبات قطاع خاص"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-21",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج دكاترة وأساتذة الجامعات المصرية؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج دكاترة وأساتذة الجامعات المصرية: المبلغ من 50,000 لـ1,100,000 جنيه، والمدة من 12 لـ84 شهر، وسعر العائد السنوي المتناقص 25.5%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "دكاترة وأساتذة الجامعات المصرية"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    },
+    {
+      "id": "LOAN-calc-22",
+      "category": "personal_loans",
+      "topic": "personal_loans",
+      "scope": "in_scope",
+      "question": {
+        "ar": "كام سعر العائد وحدود المبلغ والمدة في برنامج قرض بدون تعهد جهة العمل جهات متعاقدة لتحويل المرتبات حكومي – قطاع خاص؟"
+      },
+      "answer": {
+        "ar": "حسب حاسبة بنك مصر: برنامج قرض بدون تعهد جهة العمل جهات متعاقدة لتحويل المرتبات حكومي – قطاع خاص: المبلغ من 10,000 لـ3,000,000 جنيه، والمدة من 6 لـ120 شهر، وسعر العائد السنوي المتناقص 21.75%. التفاصيل تقديرية والسعر النهائي بيتحدد وقت الطلب."
+      },
+      "tags": [
+        "calculator",
+        "حاسبة",
+        "سعر العائد",
+        "personal loan",
+        "قرض بدون تعهد جهة العمل جهات متعاقدة لتحويل المرتبات حكومي – قطاع خاص"
+      ],
+      "source_file": "personal loan details.txt",
+      "accessed": "2026-10-22",
+      "generated_from": "personal loan details.txt"
+    }
+  ]
+}

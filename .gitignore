@@ -1,0 +1,56 @@
+# =============================================================================
+# BankWise AI - .gitignore
+# =============================================================================
+
+# ---- Secrets: NEVER commit these (API keys live here) ------------------------
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+secrets.toml
+*.pem
+*.key
+
+# ---- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---- Virtual environments (each person creates their own) --------------------
+venv/
+.venv/
+env/
+ENV/
+ai_bank_assi/
+
+# ---- Logs --------------------------------------------------------------------
+*.log
+
+# ---- Jupyter -----------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ---- Editors and OS files ----------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Local caches ------------------------------------------------------------
+.cache/
+
+# -----------------------------------------------------------------------------
+# NOT ignored on purpose:
+version2/embedding/chroma_db/   the prebuilt vector index the assistant needs
+#   version2/chunking/*.json        the chunk files used to build that index
+#   version2/data/                  FAQ sources and loan rules
+# -----------------------------------------------------------------------------
