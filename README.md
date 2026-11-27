@@ -108,7 +108,7 @@ The final version of the project lives in **`version2/`**. Run all commands from
 .
 ├── bankWiseAI/                      # ← final version
 │   ├── requirements.txt
-│   ├── .env                       # your API key (you create it, never commit it)
+│   ├── .env                       # local settings and your API key
 │   ├── chatbot/                   # the assistant
 │   │   ├── agent.py               #   orchestrator: memory, tool loop, guards
 │   │   ├── agent_tools.py         #   tool specs and runner (search_faq + eligibility + calculator)
@@ -163,7 +163,6 @@ python -m pip install openai      # for LLM_PROVIDER=openai AND for gemini (Gemi
 ```
 
 **4. Add your API key.** Create a file named `.env` inside `version2/` (next to `requirements.txt`).
-Values go on one line, without quotes or spaces around `=`.
 
 ```env
 # Option A: Google Gemini
@@ -177,8 +176,6 @@ GEMINI_API_KEY=your_key_here
 # LLM_PROVIDER=openai
 # OPENAI_API_KEY=your_key_here
 ```
-
-> ⚠️ Never commit `.env`. Add it to `.gitignore` before your first `git add`.
 
 ## Running the assistant
 
@@ -226,8 +223,7 @@ curl -X POST http://localhost:8000/chat \
 }
 ```
 
-`session_id` (1 to 64 characters) identifies a conversation. Use a new id per chat window.
-Sessions are stored in memory only.
+`session_id` (1 to 64 characters) identifies a conversation. Sessions are stored in memory only.
 
 ### Live smoke test
 
@@ -250,7 +246,7 @@ Everything is configured through environment variables (usually in `.env`). Defa
 | `LLM_MODEL` | provider default | Model name to use |
 | `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` / `GEMINI_API_KEY` | none | Key for the chosen provider |
 | `LLM_MAX_TOKENS` | `900` | Maximum tokens per LLM reply |
-| `LLM_TEMPERATURE` | provider default | Optional. Around `0.2` suits a bank bot, if the model accepts it |
+| `LLM_TEMPERATURE` | provider default | Optional sampling temperature. The provider default is used when unset |
 | `LLM_TIMEOUT_S` | `30` | LLM request timeout in seconds |
 | `BANKWISE_TOP_K` | `4` | FAQ chunks returned per search |
 | `BANKWISE_MIN_SCORE` | `0.50` | Minimum cosine similarity. Below it the assistant says it does not know |
@@ -258,8 +254,8 @@ Everything is configured through environment variables (usually in `.env`). Defa
 | `BANKWISE_COLLECTION` | `bm_faq` | Chroma collection name |
 
 Fixed limits in `config.py`: 5 tool steps per message, 1000 characters per user message, 12 messages of history.
-`BANKWISE_MIN_SCORE` is a starting value. Calibrate it with `embedding/eval_retrieval.py` on real customer
-questions.
+`BANKWISE_MIN_SCORE` is a starting value, and `embedding/eval_retrieval.py` is the tool for evaluating it on real
+customer questions.
 
 ## Knowledge base and data pipeline
 
@@ -288,8 +284,8 @@ python index_chunks.py --chunks ../chunking/chunks_ar.json --reset
 python eval_retrieval.py eval_questions.json
 ```
 
-If you change the embedding model, rebuild the index with the same model. A new model also needs a new
-`BANKWISE_MIN_SCORE`.
+The index and the query embeddings must come from the same model, so changing the embedding model means
+rebuilding the index and re-tuning `BANKWISE_MIN_SCORE`.
 
 ## Loan eligibility engine
 
