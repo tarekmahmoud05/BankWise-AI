@@ -242,7 +242,7 @@ Everything is configured through environment variables (usually in `.env`). Defa
 
 | Variable | Default | Description |
 |---|---|---|
-| `LLM_PROVIDER` | `anthropic` | `anthropic`, `openai` or `gemini` |
+| `LLM_PROVIDER` | `gemini` | `anthropic`, `openai` or `gemini` |
 | `LLM_MODEL` | provider default | Model name to use |
 | `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` / `GEMINI_API_KEY` | none | Key for the chosen provider |
 | `LLM_MAX_TOKENS` | `900` | Maximum tokens per LLM reply |
