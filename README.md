@@ -106,7 +106,7 @@ The final version of the project lives in **`version2/`**. Run all commands from
 
 ```
 .
-├── version2/                      # ← final version
+├── bankWiseAI/                      # ← final version
 │   ├── requirements.txt
 │   ├── .env                       # your API key (you create it, never commit it)
 │   ├── chatbot/                   # the assistant
@@ -133,8 +133,6 @@ The final version of the project lives in **`version2/`**. Run all commands from
 │   ├── chunking/                  # FAQ JSON -> chunks (prepare_chunks.py, chunks_ar.json, chunks_en.json)
 │   ├── data/                      # source FAQ files and loan-rate sync script (api_data/)
 │   └── instructions/              # notes on how to improve retrieval
-├── bankwise-rag-stage1/           # earlier iteration (RAG pipeline)
-├── bankwise-rag-stage2/           # earlier iteration (RAG pipeline)
 └── Project Documentation/         # project report and system analysis & design (PDF)
 ```
 
