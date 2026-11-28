@@ -147,16 +147,16 @@ def make_llm(provider: Optional[str] = None, model: Optional[str] = None) -> LLM
     if provider == "anthropic":
         key = os.getenv("ANTHROPIC_API_KEY")
         if not key:
-            raise RuntimeError("ANTHROPIC_API_KEY is not set (put it in version2/.env)")
+            raise RuntimeError("ANTHROPIC_API_KEY is not set (put it in the .env file in the project root)")
         return AnthropicLLM(model, api_key=key)
     if provider == "openai":
         key = os.getenv("OPENAI_API_KEY")
         if not key:
-            raise RuntimeError("OPENAI_API_KEY is not set (put it in version2/.env)")
+            raise RuntimeError("OPENAI_API_KEY is not set (put it in the .env file in the project root)")
         return OpenAICompatLLM(model, api_key=key)
     if provider == "gemini":
         key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
         if not key:
-            raise RuntimeError("GEMINI_API_KEY is not set (put it in version2/.env)")
+            raise RuntimeError("GEMINI_API_KEY is not set (put it in the .env file in the project root)")
         return OpenAICompatLLM(model, api_key=key, base_url=config.GEMINI_OPENAI_BASE_URL)
     raise ValueError(f"unknown LLM_PROVIDER '{provider}' (use anthropic | openai | gemini)")

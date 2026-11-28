@@ -9,7 +9,7 @@ check_loan_rates.py
     python check_loan_rates.py --dry-run    يعرض الفروق بس، ومش بيعدل أي حاجة
     python check_loan_rates.py              يعرض الفروق ويعدل الملفات
 
-مكان الملف:  version2/data/api_data/check_loan_rates.py
+مكان الملف:  data/api_data/check_loan_rates.py
 """
 import argparse
 import json

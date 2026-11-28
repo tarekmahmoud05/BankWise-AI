@@ -102,38 +102,38 @@ cannot break them:
 
 ## Repository structure
 
-The final version of the project lives in **`version2/`**. Run all commands from there unless stated otherwise.
+Run all commands from the repository root (the folder that contains `requirements.txt`).
 
 ```
 .
-├── bankWiseAI/                      # ← final version
-│   ├── requirements.txt
-│   ├── .env                       # local settings and your API key
-│   ├── chatbot/                   # the assistant
-│   │   ├── agent.py               #   orchestrator: memory, tool loop, guards
-│   │   ├── agent_tools.py         #   tool specs and runner (search_faq + eligibility + calculator)
-│   │   ├── llm_clients.py         #   Claude / Gemini / OpenAI adapters
-│   │   ├── prompts.py             #   system prompt
-│   │   ├── retriever.py           #   wrapper around the vector search
-│   │   ├── config.py              #   all settings (env vars)
-│   │   ├── cli.py                 #   terminal chat
-│   │   ├── api.py                 #   FastAPI backend
-│   │   ├── smoke_test.py          #   live end-to-end behaviour check
-│   │   └── tests/                 #   unit tests
-│   ├── eligibility/               # loan rule engine
-│   │   ├── eligibility.py         #   executes the JSON rules
-│   │   ├── calculator.py          #   monthly payment / total / interest
-│   │   ├── tools.py               #   tool schemas generated from the rules
-│   │   └── rules/                 #   personal and car loan rules (JSON)
-│   ├── embedding/                 # retrieval
-│   │   ├── index_chunks.py        #   embed chunks and store them in Chroma
-│   │   ├── search_chunks.py       #   semantic search
-│   │   ├── eval_retrieval.py      #   hit@k / MRR evaluation
-│   │   └── chroma_db/             #   the prebuilt index (240 chunks)
-│   ├── chunking/                  # FAQ JSON -> chunks (prepare_chunks.py, chunks_ar.json, chunks_en.json)
-│   ├── data/                      # source FAQ files and loan-rate sync script (api_data/)
-│   └── instructions/              # notes on how to improve retrieval
-└── Project Documentation/         # project report and system analysis & design (PDF)
+├── requirements.txt
+├── app.py                     # Streamlit demo UI
+├── .env                       # local settings and your API key
+├── chatbot/                   # the assistant
+│   ├── agent.py               #   orchestrator: memory, tool loop, guards
+│   ├── agent_tools.py         #   tool specs and runner (search_faq + eligibility + calculator)
+│   ├── llm_clients.py         #   Claude / Gemini / OpenAI adapters
+│   ├── prompts.py             #   system prompt
+│   ├── retriever.py           #   wrapper around the vector search
+│   ├── config.py              #   all settings (env vars)
+│   ├── cli.py                 #   terminal chat
+│   ├── api.py                 #   FastAPI backend
+│   ├── smoke_test.py          #   live end-to-end behaviour check
+│   └── tests/                 #   unit tests
+├── eligibility/               # loan rule engine
+│   ├── eligibility.py         #   executes the JSON rules
+│   ├── calculator.py          #   monthly payment / total / interest
+│   ├── tools.py               #   tool schemas generated from the rules
+│   └── rules/                 #   personal and car loan rules (JSON)
+├── embedding/                 # retrieval
+│   ├── index_chunks.py        #   embed chunks and store them in Chroma
+│   ├── search_chunks.py       #   semantic search
+│   ├── eval_retrieval.py      #   hit@k / MRR evaluation
+│   └── chroma_db/             #   the prebuilt index (240 chunks)
+├── chunking/                  # FAQ JSON -> chunks (prepare_chunks.py, chunks_ar.json, chunks_en.json)
+├── data/                      # source FAQ files and loan-rate sync script (api_data/)
+├── instructions/              # notes on how to improve retrieval
+└── Project Documentation/     # project report and system analysis & design (PDF)
 ```
 
 ## Getting started
@@ -144,7 +144,7 @@ The final version of the project lives in **`version2/`**. Run all commands from
 ```bash
 # 1. Clone
 git clone https://github.com/tarekmahmoud05/BankWise-AI.git
-cd BankWise-AI/version2
+cd BankWise-AI
 
 # 2. Create and activate a virtual environment
 python -m venv venv
@@ -162,7 +162,7 @@ python -m pip install anthropic   # for LLM_PROVIDER=anthropic (Claude)
 python -m pip install openai      # for LLM_PROVIDER=openai AND for gemini (Gemini is called through the OpenAI SDK)
 ```
 
-**4. Add your API key.** Create a file named `.env` inside `version2/` (next to `requirements.txt`).
+**4. Add your API key.** Create a file named `.env` in the repository root (next to `requirements.txt`).
 
 ```env
 # Option A: Google Gemini
@@ -190,6 +190,17 @@ python -m chatbot.cli --debug
 Type `/new` for a new conversation and an empty line to quit. `--debug` prints the tools used, retrieval score,
 latency and token counts after every reply. You can override the settings per run:
 `--provider gemini --model <model-name>`.
+
+### Web demo (Streamlit)
+
+```bash
+streamlit run app.py
+```
+
+Under each answer the demo shows up to 3 *suggested questions* taken from related FAQ entries. The FAQ index is
+Arabic, so when the customer is chatting in English the agent translates the suggestions with one extra LLM call
+(cached per question; if the translation fails, the suggestions are simply hidden). The same list is returned in
+the `suggestions` field of `POST /chat`.
 
 ### REST API (for the real front end)
 
@@ -324,7 +335,7 @@ The unit tests use fake LLMs and fake retrieval, so they run in seconds and cost
 
 | Symptom | Cause and fix |
 |---|---|
-| `ANTHROPIC_API_KEY is not set` | The default provider is Anthropic. Set `LLM_PROVIDER` (`gemini` or `openai`) in `.env`, or pass `--provider`. The file must be named exactly `.env` and be inside `version2/`. |
+| `ANTHROPIC_API_KEY is not set` | The default provider is Anthropic. Set `LLM_PROVIDER` (`gemini` or `openai`) in `.env`, or pass `--provider`. The file must be named exactly `.env` and be in the repository root (next to `requirements.txt`). |
 | `ModuleNotFoundError: No module named 'openai'` | Gemini and OpenAI are both called through the `openai` package. Install it with `python -m pip install openai`. |
 | First start is very slow | The `BAAI/bge-m3` embedding model (about 2 GB) is being downloaded. It is cached for later runs. |
 

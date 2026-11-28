@@ -6,6 +6,7 @@ One user message goes through:
     3. guards: abstain, citations -> sources footer, eligibility disclaimer, error fallback
     4. save the clean turn into the session history
 """
+import json
 import logging
 import re
 import threading
@@ -16,13 +17,13 @@ from typing import Optional
 from . import config
 from .agent_tools import ToolRunner, all_tool_specs
 from .llm_clients import LLMClient
-from .prompts import SYSTEM_PROMPT
+from .prompts import SYSTEM_PROMPT, TRANSLATE_SUGGESTIONS_PROMPT
 from .retriever import Retriever
 
 log = logging.getLogger("bankwise.agent")
 
 _ARABIC = re.compile(r"[\u0600-\u06FF]")
-_QUESTION = re.compile(r"السؤال:\s*(.+)")
+_QUESTION = re.compile(r"(?:السؤال|Question):\s*(.+)")
 _CITE = re.compile(r"\[\s*(S\d+(?:\s*[,،]\s*S\d+)*)\s*\]")
 FALLBACK_EN = ("Sorry, I don't have confirmed information to answer this. "
                "Please call Banque Misr on 19888 or visit your nearest branch.")
@@ -30,8 +31,28 @@ ERROR_EN = "A temporary error occurred. Please try again shortly, or call Banque
 EMPTY_EN = "Please type your question and I will help."
 
 
+SUGGESTION_CACHE_MAX = 1000          # translated suggestions kept in memory (FAQ is small, so this is plenty)
+SUGGESTION_MAX_CHARS = 300
+
+
 def _is_arabic(text: str) -> bool:
     return bool(_ARABIC.search(text or ""))
+
+
+def _parse_string_list(text: str, expected: int):
+    """Parse the translator's reply into a list of `expected` strings, or None if it is not usable.
+    Tolerates a ```json fence or a short sentence around the array (LLMs do that sometimes)."""
+    text = (text or "").strip()
+    start, end = text.find("["), text.rfind("]")
+    if start == -1 or end <= start:
+        return None
+    try:
+        data = json.loads(text[start:end + 1])
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(data, list) or len(data) != expected:
+        return None
+    return [x.strip() if isinstance(x, str) else "" for x in data]
 
 
 @dataclass
@@ -54,6 +75,7 @@ class BankWiseAgent:
         self.retriever = retriever or Retriever()
         self.tools = all_tool_specs()
         self._history = {}                      # session_id -> list of neutral messages
+        self._suggestion_cache = {}             # (question, target language) -> translated question
         self._lock = threading.Lock()
 
     # ------------------------------------------------------------------ public
@@ -103,6 +125,13 @@ class BankWiseAgent:
         except Exception as exc:                  # never show a stack trace to a customer
             log.error("agent error: %r", exc)
             reply = AgentReply(config.ERROR_AR if ar else ERROR_EN, abstained=False, reason="llm_error")
+
+        # The suggested questions come from Arabic FAQ chunks. Show them in the customer's language: if an
+        # English chat displayed Arabic ones, clicking one would send Arabic and flip the chat to Arabic.
+        if reply.suggestions:
+            reply.suggestions, s_in, s_out = self._localize_suggestions(reply.suggestions, ar)
+            in_tok += s_in
+            out_tok += s_out
 
         reply.tools_used = list(runner.tools_used)
         reply.top_score = runner.top_score
@@ -166,6 +195,50 @@ class BankWiseAgent:
             if len(out) == limit:
                 break
         return out
+
+    def _localize_suggestions(self, suggestions: list, to_arabic: bool):
+        """Make the suggested questions match the customer's language, using ONE extra tool-less LLM call.
+
+        Returns (suggestions, input_tokens, output_tokens). It never raises: if the translation fails or
+        comes back unusable, the questions that are in the wrong language are DROPPED (no suggestions is
+        better than Arabic buttons under an English chat). Translations are cached in memory, so the same
+        FAQ question is translated once.
+        """
+        target = "Arabic" if to_arabic else "English"
+        need = [q for q in suggestions if _is_arabic(q) != to_arabic]      # wrong language for this customer
+        if not need:
+            return suggestions, 0, 0
+
+        with self._lock:
+            done = {q: self._suggestion_cache.get((q, target)) for q in need}
+        todo = [q for q in need if not done[q]]
+        in_tok = out_tok = 0
+
+        if todo:
+            try:
+                resp = self.llm.chat(TRANSLATE_SUGGESTIONS_PROMPT.format(target=target),
+                                     [{"role": "user", "content": json.dumps(todo, ensure_ascii=False)}], [])
+                in_tok, out_tok = resp.input_tokens, resp.output_tokens
+                translated = _parse_string_list(resp.text, len(todo))
+                if translated is None:
+                    log.warning("suggestion translation: unusable reply, hiding suggestions")
+                else:
+                    with self._lock:
+                        if len(self._suggestion_cache) >= SUGGESTION_CACHE_MAX:
+                            self._suggestion_cache.clear()
+                        for q, t in zip(todo, translated):
+                            # accept only a real translation: non-empty, short, and in the target script
+                            if t and len(t) <= SUGGESTION_MAX_CHARS and _is_arabic(t) == to_arabic:
+                                self._suggestion_cache[(q, target)] = done[q] = t
+            except Exception as exc:                  # a translation problem must never break the reply
+                log.warning("suggestion translation failed: %r", exc)
+
+        out = []
+        for q in suggestions:
+            t = done[q] if q in done else q          # q not in `done` was already in the right language
+            if t and t not in out:
+                out.append(t)
+        return out, in_tok, out_tok
 
     @staticmethod
     def _source(ref, hit):

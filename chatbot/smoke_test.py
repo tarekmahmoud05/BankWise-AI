@@ -1,6 +1,6 @@
 """Live smoke test: real embedding model + real LLM + real Chroma index + real rule engine.
 
-    cd version2 && python -m chatbot.smoke_test [--provider gemini]
+    python -m chatbot.smoke_test [--provider gemini]
 
 It does not compare wording (LLM wording varies). It checks BEHAVIOUR: did the right tool run, did the
 bot abstain when it should, are sources/disclaimer present. Exit code 1 if any check fails.

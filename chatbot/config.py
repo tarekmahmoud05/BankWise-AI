@@ -10,7 +10,7 @@ except ImportError:
     pass
 
 # ----------------------------------------------------------------- paths
-VERSION2 = Path(__file__).resolve().parent.parent            # .../version2
+VERSION2 = Path(__file__).resolve().parent.parent            # project root (the folder with requirements.txt)
 EMBEDDING_DIR = VERSION2 / "embedding"
 ELIGIBILITY_DIR = VERSION2 / "eligibility"
 CHROMA_DIR = Path(os.getenv("BANKWISE_CHROMA_DIR", EMBEDDING_DIR / "chroma_db"))

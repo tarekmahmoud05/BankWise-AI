@@ -1,4 +1,4 @@
-"""FastAPI backend.   Run from version2/:   uvicorn chatbot.api:app --reload
+"""FastAPI backend.   Run from the project root:   uvicorn chatbot.api:app --reload
 
 POST /chat   {"session_id": "abc", "message": "..."}  ->  reply + sources + diagnostics
 POST /reset  {"session_id": "abc"}
@@ -54,7 +54,8 @@ def create_app(agent: Optional[BankWiseAgent] = None) -> FastAPI:
     def chat(body: ChatIn):
         r = app.state.agent.chat(body.session_id, body.message)
         return ChatOut(reply=r.text, answer=r.answer, sources=r.sources, abstained=r.abstained,
-                       reason=r.reason, tools_used=r.tools_used, latency_ms=r.latency_ms)
+                       reason=r.reason, tools_used=r.tools_used, latency_ms=r.latency_ms,
+                       suggestions=r.suggestions)
 
     @app.post("/reset")
     def reset(body: ResetIn):

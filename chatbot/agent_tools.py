@@ -9,7 +9,7 @@ import json
 from . import config  # noqa: F401  (puts eligibility/ and embedding/ on sys.path)
 from .retriever import Retriever
 
-import tools as eligibility_tools          # version2/eligibility/tools.py
+import tools as eligibility_tools          # eligibility/tools.py
 
 ELIGIBILITY_TOOL_NAMES = {"check_personal_loan_eligibility", "check_car_loan_eligibility", "estimate_payment"}
 

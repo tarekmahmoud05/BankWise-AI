@@ -1,4 +1,4 @@
-"""Terminal chat.   Run from version2/:   python -m chatbot.cli [--provider gemini] [--debug]"""
+"""Terminal chat.   Run from the project root:   python -m chatbot.cli [--provider gemini] [--debug]"""
 import argparse
 import logging
 import uuid

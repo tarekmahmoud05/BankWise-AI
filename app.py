@@ -1,12 +1,12 @@
 """BankWise AI - واجهة تجريبية بسيطة (Streamlit).
 
-مكانها: version2/app.py        (جنب requirements.txt)
-التشغيل:   cd version2
-           streamlit run app.py
+مكانها: app.py        (جنب requirements.txt في أول الريبو)
+التشغيل:   streamlit run app.py     (من فولدر المشروع)
 
 بتستخدم نفس الـ agent بتاع الشات في التيرمنال مباشرة، فمحتاجة نفس إعدادات الـ .env.
 """
 import os
+import re
 import sys
 import uuid
 
@@ -108,7 +108,7 @@ try:
     agent = get_agent()
 except Exception as exc:                # مفتاح ناقص، موديل غلط، إلخ
     st.error(f"مقدرتش أشغّل الـ agent: {exc}")
-    st.info("اتأكدي من ملف .env جوه فولدر version2 (LLM_PROVIDER و GEMINI_API_KEY و LLM_MODEL).")
+    st.info("اتأكدي من ملف .env جوه فولدر المشروع (جنب requirements.txt) (LLM_PROVIDER و GEMINI_API_KEY و LLM_MODEL).")
     st.stop()
 
 # السؤال: يا إما اتكتب في الشات، يا إما اتضغط عليه (سؤال جاهز / سؤال مقترح)
@@ -126,8 +126,9 @@ if not st.session_state.messages:
 # الأسئلة المقترحة: تحت آخر رد بس، وتختفي أول ما يتبعت سؤال جديد
 last = st.session_state.messages[-1] if st.session_state.messages else None
 if not prompt and last and last["role"] == "assistant" and last.get("meta", {}).get("suggestions"):
-    st.caption("أسئلة ممكن تفيدك:")
-    for i, q in enumerate(last["meta"]["suggestions"]):
+    sugg = last["meta"]["suggestions"]
+    st.caption("أسئلة ممكن تفيدك:" if re.search(r"[\u0600-\u06FF]", sugg[0]) else "Related questions you may find useful:")
+    for i, q in enumerate(sugg):
         st.button(q, key=f"sg{len(st.session_state.messages)}_{i}", use_container_width=True,
                   on_click=ask, args=(q,))
 
